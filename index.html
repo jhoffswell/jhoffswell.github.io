@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="author" content="Jane Hoffswell">
+  <title>Jane Hoffswell</title>
+  <link rel="stylesheet" type="text/css" href="website/website.css"/>
+  <script src="website/website.js" charset="utf-8"></script>
+</head>
+<body  onload="init()" onhashchange="showTab()">
+<div class="container">
+
+<div class="header">
+  <h1>Jane Hoffswell<h1>
+</div>
+
+<div class="body content">
+
+  <div class="nav">
+    <img src="website/resources/images/JaneHoffswell.jpg" alt="Jane Hoffswell Profile">
+    <ul>
+      <li onclick="openTab(event, 'Home')"><a href="#Home">Home</a></li>
+      <li onclick="openTab(event, 'Publications')"><a href="#Publications">Publications</a></li>
+      <li onclick="openTab(event, 'CurriculumVitae')"><a href="#CurriculumVitae">Curriculum Vitae</a></li>
+    </ul>
+  </div>
+
+  <div class="main content" id="Home">
+
+    <p class="objective">I am a third year PhD student in the Computer Science and Engineering Department at the <a href="https://www.cs.washington.edu/">University of Washington</a>. I am advised by <a href="http://homes.cs.washington.edu/~jheer/">Jeffrey Heer</a> from the <a href="http://idl.cs.washington.edu/">Interactive Data Lab</a>. I received my undergraduate degree from <a href="https://www.hmc.edu/">Harvey Mudd College</a>. I am interested in how developers write and understand their software, and how visualization techniques can be applied to improve program understanding, debugging, and authoring.</p>
+
+    <h2>Recent Publications</h2>
+    <div class="publication">
+      <img src="website/resources/images/triggers.png" alt="Individual Triggers Thumbnail">
+      <div class="paper">
+        <p class="title">Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals.</p>
+        <p class="authors">Jessica Schroeder, <span class="jane">Jane Hoffswell</span>, Chia-Fang Chung, James Fogarty, Sean Munson, Jasmine Zia.</p>
+        <p class="venue">ACM Computer-Supported Cooperative Work (CSCW), 2017.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/2017-Triggers-CSCW.pdf">PDF</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img src="website/resources/images/vega-debugging.png" alt="Visual Debugging Thumbnail">
+      <div class="paper">
+        <p class="title">Visual Debugging Techniques for Reactive Data Visualization.</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
+        <p class="venue">Eurographics Conference on Visualization (EuroVis), 2016.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/2016-VegaDebugging-EuroVis.pdf">PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="main content" id="Publications" style="display:none">
+    <h1>Publications</h1>
+
+    <div class="publication">
+      <img src="website/resources/images/triggers.png" alt="Individual Triggers Thumbnail">
+      <div class="paper">
+        <p class="title">Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals.</p>
+        <p class="authors">Jessica Schroeder, <span class="jane">Jane Hoffswell</span>, Chia-Fang Chung, James Fogarty, Sean Munson, Jasmine Zia.</p>
+        <p class="venue">ACM Computer-Supported Cooperative Work (CSCW), 2017.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/2017-Triggers-CSCW.pdf">PDF</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img src="website/resources/images/vega-debugging.png" alt="Visual Debugging Thumbnail">
+      <div class="paper">
+        <p class="title">Visual Debugging Techniques for Reactive Data Visualization.</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
+        <p class="venue">Eurographics Conference on Visualization (EuroVis), 2016.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/2016-VegaDebugging-EuroVis.pdf">PDF</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img src="website/resources/images/reactive-vega-architecture.png" alt="Reactive Vega Thumbnail">
+      <div class="paper">
+        <p class="title">Reactive Vega: A Streaming Dataflow Architecture for Declarative Interactive Visualization.</p>
+        <p class="authors">Arvind Satyanarayan, Ryan Russell, <span class="jane">Jane Hoffswell</span>, Jeffrey Heer.</p>
+        <p class="venue">IEEE Trans. Visualization & Comp. Graphics (Proc. InfoVis), 2016.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/2015-ReactiveVega-InfoVis.pdf">PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="main content" id="CurriculumVitae" style="display:none">
+    <embed src="website/resources/JaneHoffswellCV-Winter2017.pdf"/>
+  </div>
+
+</div>  
+
+<div class="footer"></div>
+
+</div>
+
+</body>
+</html>

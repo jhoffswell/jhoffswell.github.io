@@ -1,0 +1,133 @@
+html, body {
+  height: 100%;
+  margin: 0
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.body {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+}
+
+.header {
+  flex: 0 1 auto;
+  background-color: #1f1b17;
+  color: white;
+  text-align: center;
+}
+
+.nav {
+  max-width: 200px;
+  flex: 0 0 20%;
+  padding: 1em;
+  border-right: 1px solid gray;
+  overflow: scroll;
+}
+
+.nav ul {
+  list-style-type: none;
+  margin: 8px 0px;
+  padding: 0px;
+}
+
+.nav li {
+  background: #1f1b17;
+  padding: 10px 6px;
+  margin: 2px 0px;
+  cursor: pointer;
+}
+
+.nav li.active {
+  background: #8b3a35;
+}
+   
+.nav ul a {
+  text-decoration: none;
+  color: white;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.main {
+  padding: 0em 1em;
+  overflow: scroll;
+}
+
+.objective {
+  font-size: 14pt;
+}
+
+.objective a {
+  text-decoration: none;
+  color: #b22727;
+}
+
+.objective a:hover { 
+  text-decoration: underline;
+}
+
+embed {
+  width: 100%;
+  padding: 2.5% 0px;
+  height: 95%;
+}
+
+.publication {
+  min-height: 60px;
+  max-width: 750px;
+  padding: 5px 0px;
+}
+
+.publication img {
+  width: 120px;
+  position: absolute;
+  margin: 5px 0px;
+}
+
+.publication p {
+  display: inline;
+}
+
+.publication .title {
+  font-variant: small-caps;
+}
+
+.publication .jane {
+  font-weight: bold;
+}
+
+.publication .venue {
+  font-style: oblique;
+}
+
+.publication .pdf {
+  text-decoration: none;
+  color: gray;
+}
+
+.publication .pdf:hover { 
+  color: #b22727;
+  text-decoration: underline;
+}
+
+.paper {
+  margin-left: 135px;
+  padding: 7px 0px;
+}
+
+.footer {
+  flex: 0 1 5%;
+  background-color: #1f1b17;
+}
