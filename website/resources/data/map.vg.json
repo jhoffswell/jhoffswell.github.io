@@ -1,0 +1,197 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "width": 900,
+  "height": 500,
+  "autosize": "none",
+
+  "encode": {
+    "update": {
+      "fill": {"value": "white"}
+    }
+  },
+
+  "signals": [
+    { "name": "translate0", "update": "width / 2" },
+    { "name": "translate1", "update": "height / 2" },
+    {
+      "name": "point",
+      "value": {},
+      "on": [
+        {"events": "symbol:mouseover", "update": "datum"},
+        {"events": "symbol:mouseout", "update": "{}"}
+      ]
+    },
+    {
+      "name": "selected",
+      "value": {},
+      "on": [{"events": "symbol:click", "update": "datum"}]
+    }
+  ],
+
+  "projections": [
+    {
+      "name": "projection",
+      "type": "mercator",
+      "scale": 300,
+      "rotate": [0, 0, 0],
+      "center": [-50, 30],
+      "translate": [
+        {"signal": "translate0"},
+        {"signal": "translate1"}
+      ]
+    }
+  ],
+
+  "data": [
+    {
+      "name": "world",
+      "url": "website/resources/data/world-110m.json",
+      "format": {
+        "type": "topojson",
+        "feature": "countries"
+      }
+    },
+    {
+      "name": "conferences",
+      "url": "website/resources/data/conferences.json",
+      "format": {"parse": {"date": "date"}},
+      "transform": [
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["longitude", "latitude"]
+        },
+        {
+          "type": "formula",
+          "as": "attendee-status",
+          "expr": "datum.presented ? (now() < datum.date ? 'Presenter (future)' : 'Presenter') : 'Attendee'"
+        }
+      ]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "reverse": true,
+      "range": {"scheme": "yelloworangered"},
+      "domain": ["Presenter (future)", "Presenter", "Attendee"]
+    }
+  ],
+
+  "legends": [
+    {
+      "fill": "color",
+      "orient": "bottom-left",
+      "title": "Conferences Attended",
+      "encode": {
+        "symbols": {
+          "update": {
+            "stroke": {"value": "#ccc"},
+            "strokeWidth": {"value": 0.2}
+          }
+        }
+      }
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "shape",
+      "from": {"data": "world"},
+      "encode": {
+        "update": {
+          "strokeWidth": {"value": 1},
+          "stroke": {"value": "#bbb"},
+          "fill": {"value": "#eee"},
+          "zindex": {"value": 0}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "symbol",
+      "from": {"data": "conferences"},
+      "encode": {
+        "enter": {
+          "size": {"value": 150},
+          "fill": {"scale": "color", "field": "attendee-status"},
+          "fillOpacity": {"value": 0.8},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 1.5},
+          "cursor": {"value": "pointer"}
+        },
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"}
+        }
+      }
+    },
+    {
+      "type": "group",
+      "interactive": false,
+      "marks": [
+        {
+          "type": "image",
+          "from": {"data": "conferences"},
+          "interactive": false,
+          "encode": {
+            "enter": {
+              "url": {"field": "image"},
+              "x": {"field": "x", "offset": 6},
+              "y": {"field": "y", "offset": 6},
+              "width": {"value": 120},
+              "height": {"value": 60},
+              "aspect": {"value": true},
+              "opacity": {"value": 0}
+            },
+            "update": {
+              "opacity": {"signal": "point === datum ? 1 : 0"}
+            }
+          }
+        },
+        {
+          "type": "rect",
+          "from": {"data": "conferences"},
+          "interactive": false,
+          "encode": {
+            "enter": {
+              "x": {"field": "x", "offset": 6},
+              "y": {"field": "y", "offset": -8},
+              "width": {"value": 120},
+              "height": {"value": 14},
+              "fill": {"value": "777"},
+              "opacity": {"value": 0},
+              "cornerRadius": {"value": 4}
+            },
+            "update": {
+              "opacity": {"signal": "point === datum ? 0.8 : 0"}
+            }
+          }
+        },
+        {
+          "type": "text",
+          "from": {"data": "conferences"},
+          "interactive": false,
+          "encode": {
+            "enter": {
+              "text": {"field": "text"},
+              "x": {"field": "x", "offset": 10},
+              "y": {"field": "y", "offset": 3},
+              "width": {"value": 120},
+              "height": {"value": 12},
+              "fill": {"value": "white"},
+              "opacity": {"value": 0}
+            },
+            "update": {
+              "opacity": {"signal": "point === datum ? 0.8 : 0"}
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

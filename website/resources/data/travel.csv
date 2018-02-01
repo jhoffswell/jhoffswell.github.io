@@ -1,0 +1,9 @@
+country,state,city,year,conference,image,latitude,longitude
+USA,Colorado,Denver,2017,CHI,,39.74,-104.992
+USA,Oregon,Portland,2017,CSCW,,45.5118,-122.676
+USA,Maryland,Baltimore,2016,VIS,,39.2906,-76.6093
+Netherlands,Groningen,Groningen,2016,EuroVis,,53.219,6.566
+USA,Illinois,Chicago,2015,VIS,,41.8843,-87.6324
+Italy,Sardinia,Cagliari,2015,EuroVis,,39.2145,9.1105
+France,Île-de-France,Paris,2014,VIS,,48.8569,2.3412
+USA,Minnesota,Minneapolis,2013,Grace Hopper,,44.979,-93.2649
