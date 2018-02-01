@@ -2,4 +2,5 @@ This repository contains the resources for my current personal website. The webs
 
 # Host at CSE
 scp index.html jhoffs@tricycle.cs.washington.edu:/cse/web/homes/jhoffs
+
 scp -r website jhoffs@tricycle.cs.washington.edu:/cse/web/homes/jhoffs

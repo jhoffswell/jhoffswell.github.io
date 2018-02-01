@@ -1,7 +1,7 @@
 var container, loader, renderType, runtime, spec, view;
 
 function init() {
-  if(location.hash == '') location.hash = '#' + 'Home'; 
+  if(location.hash == '') location.hash = '#' + 'About'; 
 
   // Create the visualization
   container = document.querySelector('#conference-map');
