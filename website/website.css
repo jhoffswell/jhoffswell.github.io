@@ -110,6 +110,11 @@ html, body {
   overflow: scroll;
 }
 
+.inline {
+  text-decoration: none;
+  color: #B27300;
+}
+
 .link:hover {
   cursor: pointer;
   /*color: #B27300;*/

@@ -1,5 +1,19 @@
 [
   {
+    "country": "Czech Republic",
+    "state": "Brno-City District",
+    "city": "Brno",
+    "year": 2018,
+    "date": "June 4, 2018",
+    "conference": "EuroVis",
+    "text": "EuroVis 2018",
+    "image": "website/resources/images/setcola-thumbnail.png",
+    "tab": "SetCoLa",
+    "presented": true,
+    "latitude": 49.2,
+    "longitude": 16.616667
+  },
+  {
     "country": "Canada",
     "state": "Québec",
     "city": "Montreal",
