@@ -26,7 +26,7 @@ function showTab() {
   
   var tabs = document.getElementsByClassName('menu');
   for(var i = 0; i < tabs.length; i++) {
-    if(tabs[i].innerText.replace(/ /g, '') == tab) {
+    if(tabs[i].textContent.replace(/ /g, '') == tab) {
       tabs[i].className = 'menu selected';
     } else {
       tabs[i].className = 'menu';
@@ -54,7 +54,7 @@ function showTab() {
 /*************************** Paper Details ****************************/
 
 var preContents = {
-  'SetCoLa': '@inproceedings{2016-setcola,\n  title = {SetCoLa: High-Level Constraints for Graph Layout},\n  author = {Jane Hoffswell AND Alan Borning AND Jeffrey Heer},\n  booktitle = {Computer Graphics Forum (Proc. EuroVis)},\n  year = {2018},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2018-SetCoLa-EuroVis.pdf},\n}',
+  'SetCoLa': '@inproceedings{2018-setcola,\n  title = {SetCoLa: High-Level Constraints for Graph Layout},\n  author = {Jane Hoffswell AND Alan Borning AND Jeffrey Heer},\n  booktitle = {Computer Graphics Forum (Proc. EuroVis)},\n  year = {2018},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2018-SetCoLa-EuroVis.pdf},\n}',
   'CodeAugmentations': '@inproceedings{2017-code-augmentations,\n  title = {Augmenting Code with In Situ Visualizations to Aid Program Understanding},\n  author = {Jane Hoffswell AND Arvind Satyanarayan AND Jeffrey Heer},\n  booktitle = {ACM Human Factors in Computing Systems (CHI)},\n  year = {2018},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2018-AugmentingCode-CHI.pdf},\n}',
   'Triggers': '@inproceedings{2017-food-triggers,\n  title = {Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals},\n  author = {Jessica Schroeder AND Jane Hoffswell AND Chia-Fang Chung AND James Fogarty AND Sean Munson AND Jasmine Zia},\n  booktitle = {ACM Computer-Supported Cooperative Work (CSCW)},\n  year = {2017},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2017-Triggers-CSCW.pdf},\n}',
   'VegaDebugging': '@article{2016-vega-debugging,\n  title = {Visual Debugging Techniques for Reactive Data Visualization},\n  author = {Jane Hoffswell AND Arvind Satyanarayan AND Jeffrey Heer},\n  journal = {Computer Graphics Forum (Proc. EuroVis)},\n  year = {2016},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2016-VegaDebugging-EuroVis.pdf},\n}',
