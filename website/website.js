@@ -34,7 +34,6 @@ function setDisplayType() {
   if(width < 1000) {
     document.body.className = 'mobile';
   } else {
-    console.log(width, document.body.className)
     document.body.className = '';
   }
 }

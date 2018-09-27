@@ -1,3 +1,9 @@
+/********* About block *********/
+
+.mobile #aboutblock img {
+  display: none;
+}
+
 /****** Publications *******/
 
 .mobile .publication {
@@ -7,7 +13,11 @@
 .mobile .publication img {
   width: 100%;
   height: 100%;
+  margin-top: 20px;
   align-self: center;
+  -webkit-box-shadow: 0px 0px 5px 3px #ddd;
+  -moz-box-shadow: 0px 0px 5px 3px #ddd;
+  box-shadow: 0px 0px 5px 3px #ddd;
 }
 
 .mobile .paper {
@@ -17,14 +27,14 @@
 }
 
 .mobile .publication p {
-  font-size: 18pt;
+  font-size: 16pt;
   display: inline;
 }
 
 .mobile .publication a {
   text-decoration: none;
   color: gray;
-  font-size: 18pt;
+  font-size: 16pt;
 }
 
 /****** Paper Details *******/
@@ -45,4 +55,9 @@
 
 .mobile .abstract a {
   font-size: 16pt;
+}
+
+.mobile .bibtex pre {
+  font-size: 14 pt;
+  margin: 0px;
 }
