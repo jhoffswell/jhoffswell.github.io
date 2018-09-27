@@ -11,9 +11,32 @@ function init() {
   spec = null;
   view = null;
 
+  window.onresize = function() { setDisplayType(); };
+
+  setDisplayType();
   load('website/resources/data/map.vg.json');
 
   showTab();
+}
+
+function getWidth() {
+  return Math.max(
+    document.body.scrollWidth,
+    document.documentElement.scrollWidth,
+    document.body.offsetWidth,
+    document.documentElement.offsetWidth,
+    document.documentElement.clientWidth
+  );
+}
+
+function setDisplayType() {
+  var width = getWidth();
+  if(width < 1000) {
+    document.body.className = 'mobile';
+  } else {
+    console.log(width, document.body.className)
+    document.body.className = '';
+  }
 }
 
 function openTab(evt, tab) {

@@ -1,0 +1,48 @@
+/****** Publications *******/
+
+.mobile .publication {
+  flex-flow: column;
+}
+
+.mobile .publication img {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+.mobile .paper {
+  align-self: center;
+  width: 100%;
+  padding: 7px 0px;
+}
+
+.mobile .publication p {
+  font-size: 18pt;
+  display: inline;
+}
+
+.mobile .publication a {
+  text-decoration: none;
+  color: gray;
+  font-size: 18pt;
+}
+
+/****** Paper Details *******/
+
+.mobile .paper-container {
+  flex-flow: column-reverse;
+}
+
+.mobile .abstract {
+  flex: 100% 0 auto;
+  max-width: 100%; 
+}
+
+.mobile .figure {
+  flex: 100% 0 auto;
+  max-width: 100%;
+}
+
+.mobile .abstract a {
+  font-size: 16pt;
+}
