@@ -31,10 +31,25 @@
       
     </div>
     <div class="column" id="menu">
-      <span class="menu selected" onclick="openTab(event, 'About')"><a href="#About">About</a> <span class="fa fa-info-circle"></span></span><br>
-      <span class="menu" onclick="openTab(event, 'CurriculumVitae')"><a href="#CurriculumVitae">Curriculum Vitae</a> <span class="fa fa-file-text"></span></span><br>
-      <span class="menu" onclick="openTab(event, 'Publications')"><a href="#Publications">Publications</a> <span class="fa fa-book"></span></span><br>
-      <span class="menu" onclick="openTab(event, 'ConferenceMap')"><a href="#ConferenceMap">Conference Map</a> <span class="fa fa-globe"></span></span>
+      <span class="menu selected" onclick="openTab(event, 'About')">
+        <a href="#About">About</a>
+        <span class="fa fa-info-circle"></span>
+      </span>
+      <br>
+      <span class="menu" onclick="openTab(event, 'CurriculumVitae')">
+        <a href="#CurriculumVitae">Curriculum Vitae</a>
+        <span class="fa fa-file-text"></span>
+      </span>
+      <br>
+      <span class="menu" onclick="openTab(event, 'Publications')">
+        <a href="#Publications">Publications</a>
+        <span class="fa fa-book"></span>
+      </span>
+      <br>
+      <span class="menu" onclick="openTab(event, 'ConferenceMap')">
+        <a href="#ConferenceMap">Conference Map</a>
+        <span class="fa fa-globe"></span>
+      </span>
     </div>
   </div>
 </div>
@@ -45,10 +60,36 @@
   <div class="main content" id="About">
     <div id="aboutblock">
       <img id="profile" src="website/resources/images/JaneHoffswell.png" alt="Jane Hoffswell Profile">
-      <p class="objective">I am a fifth year PhD student in the Paul G. Allen School of Computer Science & Engineering at the <a class="link" href="https://www.cs.washington.edu/">University of Washington</a>. I am advised by <a class="link" href="http://homes.cs.washington.edu/~jheer/">Jeffrey Heer</a> and conduct research in the <a class="link" href="http://idl.cs.washington.edu/">Interactive Data Lab</a>. I received my Bachelors in Computer Science from <a class="link" href="https://www.hmc.edu/">Harvey Mudd College</a>. My research examines the design of interactive systems to help end user programmers better understand, author, and reuse both their code and data. My work combines techniques from visualization, human-computer interaction, and program understanding. Outside of research, I love to travel and take photographs. </p>
+      <p class="objective">I am a fifth year PhD student in the Paul G. Allen School of Computer Science & Engineering at the <a class="link" href="https://www.cs.washington.edu/">University of Washington</a>. I am advised by <a class="link" href="http://homes.cs.washington.edu/~jheer/">Jeffrey Heer</a> and conduct research in the <a class="link" href="http://idl.cs.washington.edu/">Interactive Data Lab</a>. I received my Bachelors in Computer Science from <a class="link" href="https://www.hmc.edu/">Harvey Mudd College</a>. My research examines the design of interactive systems to help end user programmers better understand, author, and reuse both their code and data. My work combines techniques from visualization, human-computer interaction, and program understanding. Outside of research, I love to travel and take photographs.</p>
     </div>
 
     <h2>Recent Publications</h2>
+    <div class="publication">
+      <img class="link" src="website/resources/images/tableErrors-thumbnail.png" alt="Tables Thumbnail" onclick="openTab(event, 'Tables')" href="#Tables">
+      <div class="paper">
+        <p class="title link" onclick="openTab(event, 'Tables')" href="#Tables">Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>, Zhicheng Liu.</p>
+        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2019.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
+        <p style="color:gray"> | </p>
+        <a class="link bibtex-text" onclick="showBibTeX(event, 'Tables')">BibTeX</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img class="link" src="website/resources/images/chidc-thumbnail.png" alt="CHI DC Thumbnail" onclick="openTab(event, 'CHIDC')" href="#CHIDC">
+      <div class="paper">
+        <p class="title link" onclick="openTab(event, 'CHIDC')" href="#CHIDC">Languages & Visualizations to Enable Effective End User Programming</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>.</p>
+        <p class="venue">Extended Abstracts of the ACM Human Factors in Computing Systems (CHI EA), 2019.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/papers/2019-DoctoralConsortium-CHI.pdf">PDF</a>
+        <p style="color:gray"> | </p>
+        <a class="link bibtex-text" onclick="showBibTeX(event, 'CHIDC')">BibTeX</a>
+      </div>
+    </div>
+
     <div class="publication">
       <img class="link" src="website/resources/images/setcola-thumbnail.png" alt="SetCoLa Thumbnail" onclick="openTab(event, 'SetCoLa')" href="#SetCoLa">
       <div class="paper">
@@ -75,25 +116,38 @@
       </div>
     </div>
 
-    <div class="publication">
-      <img class="link" src="website/resources/images/vegaDebugging-thumbnail.png" alt="Visual Debugging Thumbnail" onclick="openTab(event, 'VegaDebugging')" href="#VegaDebugging">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'VegaDebugging')" href="#VegaDebugging">Visual Debugging Techniques for Reactive Data Visualization.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">Computer Graphics Forum (Proc. EuroVis), 2016.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2016-VegaDebugging-EuroVis.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'VegaDebugging')">BibTeX</a>
-      </div>
-    </div>
-
     <h3 class="link" onclick="openTab(event, 'Publications')" href="#About">And more...</h2>
   </div>
 
   <!-- *********************** Publications ************************ -->
   <div class="main content" id="Publications" style="display:none">
     <h2>Publications</h2>
+
+    <div class="publication">
+      <img class="link" src="website/resources/images/tableErrors-thumbnail.png" alt="Tables Thumbnail" onclick="openTab(event, 'Tables')" href="#Tables">
+      <div class="paper">
+        <p class="title link" onclick="openTab(event, 'Tables')" href="#Tables">Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>, Zhicheng Liu.</p>
+        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2019.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
+        <p style="color:gray"> | </p>
+        <a class="link bibtex-text" onclick="showBibTeX(event, 'Tables')">BibTeX</a>
+      </div>
+    </div>
+
+    <div class="publication">
+      <img class="link" src="website/resources/images/chidc-thumbnail.png" alt="CHI DC Thumbnail" onclick="openTab(event, 'CHIDC')" href="#CHIDC">
+      <div class="paper">
+        <p class="title link" onclick="openTab(event, 'CHIDC')" href="#CHIDC">Languages & Visualizations to Enable Effective End User Programming</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>.</p>
+        <p class="venue">Extended Abstracts of the ACM Human Factors in Computing Systems (CHI EA), 2019.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/papers/2019-DoctoralConsortium-CHI.pdf">PDF</a>
+        <p style="color:gray"> | </p>
+        <a class="link bibtex-text" onclick="showBibTeX(event, 'CHIDC')">BibTeX</a>
+      </div>
+    </div>
 
     <div class="publication">
       <img class="link" src="website/resources/images/setcola-thumbnail.png" alt="SetCoLa Thumbnail" onclick="openTab(event, 'SetCoLa')" href="#SetCoLa">
@@ -162,6 +216,77 @@
   </div>
 
   <!-- *********************** Paper Details *********************** -->
+  <div class="main content paper-details" id="Tables" style="display:none">
+    <h2>Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices</h2>
+    <h3><span class="jane">Jane Hoffswell</span>, Zhicheng Liu</h3>
+
+    <div class="paper-container">
+      <div class="abstract">
+        <h4>abstract</h4>
+        <p class="paper-abstract">PDF documents often contain rich data tables that offer opportunities for dynamic reuse in new interactive applications. We describe a pipeline for extracting, analyzing, and parsing PDF tables based on existing machine learning and rule-based techniques. Implementing and deploying this pipeline on a corpus of 447 documents with 1,171 tables results in only 11 tables that are correctly extracted and parsed. To improve the results of automatic table analysis, we first present a taxonomy of errors that arise in the analysis pipeline and discuss the implications of cascading errors on the user experience. We then contribute a system with two sets of lightweight interaction techniques (gesture and toolbar), for viewing and repairing extraction errors in PDF tables on mobile devices. In an evaluation with 17 users involving both a phone and a tablet, participants effectively repaired common errors in 10 tables, with an average time of about 2 minutes per table.</p>
+        <br>
+        <h4>materials</h4>
+        <a class="link" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
+        <p style="color:#B27300; display:inline-block;"> | </p>
+        <a class="link bibtex-text" onclick="showBibTeX(event, 'Tables')">BibTeX</a>
+      </div>
+
+      <div class="figure">
+        <img src="website/resources/images/tableErrors-figure.png">
+        <p>(a) PDF documents often contain rich data tables such as the one shown here. (b) However, techniques for extracting the data from static PDF tables can be error prone (errors are shown in red). In this example, the header has been split into two rows and a whitespace cell is missing in what is now the first row; in the body of the table, several of the data rows have been merged together (e.g., "Squirrel" and "Deer"). </p>
+      </div>
+    </div>
+
+    <h4>citation</h4>
+    <div class="publication">
+      <img src="website/resources/images/tableErrors-thumbnail.png" alt="Tables Thumbnail">
+      <div class="paper">
+        <p class="title">Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>, Zhicheng Liu.</p>
+        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2019.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main content paper-details" id="CHIDC" style="display:none">
+    <h2>Languages & Visualizations to Enable Effective End User Programming</h2>
+    <h3><span class="jane">Jane Hoffswell</span></h3>
+
+    <div class="paper-container">
+      <div class="abstract">
+        <h4>abstract</h4>
+        <p class="paper-abstract">Programming requires expertise to employ effectively. My research aims to help end user programmers more effectively author, understand, and reuse code and data through the design of new languages and program visualization tools. New programming languages can raise the level of abstraction to focus on relevant domain-specific details. Improved tools can better align with and enrich end user programmers' mental models. Visualizing program state and behavior promotes program understanding, and can proactively surface surprising or incorrect results. My future work proposes to explore new visualization techniques and languages to facilitate understanding constraint programming systems.</p>
+        <br>
+        <h4>thesis statement</h4>
+        <p>The design of new languages and program visualization tools that raise the level of abstraction from low-level system details to domain-specific concepts and operations can help end user programmers better <span style="font-style:italic;">author</span>, <span style="font-style:italic;">understand</span>, and <span style="font-style:italic;">reuse</span> code and data.</p>
+        <br>
+        <h4>materials</h4>
+        <a class="link" href="">PDF</a>
+        <p style="color:#B27300; display:inline-block;"> | </p>
+        <a class="link bibtex-text" onclick="showBibTeX(event, 'CHIDC')">BibTeX</a>
+      </div>
+
+      <div class="figure">
+        <img src="website/resources/images/chidc-figure.png">
+        <p>A code snippet with in situ visualizations of program variables in Vega: a declarative visualization grammar. Histograms show the distribution of values for array variables, with the count and range shown on hover. The symbol variable is an array of five unique strings representing different companies (<span style="font-family:monospace;">AAPL</span>, <span style="font-family:monospace;">AMZN</span>, <span style="font-family:monospace;">IBM</span>, <span style="font-family:monospace;">GOOG</span>, and <span style="font-family:monospace;">MSFT</span>), one of which occurs less frequently in the dataset than the others (<span style="font-family:monospace;">GOOG</span>). The <span style="font-family:monospace;">indexed_price</span> variable is an array of numbers corresponding to the stock price. Whereas the symbol and indexed_price variables are both arrays of a simple type, the <span style="font-family:monospace;">index_term</span> variable is an array of objects; the histogram is colored orange to differentiate it from the others and shows only the value distribution for the <span style="font-family:monospace;">index_term.price</span> property.</p>
+      </div>
+    </div>
+
+    <h4>citation</h4>
+    <div class="publication">
+      <img src="website/resources/images/chidc-thumbnail.png" alt="CHI DC Thumbnail">
+      <div class="paper">
+        <p class="title">Languages & Visualizations to Enable Effective End User Programming.</p>
+        <p class="authors"><span class="jane">Jane Hoffswell</span>.</p>
+        <p class="venue">Extended Abstract of the ACM Human Factors in Computing Systems (CHI EA), 2019.</p>
+        <p style="color:gray"> | </p>
+        <a class="pdf" href="website/resources/papers/2018-DoctoralConsortium-CHI.pdf">PDF</a>
+      </div>
+    </div>
+  </div>
+
   <div class="main content paper-details" id="SetCoLa" style="display:none">
     <h2>SetCoLa: High-Level Constraints for Graph Layout</h2>
     <h3><span class="jane">Jane Hoffswell</span>, Alan Borning, Jeffrey Heer</h3>

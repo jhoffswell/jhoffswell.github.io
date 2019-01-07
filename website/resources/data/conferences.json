@@ -1,5 +1,19 @@
 [
   {
+    "country": "United Kingdom",
+    "state": "Scotland",
+    "city": "Glasgow",
+    "year": 2019,
+    "date": "May 4, 2019",
+    "conference": "CHI",
+    "text": "CHI 2019",
+    "image": "website/resources/images/chi-thumbnail.png",
+    "tab": "",
+    "presented": true,
+    "latitude": 55.858,
+    "longitude": -4.259
+  },
+  {
     "country": "Czech Republic",
     "state": "Brno-City District",
     "city": "Brno",
