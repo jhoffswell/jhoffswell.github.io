@@ -25,6 +25,11 @@
       "name": "selected",
       "value": {},
       "on": [{"events": "symbol:click", "update": "datum"}]
+    },
+    {
+      "name": "showTravel",
+      "value": false,
+      "on": [{"events": "dblclick", "update": "!showTravel"}]
     }
   ],
 
@@ -43,13 +48,51 @@
   ],
 
   "data": [
+    {"name": "stateID", "url": "website/resources/data/stateID.json"},
+    {"name": "countryID", "url": "website/resources/data/countryID.json"},
+    {
+      "name": "travel",
+      "url": "website/resources/data/travel.json",
+      "transform": [
+        {
+          "type": "lookup", 
+          "key": "state", 
+          "from": "stateID", "fields": ["state"],
+          "values": ["id"], "as": ["stateID"]
+        },
+        {
+          "type": "lookup", 
+          "key": "name", 
+          "from": "countryID", "fields": ["country"],
+          "values": ["id"], "as": ["countryID"]
+        }
+      ]
+    },
+    {
+      "name": "states",
+      "url": "website/resources/data/us-10m.json",
+      "format": {"type": "topojson", "feature": "states"},
+      "transform": [
+        {
+          "type": "lookup", 
+          "fields": ["id"],
+          "from": "travel", "key": "stateID", 
+          "values": ["year"]
+        }
+      ]
+    },
     {
       "name": "world",
       "url": "website/resources/data/world-110m.json",
-      "format": {
-        "type": "topojson",
-        "feature": "countries"
-      }
+      "format": {"type": "topojson", "feature": "countries"},
+      "transform": [
+        {
+          "type": "lookup", 
+          "fields": ["id"],
+          "from": "travel", "key": "countryID",
+          "values": ["year"]
+        }
+      ]
     },
     {
       "name": "conferences",
@@ -67,6 +110,14 @@
           "expr": "datum.presented ? (now() < datum.date ? 'Presenter (future)' : 'Presenter') : 'Attendee'"
         }
       ]
+    },
+    {
+      "name": "text",
+      "values": [
+        {"text": "World Map of Conference Travel", "weight": "bold", "y": 30, "size": 20},
+        {"text": "Hover over a conference to view the name and year. Click on", "y": 45},
+        {"text": "an image to view the corresponding publication information.", "y": 60}
+      ]
     }
   ],
 
@@ -77,14 +128,35 @@
       "reverse": true,
       "range": {"scheme": "yelloworangered"},
       "domain": ["Presenter (future)", "Presenter", "Attendee"]
+    },
+    {
+      "name": "shape",
+      "type": "ordinal",
+      "range": ["circle", "triangle-up", "diamond", "cross"],
+      "domain": ["CHI", "VIS", "EuroVis", "Other"]
     }
   ],
 
   "legends": [
     {
+      "type": "symbol",
+      "shape": "shape",
+      "orient": "bottom-left",
+      "title": "Conferences",
+      "encode": {
+        "symbols": {
+          "update": {
+            "fill": {"value": "#feb351"},
+            "stroke": {"value": "#ccc"},
+            "strokeWidth": {"value": 0.2}
+          }
+        }
+      }
+    },
+    {
       "fill": "color",
       "orient": "bottom-left",
-      "title": "Conferences Attended",
+      "title": "Attendance Status",
       "encode": {
         "symbols": {
           "update": {
@@ -104,7 +176,34 @@
         "update": {
           "strokeWidth": {"value": 1},
           "stroke": {"value": "#bbb"},
-          "fill": {"value": "#eee"},
+          "fill": [
+            {
+              "test": "datum.year > 0 && showTravel",
+              "value": "#aaa"
+            },
+            {"value": "#eee"}
+          ],
+          "zindex": {"value": 0}
+        }
+      },
+      "transform": [
+        { "type": "geoshape", "projection": "projection" }
+      ]
+    },
+    {
+      "type": "shape",
+      "from": {"data": "states"},
+      "encode": {
+        "update": {
+          "strokeWidth": {"value": 1},
+          "stroke": {"value": "#bbb"},
+          "fill": [
+            {
+              "test": "datum.year > 0 && showTravel",
+              "value": "#aaa"
+            },
+            {"value": "#eee"}
+          ],
           "zindex": {"value": 0}
         }
       },
@@ -117,6 +216,12 @@
       "from": {"data": "conferences"},
       "encode": {
         "enter": {
+          "shape": [
+            {"test": "datum.conference == 'CHI'", "value": "circle"},
+            {"test": "datum.conference == 'VIS'", "value": "triangle-up"},
+            {"test": "datum.conference == 'EuroVis'", "value": "diamond"},
+            {"value": "cross"}
+          ],
           "size": {"value": 150},
           "fill": {"scale": "color", "field": "attendee-status"},
           "fillOpacity": {"value": 0.8},
@@ -188,6 +293,25 @@
             },
             "update": {
               "opacity": {"signal": "point === datum ? 0.8 : 0"}
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "interactive": false,
+      "marks": [
+        {
+          "from": {"data": "text"},
+          "type": "text",
+          "encode": {
+            "enter": {
+              "text": {"field": "text"},
+              "fontWeight": {"field": "weight"},
+              "fontSize": {"field": "size"},
+              "x": {"value": 10},
+              "y": {"field": "y"}
             }
           }
         }

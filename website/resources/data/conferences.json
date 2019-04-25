@@ -8,10 +8,24 @@
     "conference": "CHI",
     "text": "CHI 2019",
     "image": "website/resources/images/chi-thumbnail.png",
-    "tab": "",
+    "tab": "Tables",
     "presented": true,
     "latitude": 55.858,
     "longitude": -4.259
+  },
+  {
+    "country": "USA",
+    "state": "Washington",
+    "city": "Seattle",
+    "year": 2019,
+    "date": "March 22, 2019",
+    "conference": "Hopper x1 Seattle",
+    "text": "Hopperx1 2019",
+    "image": "",
+    "tab": "",
+    "presented": false,
+    "latitude": 47.609722,
+    "longitude": -122.333056
   },
   {
     "country": "Czech Republic",
@@ -118,6 +132,7 @@
     "conference": "EuroVis",
     "text": "EuroVis 2015",
     "image": "website/resources/images/eurorv3-thumbnail.png",
+    "tab": "EuroRV3",
     "presented": true,
     "latitude": 39.2145,
     "longitude": 9.1105
