@@ -1,24 +1,25 @@
-var container, loader, renderType, runtime, spec, view;
-
 function init() {
-  if(location.hash == '') location.hash = '#' + 'About'; 
+  if(location.hash == "") location.hash = "#" + "About"; 
 
-  // Create the visualization
-  container = document.querySelector('#conference-map');
-  loader = vega.loader();
-  renderType = 'svg';
-  runtime = null;
-  spec = null;
-  view = null;
-
+  // Set the size of the page
+  document.documentElement.scrollTop = document.body.scrollTop = 0;
   window.onresize = function() { setDisplayType(); };
-
   setDisplayType();
-  load('website/resources/data/map.vg.json');
 
+  // Initialize the page elements
+  initAbout();
+  initPublications();
+  initDetails();
+
+  // Create the map visualization
+  initConferenceMap();
+  loadMap("website/resources/data/map.vg.json");
+
+  // Show the page content
   showTab();
 }
 
+// Get the width of the page
 function getWidth() {
   return Math.max(
     document.body.scrollWidth,
@@ -29,121 +30,71 @@ function getWidth() {
   );
 }
 
+// Set the display type for the page
 function setDisplayType() {
-  var width = getWidth();
-  if(width < 1000) {
-    document.body.className = 'mobile';
-  } else {
-    document.body.className = '';
-  }
+  document.body.className = getWidth() < 1000 ? "mobile" : "";
 }
 
+// Open a particular tab
 function openTab(evt, tab) {
-  location.hash = '#' + tab;
+  location.hash = "#" + tab;
   showTab();
 }
 
 function showTab() {
-  var tab = location.hash.replace('#', '');
+  var tab = location.hash.replace("#", "");
   
-  var tabs = document.getElementsByClassName('menu');
+  document.documentElement.scrollTop = document.body.scrollTop = 0;
+  hideElementsByClassName("main");
+  updateMenuStatus(tab);
+  
+  switch(tab) {
+    case "About":
+      showAbout();
+      break;
+    case "CurriculumVitae":
+      showCurriculumVitae();
+      break;
+    case "Publications":
+      showPublications();
+      break;
+    case "ConferenceMap":
+      showConferenceMap();
+      break;
+    default:
+      var info = publications[tab];
+      if(!info) location.hash = "#About";
+      if(info) showDetails(tab);
+  }
+}
+
+// Update the display status of the menu items
+function updateMenuStatus(tab) {
+  var tabs = document.getElementsByClassName("menuitem");
   for(var i = 0; i < tabs.length; i++) {
-    if(tabs[i].textContent.replace(/ /g, '') == tab) {
-      tabs[i].className = 'menu selected';
-    } else {
-      tabs[i].className = 'menu';
-    }
+    var content = tabs[i].textContent.replace(/\W/g, "");
+    tabs[i].className = "menuitem";
+    if(content == tab) tabs[i].className += " selected";
   }
+}
 
-  var content = document.getElementsByClassName('main');
+function showElementsByClassName(classname) {
+  var content = document.getElementsByClassName(classname);
   for(var i = 0; i < content.length; i++) {
-     content[i].style.display = 'none';
-  }
-  document.getElementById(tab).style.display = 'block';
-
-  if(tab==='ConferenceMap' && spec) {
-    // Update the width and height
-    var width = document.getElementById('ConferenceMap').clientWidth;
-    var height = document.getElementById('ConferenceMap').clientHeight;
-
-    spec.width = width;
-    spec.height = height;
-
-    visualize(spec);
+    content[i].style.display = "block";
   }
 }
 
-/*************************** Paper Details ****************************/
-
-var preContents = {
-  'Tables': '@inproceedings{2019-table-errors,\n  title = {Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices},\n  author = {Jane Hoffswell AND Zhicheng Liu},\n  booktitle = {ACM Human Factors in Computing Systems (CHI)},\n  year = {2019},\n  url={https://homes.cs.washington.edu/~jhoffs/papers/2019-InteractiveTableRepair-CHI.pdf},\n}',
-  'CHIDC': '@inproceedings{2019-chidc,\n  title = {Languages & Visualizations to Enable Effective End User Programming},\n  author = {Jane Hoffswell},\n  booktitle = {CHI Conference on Human Factors in Computing Systems Extended Abstracts (CHI\'19 Extended Abstracts)},\n  year = {2019},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2019-DoctoralConsortium-CHI.pdf},\n}',
-  'SetCoLa': '@inproceedings{2018-setcola,\n  title = {SetCoLa: High-Level Constraints for Graph Layout},\n  author = {Jane Hoffswell AND Alan Borning AND Jeffrey Heer},\n  booktitle = {Computer Graphics Forum (Proc. EuroVis)},\n  year = {2018},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2018-SetCoLa-EuroVis.pdf},\n}',
-  'CodeAugmentations': '@inproceedings{2018-code-augmentations,\n  title = {Augmenting Code with In Situ Visualizations to Aid Program Understanding},\n  author = {Jane Hoffswell AND Arvind Satyanarayan AND Jeffrey Heer},\n  booktitle = {ACM Human Factors in Computing Systems (CHI)},\n  year = {2018},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2018-AugmentingCode-CHI.pdf},\n}',
-  'Triggers': '@inproceedings{2017-food-triggers,\n  title = {Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals},\n  author = {Jessica Schroeder AND Jane Hoffswell AND Chia-Fang Chung AND James Fogarty AND Sean Munson AND Jasmine Zia},\n  booktitle = {ACM Computer-Supported Cooperative Work (CSCW)},\n  year = {2017},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2017-Triggers-CSCW.pdf},\n}',
-  'VegaDebugging': '@article{2016-vega-debugging,\n  title = {Visual Debugging Techniques for Reactive Data Visualization},\n  author = {Jane Hoffswell AND Arvind Satyanarayan AND Jeffrey Heer},\n  journal = {Computer Graphics Forum (Proc. EuroVis)},\n  year = {2016},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2016-VegaDebugging-EuroVis.pdf},\n}',
-  'ReactiveVega': '@article{2016-reactive-vega-architecture,\n  title = {Reactive Vega: A Streaming Dataflow Architecture for Declarative Interactive Visualization},\n  author = {Arvind Satyanarayan AND Ryan Russell AND Jane Hoffswell AND Jeffrey Heer},\n  journal = {IEEE Trans. Visualization \& Comp. Graphics (Proc. InfoVis)},\n  year = {2016},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2015-ReactiveVega-InfoVis.pdf},\n}',
-  'EuroRV3': '@inproceedings{2015-data-flow,\n  title = {Debugging Vega through Inspection of the Data Flow Graph},\n  author = {Jane Hoffswell AND Arvind Satyanarayan AND Jeffrey Heer},\n  booktitle = {EuroVis Workshop on Reproducibility, Verification, and Validation in Visualization (EuroRV3)},\n  year = {2015},\n  url = {https://homes.cs.washington.edu/~jhoffs/papers/2015-DataFlow-EuroRV3.pdf},\n}'
-}
-
-function showBibTeX(evt, type) {
-  var loc = location.hash;
-  if(evt.srcElement.className.indexOf('selected') !== -1) {
-    evt.srcElement.className = evt.srcElement.className.replace(' selected', '');
-    var element = document.getElementById('BibTeX-' + type + '-' + loc);
-    evt.srcElement.parentNode.removeChild(element);
-  } else {
-    evt.srcElement.className += ' selected';
-    var parent = evt.srcElement.parentNode;
-    var div = document.createElement('div');
-    parent.append(div);
-    div.className = 'bibtex';
-    div.id = 'BibTeX-' + type + '-' + loc;
-    var pre = document.createElement('pre');
-    div.append(pre);
-    pre.innerHTML = preContents[type];
+function hideElementsByClassName(classname) {
+  var content = document.getElementsByClassName(classname);
+  for(var i = 0; i < content.length; i++) {
+    content[i].style.display = "none";
   }
 }
 
-/******************** Conference Map Visualization ********************/
-
-function load(url) {
-  if (!url) {
-    if (view) view.finalize(), container.innerHTML = '';
-    return;
-  }
-
-  // load vega spec, then visualize it
-  loader.load(url)
-    .then(function(data) {
-      spec = JSON.parse(data);
-
-      // Update the width and height
-      var width = document.getElementById('ConferenceMap').clientWidth;
-      var height = document.getElementById('ConferenceMap').clientHeight;
-
-      spec.width = width;
-      spec.height = height;
-
-      visualize(spec);
-    })
-    .catch(function(err) {
-      console.error(err, err.stack);
-    });
-};
-
-function visualize(spec) {
-  if (view) view.finalize(); // finalize existing view
-  view = new vega.View(runtime = vega.parse(spec));
-  view.logLevel(vega.Warn)
-    .renderer(renderType)
-    .initialize('#conference-map')
-    .hover()
-    .run();
-
-  view.addSignalListener('selected', function(name, data) {
-    if(data.tab) {
-      openTab(null, data.tab);
-    }
-  })
-};
+function createElement(type, options, content) {
+  var element = document.createElement(type);
+  if(content) element.innerHTML = content;
+  Object.keys((options || {})).forEach(o => element.setAttribute(o, options[o]));
+  return element;
+}

@@ -6,6 +6,12 @@
   <link rel="stylesheet" type="text/css" href="website/website.css"/>
   <link rel="stylesheet" type="text/css" href="website/website-mobile.css"/>
   <link rel="stylesheet" href="website/resources/font-awesome-4.7.0/css/font-awesome.min.css">
+  <script src="website/content.js" charset="utf-8"></script>
+  <script src="website/about.js" charset="utf-8"></script>
+  <script src="website/curriculumvitae.js" charset="utf-8"></script>
+  <script src="website/publications.js" charset="utf-8"></script>
+  <script src="website/conferencemap.js" charset="utf-8"></script>
+  <script src="website/details.js" charset="utf-8"></script>
   <script src="website/website.js" charset="utf-8"></script>
   <script src="https://vega.github.io/vega/vega.min.js"></script>
 </head>
@@ -15,12 +21,10 @@
 
 <div class="header">
   <img src="website/resources/images/daisies.jpg" class="header-background" alt="Header image: daisies">
-  <div class="title">
+  <div class="background">
     <div class="column">
       <h1>Jane Hoffswell</h1>
-      <p>
-        Paul G. Allen&nbsp; School&nbsp;of&nbsp; Computer&nbsp; Science&nbsp; &&nbsp; Engineering
-      </p>
+      <p>Paul G. Allen School of Computer Science&nbsp; &&nbsp; Engineering</p>
       <p> 
         University of Washington
         <span class="separator">|</span> 
@@ -28,25 +32,24 @@
         <span class="separator">|</span> 
         jhoffs<span class="fa fa-at" alt="at"></span>uw.edu
       </p>
-      
     </div>
     <div class="column" id="menu">
-      <span class="menu selected" onclick="openTab(event, 'About')">
+      <span class="menuitem selected" onclick="openTab(event, 'About')">
         <a href="#About">About</a>
         <span class="fa fa-info-circle"></span>
       </span>
       <br>
-      <span class="menu" onclick="openTab(event, 'CurriculumVitae')">
+      <span class="menuitem" onclick="openTab(event, 'CurriculumVitae')">
         <a href="#CurriculumVitae">Curriculum Vitae</a>
         <span class="fa fa-file-text"></span>
       </span>
       <br>
-      <span class="menu" onclick="openTab(event, 'Publications')">
+      <span class="menuitem" onclick="openTab(event, 'Publications')">
         <a href="#Publications">Publications</a>
         <span class="fa fa-book"></span>
       </span>
       <br>
-      <span class="menu" onclick="openTab(event, 'ConferenceMap')">
+      <span class="menuitem" onclick="openTab(event, 'ConferenceMap')">
         <a href="#ConferenceMap">Conference Map</a>
         <span class="fa fa-globe"></span>
       </span>
@@ -58,461 +61,52 @@
 
   <!-- *************************** About *************************** -->
   <div class="main content" id="About">
-    <div id="aboutblock">
-      <img id="profile" src="website/resources/images/JaneHoffswell.png" alt="Jane Hoffswell Profile">
-      <p class="objective">I am a fifth year PhD candidate in the Paul G. Allen School of Computer Science & Engineering at the <a class="link" href="https://www.cs.washington.edu/">University of Washington</a>. I am advised by Professor <a class="link" href="http://homes.cs.washington.edu/~jheer/">Jeffrey Heer</a> as part of the <a class="link" href="http://idl.cs.washington.edu/">Interactive Data Lab</a>. I received my Bachelors in Computer Science from <a class="link" href="https://www.hmc.edu/">Harvey Mudd College</a> and my Masters from the <a class="link" href="https://www.cs.washington.edu/">University of Washington</a>.
-      My research examines the design of interactive systems to help end user programmers better author, understand, and reuse both code and data.
-      <br><br>
-      New declarative programming languages [<a class="link" href="#ReactiveVega">VIS 2016</a>, <a class="link" href="#SetCoLa">EuroVis 2018</a>] can raise the level of abstraction to focus on relevant domain-specific details. Visualizing program state and behavior promotes program understanding [<a class="link" href="#VegaDebugging">EuroVis 2016</a>], and can proactively surface surprising or incorrect results [<a class="link" href="#CodeAugmentations">CHI 2018</a>]. My work combines techniques from visualization, human-computer interaction, and programming languages. Outside of research, I love to travel and take photographs.</p>
+    <div class="margin"></div>
+    <div class="center">
+      <div id="aboutblock">
+        <div id="profileblock">
+          <img id="profile" src="website/resources/images/JaneHoffswell.png" alt="Jane Hoffswell profile image">
+          <span class="fa fa-linkedin"></span><a href="https://www.linkedin.com/in/jane-hoffswell-18b876142/">LinkedIn</a>
+          <span class="fa fa-github"></span><a href="https://github.com/jhoffswell">GitHub</a>
+        </div>
+        <p id="objective">
+          Hello! I am a sixth year PhD candidate in the Paul G. Allen School of Computer Science & Engineering at the <a class="link" href="https://www.cs.washington.edu/">University of Washington</a>. I am advised by Professor <a class="link" href="http://homes.cs.washington.edu/~jheer/">Jeffrey Heer</a> as part of the <a class="link" href="http://idl.cs.washington.edu/">Interactive Data Lab</a>.
+          <br><br>
+          My research examines the design of interactive systems to help end user programmers better author, understand, and reuse both code and data. New declarative programming languages [<a class="link" href="#ReactiveVega">VIS 2015</a>, <a class="link" href="#SetCoLa">EuroVis 2018</a>] can raise the level of abstraction to focus on relevant domain-specific details. Visualizing program state and behavior promotes program understanding [<a class="link" href="#VegaDebugging">EuroVis 2016</a>] and can proactively surface surprising or incorrect results [<a class="link" href="#CodeAugmentations">CHI 2018</a>]. My work combines techniques from visualization, human-computer interaction, and programming languages.
+        </p>
+      </div>
+      <p id="background">
+        In 2014, I received my Bachelors in Computer Science from <a class="link" href="https://www.hmc.edu/">Harvey Mudd College</a>. I then received my Masters from the <a class="link" href="https://www.cs.washington.edu/">University of Washington</a> in 2016. As a graduate student, I interned with <a class="link" href="https://research.adobe.com/">Adobe Research</a>. Outside of research, I love to travel and take photographs.
+      </p>
+
+      <h2>Recent Publications</h2>
+      <div id="publicationblock"></div>
     </div>
-
-    <h2>Recent Publications</h2>
-    <div class="publication">
-      <img class="link" src="website/resources/images/tableErrors-thumbnail.png" alt="Tables Thumbnail" onclick="openTab(event, 'Tables')" href="#Tables">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'Tables')" href="#Tables">Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Zhicheng Liu.</p>
-        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2019.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'Tables')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/setcola-thumbnail.png" alt="SetCoLa Thumbnail" onclick="openTab(event, 'SetCoLa')" href="#SetCoLa">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'SetCoLa')" href="#SetCoLa">SetCoLa: High-Level Constraints for Graph Layout.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Alan Borning, Jeffrey Heer.</p>
-        <p class="venue">Computer Graphics Forum (Proc. EuroVis), 2018.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-SetCoLa-EuroVis.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'SetCoLa')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/augmentations-thumbnail.png" alt="Augmenting Code Thumbnail" onclick="openTab(event, 'CodeAugmentations')" href="#CodeAugmentations">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'CodeAugmentations')" href="#CodeAugmentations">Augmenting Code with In Situ Visualizations to Aid Program Understanding.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2018.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-AugmentingCode-CHI.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'CodeAugmentations')">BibTeX</a>
-      </div>
-    </div>
-
-    <h3 class="link" onclick="openTab(event, 'Publications')" href="#About">And more...</h2>
-  </div>
-
-  <!-- *********************** Publications ************************ -->
-  <div class="main content" id="Publications" style="display:none">
-    <h2>Publications</h2>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/tableErrors-thumbnail.png" alt="Tables Thumbnail" onclick="openTab(event, 'Tables')" href="#Tables">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'Tables')" href="#Tables">Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Zhicheng Liu.</p>
-        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2019.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'Tables')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/setcola-thumbnail.png" alt="SetCoLa Thumbnail" onclick="openTab(event, 'SetCoLa')" href="#SetCoLa">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'SetCoLa')" href="#SetCoLa">SetCoLa: High-Level Constraints for Graph Layout.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Alan Borning, Jeffrey Heer.</p>
-        <p class="venue">Computer Graphics Forum (Proc. EuroVis), 2018.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-SetCoLa-EuroVis.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'SetCoLa')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/augmentations-thumbnail.png" alt="Augmenting Code Thumbnail" onclick="openTab(event, 'CodeAugmentations')" href="#CodeAugmentations">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'CodeAugmentations')" href="#CodeAugmentations">Augmenting Code with In Situ Visualizations to Aid Program Understanding.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2018.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-AugmentingCode-CHI.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'CodeAugmentations')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/triggers-thumbnail.png" alt="Individual Triggers Thumbnail" onclick="openTab(event, 'Triggers')" href="#Triggers">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'Triggers')" href="#Triggers">Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals.</p>
-        <p class="authors">Jessica Schroeder, <span class="jane">Jane Hoffswell</span>, Chia-Fang Chung, James Fogarty, Sean Munson, Jasmine Zia.</p>
-        <p class="venue">ACM Computer-Supported Cooperative Work (CSCW), 2017.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2017-Triggers-CSCW.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'Triggers')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/vegaDebugging-thumbnail.png" alt="Visual Debugging Thumbnail" onclick="openTab(event, 'VegaDebugging')" href="#VegaDebugging">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'VegaDebugging')" href="#VegaDebugging">Visual Debugging Techniques for Reactive Data Visualization.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">Computer Graphics Forum (Proc. EuroVis), 2016.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2016-VegaDebugging-EuroVis.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'VegaDebugging')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/reactive-vega-architecture.png" alt="Reactive Vega Thumbnail" onclick="openTab(event, 'ReactiveVega')" href="#ReactiveVega">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'ReactiveVega')" href="#ReactiveVega">Reactive Vega: A Streaming Dataflow Architecture for Declarative Interactive Visualization.</p>
-        <p class="authors">Arvind Satyanarayan, Ryan Russell, <span class="jane">Jane Hoffswell</span>, Jeffrey Heer.</p>
-        <p class="venue">IEEE Trans. Visualization & Comp. Graphics (Proc. InfoVis), 2016.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2015-ReactiveVega-InfoVis.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'ReactiveVega')">BibTeX</a>
-      </div>
-    </div>
-
-    <h3>Workshops</h3>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/chidc-thumbnail.png" alt="CHI DC Thumbnail" onclick="openTab(event, 'CHIDC')" href="#CHIDC">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'CHIDC')" href="#CHIDC">Languages & Visualizations to Enable Effective End User Programming</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>.</p>
-        <p class="venue">Extended Abstracts of the ACM Human Factors in Computing Systems (CHI EA), 2019.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2019-DoctoralConsortium-CHI.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'CHIDC')">BibTeX</a>
-      </div>
-    </div>
-
-    <div class="publication">
-      <img class="link" src="website/resources/images/eurorv3-thumbnail.png" alt="EuroRV3 Thumbnail" onclick="openTab(event, 'EuroRV3')" href="#EuroRV3">
-      <div class="paper">
-        <p class="title link" onclick="openTab(event, 'EuroRV3')" href="#EuroRV3">Debugging Vega through Inspection of the Data Flow Graph</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer</p>
-        <p class="venue">EuroVis Workshop on Reproducibility, Verification, and Validation in Visualization (EuroRV3), 2015.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2015-DataFlow-EuroRV3.pdf">PDF</a>
-        <p style="color:gray"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'EuroRV3')">BibTeX</a>
-      </div>
-    </div>
-
-  </div>
-
-  <!-- *********************** Paper Details *********************** -->
-  <div class="main content paper-details" id="Tables" style="display:none">
-    <h2>Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices</h2>
-    <h3><span class="jane">Jane Hoffswell</span>, Zhicheng Liu</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">PDF documents often contain rich data tables that offer opportunities for dynamic reuse in new interactive applications. We describe a pipeline for extracting, analyzing, and parsing PDF tables based on existing machine learning and rule-based techniques. Implementing and deploying this pipeline on a corpus of 447 documents with 1,171 tables results in only 11 tables that are correctly extracted and parsed. To improve the results of automatic table analysis, we first present a taxonomy of errors that arise in the analysis pipeline and discuss the implications of cascading errors on the user experience. We then contribute a system with two sets of lightweight interaction techniques (gesture and toolbar), for viewing and repairing extraction errors in PDF tables on mobile devices. In an evaluation with 17 users involving both a phone and a tablet, participants effectively repaired common errors in 10 tables, with an average time of about 2 minutes per table.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'Tables')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/tableErrors-figure.png">
-        <p>(a) PDF documents often contain rich data tables such as the one shown here. (b) However, techniques for extracting the data from static PDF tables can be error prone (errors are shown in red). In this example, the header has been split into two rows and a whitespace cell is missing in what is now the first row; in the body of the table, several of the data rows have been merged together (e.g., "Squirrel" and "Deer"). </p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img src="website/resources/images/tableErrors-thumbnail.png" alt="Tables Thumbnail">
-      <div class="paper">
-        <p class="title">Interactive Repair of Tables Extracted from PDF Documents on Mobile Devices.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Zhicheng Liu.</p>
-        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2019.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2019-InteractiveTableRepair-CHI.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="CHIDC" style="display:none">
-    <h2>Languages & Visualizations to Enable Effective End User Programming</h2>
-    <h3><span class="jane">Jane Hoffswell</span></h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">Programming requires expertise to employ effectively. My research aims to help end user programmers more effectively author, understand, and reuse code and data through the design of new languages and program visualization tools. New programming languages can raise the level of abstraction to focus on relevant domain-specific details. Improved tools can better align with and enrich end user programmers' mental models. Visualizing program state and behavior promotes program understanding, and can proactively surface surprising or incorrect results. My future work proposes to explore new visualization techniques and languages to facilitate understanding constraint programming systems.</p>
-        <br>
-        <h4>thesis statement</h4>
-        <p>The design of new languages and program visualization tools that raise the level of abstraction from low-level system details to domain-specific concepts and operations can help end user programmers better <span style="font-style:italic;">author</span>, <span style="font-style:italic;">understand</span>, and <span style="font-style:italic;">reuse</span> code and data.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'CHIDC')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/chidc-figure.png">
-        <p>A code snippet with in situ visualizations of program variables in Vega: a declarative visualization grammar. Histograms show the distribution of values for array variables, with the count and range shown on hover. The symbol variable is an array of five unique strings representing different companies (<span style="font-family:monospace;">AAPL</span>, <span style="font-family:monospace;">AMZN</span>, <span style="font-family:monospace;">IBM</span>, <span style="font-family:monospace;">GOOG</span>, and <span style="font-family:monospace;">MSFT</span>), one of which occurs less frequently in the dataset than the others (<span style="font-family:monospace;">GOOG</span>). The <span style="font-family:monospace;">indexed_price</span> variable is an array of numbers corresponding to the stock price. Whereas the symbol and indexed_price variables are both arrays of a simple type, the <span style="font-family:monospace;">index_term</span> variable is an array of objects; the histogram is colored orange to differentiate it from the others and shows only the value distribution for the <span style="font-family:monospace;">index_term.price</span> property.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img src="website/resources/images/chidc-thumbnail.png" alt="CHI DC Thumbnail">
-      <div class="paper">
-        <p class="title">Languages & Visualizations to Enable Effective End User Programming.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>.</p>
-        <p class="venue">Extended Abstract of the ACM Human Factors in Computing Systems (CHI EA), 2019.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-DoctoralConsortium-CHI.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="SetCoLa" style="display:none">
-    <h2>SetCoLa: High-Level Constraints for Graph Layout</h2>
-    <h3><span class="jane">Jane Hoffswell</span>, Alan Borning, Jeffrey Heer</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">Constraints enable flexible graph layout by combining the ease of automatic layout with customizations for a particular domain. However, constraint-based layout often requires many individual constraints defined over specific nodes and node pairs. In addition to the effort of writing and maintaining a large number of similar constraints, such constraints are specific to the particular graph and thus cannot generalize to other graphs in the same domain. To facilitate the specification of customized and generalizable constraint layouts, we contribute SetCoLa: a domain-specific language for specifying high-level constraints relative to properties of the backing data. Users identify node sets based on data or graph properties and apply high-level constraints within each set. Applying constraints to node sets rather than individual nodes reduces specification effort and facilitates reapplication of customized layouts across distinct graphs. We demonstrate the conciseness, generalizability, and expressiveness of SetCoLa on a series of real-world examples from ecological networks, biological systems, and social networks.</p>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2018-SetCoLa-EuroVis.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="website/resources/supplemental/transference.pdf">Reapplication Example (Supplemental)</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="https://github.com/uwdata/setcola">Github</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="https://uwdata.github.io/setcola/">Website</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'SetCoLa')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/setcola-figure.png">
-        <p>The layout for the TLR4 biological system produced using (a) Cerebral (<a class="inline link" href="https://ieeexplore.ieee.org/abstract/document/4658137/">link</a>), a domain-specific layout tool, as compared to (b) SetCoLa. The layers correspond to the location of the biomolecule within a cell and show immune response outcomes at the bottom of the graph, grouped by molecular function.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img src="website/resources/images/setcola-thumbnail.png" alt="SetCoLa Thumbnail">
-      <div class="paper">
-        <p class="title">SetCoLa: High-Level Constraints for Graph Layout.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Alan Borning, Jeffrey Heer.</p>
-        <p class="venue">Computer Graphics Forum (Proc. EuroVis), 2018.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-SetCoLa-EuroVis.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="CodeAugmentations" style="display:none">
-    <h2>Augmenting Code with In Situ Visualizations to Aid Program Understanding</h2>
-    <h3><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">Programmers must draw explicit connections between their code and runtime state to properly assess the correctness of their programs. However, debugging tools often decouple the program state from the source code and require explicitly invoked views to bridge the rift between program editing and program understanding. To unobtrusively reveal runtime behavior during both normal execution and debugging, we contribute techniques for visualizing program variables directly within the source code. We describe a design space and placement criteria for embedded visualizations. We evaluate our in situ visualizations in an editor for the Vega visualization grammar. Compared to a baseline development environment, novice Vega users improve their overall task grade by about 2 points when using the in situ visualizations and exhibit significant positive effects on their self-reported speed and accuracy.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2018-AugmentingCode-CHI.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="website/resources/videos/codeAugmentations.mp4">Video</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'CodeAugmentations')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/augmentations-figure.png">
-        <p>An line chart of stock prices for 5 companies. Code augmentations visualize the runtime state of program variables to show the underlying data distributions. Interacting with the "symbol" histogram filters all other histograms to only show the data values where the "symbol" is "GOOG" (line 38, hand cursor shown here for clarity; in a real implementation the cursor is hidden mid-interaction to aid chart reading). This interaction shows that "GOOG" has missing data for the earlier dates in the dataset (line 24), which results from a later IPO date than the other companies.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img src="website/resources/images/augmentations-thumbnail.png" alt="Code Augmentations Thumbnail">
-      <div class="paper">
-        <p class="title">Augmenting Code with In Situ Visualizations to Aid Program Understanding.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">ACM Human Factors in Computing Systems (CHI), 2018.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2018-AugmentingCode-CHI.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="Triggers" style="display:none">
-    <h2>Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals</h2>
-    <h3>Jessica Schroeder, <span class="jane">Jane Hoffswell</span>, Chia-Fang Chung, James Fogarty, Sean Munson, Jasmine Zia</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">Patient-generated data can allow patients and providers to collaboratively develop accurate diagnoses and actionable treatment plans. Unfortunately, patients and providers often lack effective support to make use of such data. We examine patient-provider collaboration to interpret patient-generated data. We focus on irritable bowel syndrome (IBS), a chronic illness in which particular foods can exacerbate symptoms. IBS management often requires patient-provider collaboration using a patient's food and symptom journal to identify the patient's triggers. We contribute interactive visualizations to support exploration of such journals, as well as an examination of patient-provider collaboration in interpreting the journals. Drawing upon individual and collaborative interviews with patients and providers, we find that collaborative review helps improve data comprehension and build mutual trust. We also find a desire to use tools like our interactive visualizations within and beyond clinic appointments. We discuss these findings and present guidance for the design of future tools.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2017-Triggers-CSCW.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="website/resources/supplemental/triggers-interviewProtocol.pdf">Interview Protocol</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'Triggers')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/triggers-figure.png">
-        <p>Healthcare providers sometimes encourage patients to track information such as meals and symptoms to aid diagnoses. Our interactive visualizations allow patients and providers to explore patient-generated data to discover trends and observe which foods are associated with the patient's symptoms. In this view, the user can observe that the severity of the patient's symptoms gets worse as the amount of starch she consumes increases. The user can also hover over a point for more detail. For example, the patient here had moderate symptoms when she consumed a meal with a baguette, which was high in starch.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img src="website/resources/images/triggers-thumbnail.png" alt="Individual Triggers Thumbnail">
-      <div class="paper">
-        <p class="title">Supporting Patient-Provider Collaboration to Identify Individual Triggers using Food and Symptom Journals.</p>
-        <p class="authors">Jessica Schroeder, <span class="jane">Jane Hoffswell</span>, Chia-Fang Chung, James Fogarty, Sean Munson, Jasmine Zia.</p>
-        <p class="venue">ACM Computer-Supported Cooperative Work (CSCW), 2017.</p>
-        <p style="color:gray;"> | </p>
-        <a class="pdf" href="website/resources/papers/2017-Triggers-CSCW.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="VegaDebugging" style="display:none">
-    <h2>Visual Debugging Techniques for Reactive Data Visualization</h2>
-    <h3><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">Interaction is critical to effective visualization, but can be difficult to author and debug due to dependencies among input events, program state, and visual output. Recent advances leverage reactive semantics to support declarative design and avoid the "spaghetti code" of imperative event handlers. While reactive programming improves many aspects of development, textual specifications still fail to convey the complex runtime dynamics. In response, we contribute a set of visual debugging techniques to reveal the runtime behavior of reactive visualizations. A timeline view records input events and dynamic variable updates, allowing designers to replay and inspect the propagation of values step-by-step. On-demand annotations overlay the output visualization to expose relevant state and scale mappings in-situ. Dynamic tables visualize how backing datasets change over time. To evaluate the effectiveness of these techniques, we study how first-time Vega users debug interactions in faulty, unfamiliar specifications; with no prior knowledge, participants were able to accurately trace errors through the specification.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2016-VegaDebugging-EuroVis.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="website/resources/videos/vegaDebugging.mp4">Video</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'VegaDebugging')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/vegaDebugging-figure.png">
-        <p>Vega's visual debugging techniques allow users to inspect relevant data transformations and dependencies within their specification in the context of the visualization and interaction events. Signal updates are populated in a timeline, on which users can view dependencies (in red): brush depends on cell, start_coords, and end_coords, as shown in the specification above. Users can rewind the visualization to view previous states (in green) and inspect scale encodings as a tooltip in-situ.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img class="link" src="website/resources/images/vegaDebugging-thumbnail.png" alt="Visual Debugging Thumbnail">
-      <div class="paper">
-        <p class="title link">Visual Debugging Techniques for Reactive Data Visualization.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">Computer Graphics Forum (Proc. EuroVis), 2016.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2016-VegaDebugging-EuroVis.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="ReactiveVega" style="display:none">
-    <h2>Reactive Vega: A Streaming Dataflow Architecture for Declarative Interactive Visualization</h2>
-    <h3>Arvind Satyanarayan, Ryan Russell, <span class="jane">Jane Hoffswell</span>, Jeffrey Heer</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">We present Reactive Vega, a system architecture that provides the first robust and comprehensive treatment of declarative visual and interaction design for data visualization. Starting from a single declarative specification, Reactive Vega constructs a dataflow graph in which input data, scene graph elements, and interaction events are all treated as first-class streaming data sources. To support expressive interactive visualizations that may involve time-varying scalar, relational, or hierarchical data, Reactive Vega's dataflow graph can dynamically re-write itself at runtime by extending or pruning branches in a data-driven fashion. We discuss both compile- and run-time optimizations applied within Reactive Vega, and share the results of benchmark studies that indicate superior interactive performance to both D3 and the original, non-reactive Vega system.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2015-ReactiveVega-InfoVis.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link" href="http://vega.github.io/vega/">Software</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'ReactiveVega')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/reactiveVega-figure.png">
-        <p>The Reactive Vega dataflow graph created from a declarative specification for a interactive index chart of streaming financial data. As streaming data arrives from the Yahoo! Finance API, or as a user moves their mouse pointer across the chart, an update cycle propagates through the graph and triggers an efficient update and re-render of the visualization.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img class="link" src="website/resources/images/reactive-vega-architecture.png" alt="Reactive Vega Thumbnail">
-      <div class="paper">
-        <p class="title link">Reactive Vega: A Streaming Dataflow Architecture for Declarative Interactive Visualization.</p>
-        <p class="authors">Arvind Satyanarayan, Ryan Russell, <span class="jane">Jane Hoffswell</span>, Jeffrey Heer.</p>
-        <p class="venue">IEEE Trans. Visualization & Comp. Graphics (Proc. InfoVis), 2016.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2015-ReactiveVega-InfoVis.pdf">PDF</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="main content paper-details" id="EuroRV3" style="display:none">
-    <h2>Debugging Vega through Inspection of the Data Flow Graph</h2>
-    <h3><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer</h3>
-
-    <div class="paper-container">
-      <div class="abstract">
-        <h4>abstract</h4>
-        <p class="paper-abstract">Vega is a declarative visualization grammar that decouples specification from execution to allow users to focus on the visual representation rather than low-level implementation decisions. However, this representation comes at the cost of effective debugging as its execution is obfuscated. By presenting the developer with Vega's data flow graph along with interactive capabilities, we can bridge the gap between specification and execution to enable direct inspection of the connections between each component. This inspection can augment the developer's mental model of the specification, enabling the developer to more easily identify areas of interest and implement changes to the resulting visualization.</p>
-        <br>
-        <h4>materials</h4>
-        <a class="link" href="website/resources/papers/2015-DataFlow-EuroRV3.pdf">PDF</a>
-        <p style="color:#B27300; display:inline-block;"> | </p>
-        <a class="link bibtex-text" onclick="showBibTeX(event, 'EuroRV3')">BibTeX</a>
-      </div>
-
-      <div class="figure">
-        <img src="website/resources/images/eurorv3-figure.png">
-        <p>The components of a Vega workflow with related elements colored; (a) the specification, (b) the output visualization, and (c) a simplified representation of the underlying data flow graph.</p>
-      </div>
-    </div>
-
-    <h4>citation</h4>
-    <div class="publication">
-      <img class="link" src="website/resources/images/eurorv3-thumbnail.png" alt="EuroRV3 Thumbnail">
-      <div class="paper">
-        <p class="title link">Debugging Vega through Inspection of the Data Flow Graph.</p>
-        <p class="authors"><span class="jane">Jane Hoffswell</span>, Arvind Satyanarayan, Jeffrey Heer.</p>
-        <p class="venue">EuroVis Workshop on Reproducibility, Verification, and Validation in Visualization (EuroRV3), 2015.</p>
-        <p style="color:gray"> | </p>
-        <a class="pdf" href="website/resources/papers/2015-ReactiveVega-InfoVis.pdf">PDF</a>
-      </div>
-    </div>
+    <div class="margin"></div>
   </div>
 
   <!-- ******************** Curriculum Vitae *********************** -->
   <div class="main content" id="CurriculumVitae" style="display:none">
     <embed src="website/resources/JaneHoffswell-CurriculumVitae.pdf"/>
+  </div>
+
+  <!-- *********************** Publications ************************ -->
+  <div class="main content" id="Publications" style="display:none">
+    <div class="margin"></div>
+    <div class="center">
+      <h2>Publications</h2>
+      <div id="pubsblock"></div>
+      <h2>Workshops</h2>
+      <div id="workblock"></div>
+    </div>
+    <div class="margin"></div>
+  </div>
+
+  <!-- *********************** Paper Details *********************** -->
+  <div class="main content paper-details" id="Details" style="display:none">
+    <div class="margin"></div>
+    <div class="center"></div>
+    <div class="margin"></div>
   </div>
 
   <!-- ********************** Conference Map *********************** -->
@@ -522,5 +116,13 @@
 
 </div>
 
+<div class="footer">
+  <img src="website/resources/images/daisies.jpg" class="header-background" alt="Header image: daisies">
+  <div class="background">
+    <p>Last Updated: 03 Oct 2019</p>
+  </div>
+</div>
+
+</div>
 </body>
 </html>

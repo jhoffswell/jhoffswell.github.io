@@ -1,5 +1,18 @@
 [
   {
+    "country": "Canada",
+    "state": "British Columbia",
+    "city": "Vancouver",
+    "year": 2019,
+    "date": "October 20, 2019",
+    "conference": "VIS",
+    "text": "VIS 2019",
+    "image": "",
+    "presented": false,
+    "latitude": 49.25,
+    "longitude": -123.1
+  },    
+  {
     "country": "United Kingdom",
     "state": "Scotland",
     "city": "Glasgow",
