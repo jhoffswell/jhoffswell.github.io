@@ -27,7 +27,9 @@ function getRecentPublicationBlock(name) {
   createPubTitleBlock(paper, info, name); // Paper title
   createPubAuthorBlock(paper, info);      // Paper authors
   createPubShortVenueBlock(paper, info);  // Paper venue (short)
-  createPubLinksBlock(paper, info, name); // Paper links
+  
+  paper.appendChild(createElement("p", {style: "color:gray"}, " | "));
+  paper.appendChild(createElement("a", {class: "pdf", href: info.paper}, "PDF"));
 
   return div;
 }

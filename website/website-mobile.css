@@ -1,7 +1,11 @@
 /********* About block *********/
 
-.mobile #aboutblock img {
+.mobile #profileblock {
   display: none;
+}
+
+.mobile .center {
+  margin: 0px 20px;
 }
 
 /****** Publications *******/
