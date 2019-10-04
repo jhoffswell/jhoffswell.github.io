@@ -70,7 +70,8 @@ function createMaterialsBlock(div, info, name) {
   container.appendChild(createElement("h4", null, "materials"));
 
   // For each listed material, create a link element and separator
-  var materials = [{name: "PDF", link: info.paper}].concat(info.supplemental);
+  var defaults = [{name: "PDF", link: info.paper}, {name: "DOI", link: info.doi}];
+  var materials = defaults.concat(info.supplemental);
   for (var i = 0; i < materials.length; i++) {
     var content = materials[i].name;
     var link = materials[i].link;
