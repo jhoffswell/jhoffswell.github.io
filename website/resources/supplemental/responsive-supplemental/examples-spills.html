@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>Incidents at Sea</h1>
+
+  <p>This visualization is based on the Reuters article <a href="https://graphics.reuters.com/OIL-SPILLS/010060SL1GQ/index.html">Oil spilled at sea: Putting the Sanchi disaster into perspective</a>. This article includes a map visualization that reduces the number of text annotations, rescales the text, and updates the size encoding and legend between different device-specific visualizations. In this example, we produce a map with similar annotations but also demonstrate other responsive techniques (e.g., rotating the map for the portrait orientation).</p> 
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 865px">
+      <h2>Desktop Visualization (825x585 px)</h2>
+      <p>This visualization approximates the one from Reuters, using data from <a href="http://www.itopf.org/knowledge-resources/data-statistics/statistics/">ITOPF</a>, which includes the top 20 major spills through 2018; as such, you may notice that some of the data points from the Reuters graphic are not included in this recreation.</p>
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (325x585 px)</h2>
+      <p>We rotate the map to better use the space of the portrait orientation. However, we maintain the rotation of the labels to ensure legibility even in this orientation.</p>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 625px">
+      <h2>Phone Visualization - Landscape (585x325 px)</h2>
+      <p>For this example, the landscape version is very similar to the desktop version, but with a much tighter margin on the map content; however, the map still shows all the same data.</p>
+      <div class="vis" id="vis-landscape"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <p>Since the original article focuses on comparing to the Sanchi disaster, we designed the thumbnail to focus on this piece of data with a hint of the larger context.</p>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/spills-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/spills-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-landscape", "specs/spills-landscape.vl.json")
+      .then(result => console.log("landscape:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/spills-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+</script>

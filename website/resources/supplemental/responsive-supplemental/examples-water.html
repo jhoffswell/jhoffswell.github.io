@@ -1,0 +1,54 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>Percentage of population without access to improved water</h1>
+
+  <p>This visualization is based on the National Geographic article <a href="https://www.nationalgeographic.com/clean-water-access-around-the-world/">See Where Access to Clean Water Is Getting Better - and Worse</a>. For our recreations, we reduce the number of data points to limit the impact on the performance of our system and the visualization rendering; that being said, <span class="bold">this page can be a little slow, so give it some time to set everything up</span>. This example is particularly exciting because it is <span class="bold">interactive</span>! Try using the dropdown below each visualization to highlight a line in the view.</p>
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 1064px">
+      <h2>Desktop Visualization (1024x812 px)</h2>
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (375x812 px)</h2>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 865px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/water-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/water-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/water-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+</script>

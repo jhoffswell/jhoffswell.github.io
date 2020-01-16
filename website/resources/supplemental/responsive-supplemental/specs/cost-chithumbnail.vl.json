@@ -1,0 +1,4448 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "description": "A simple bar chart with embedded data.",
+  "autosize": "fit",
+  "padding": 0,
+  "width": 100,
+  "height": 100,
+  "view": {"stroke": null},
+  "datasets": {
+    "values": [
+      {
+        "year": 2005,
+        "cost": 161,
+        "order": 1,
+        "name": "Hurricane Katrina",
+        "offset": 161,
+        "_index_": 0
+      },
+      {
+        "year": 2017,
+        "cost": 125,
+        "order": 4,
+        "name": "Hurricane Harvey",
+        "offset": 125,
+        "_index_": 1
+      },
+      {
+        "year": 2017,
+        "cost": 90,
+        "order": 3,
+        "name": "Hurricane Maria",
+        "offset": 215,
+        "_index_": 2
+      },
+      {
+        "year": 2017,
+        "cost": 50,
+        "order": 2,
+        "name": "Hurricane Irma",
+        "offset": 265,
+        "_index_": 3
+      },
+      {
+        "year": 2017,
+        "cost": 18,
+        "order": 1,
+        "name": "California wildfires",
+        "offset": 300,
+        "_index_": 4
+      },
+      {"year": 1980, "cost": 40, "_index_": 5},
+      {"year": 1981, "cost": 5, "_index_": 6},
+      {"year": 1982, "cost": 25, "_index_": 7},
+      {"year": 1983, "cost": 35, "_index_": 8},
+      {"year": 1984, "cost": 10, "_index_": 9},
+      {"year": 1985, "cost": 25, "_index_": 10},
+      {"year": 1986, "cost": 15, "_index_": 11},
+      {"year": 1987, "cost": 0, "_index_": 12},
+      {"year": 1988, "cost": 45, "_index_": 13},
+      {"year": 1989, "cost": 35, "_index_": 14},
+      {"year": 1990, "cost": 20, "_index_": 15},
+      {"year": 1991, "cost": 30, "_index_": 16},
+      {"year": 1992, "cost": 60, "_index_": 17},
+      {"year": 1993, "cost": 50, "_index_": 18},
+      {"year": 1994, "cost": 20, "_index_": 19},
+      {"year": 1995, "cost": 25, "_index_": 20},
+      {"year": 1996, "cost": 20, "_index_": 21},
+      {"year": 1997, "cost": 15, "_index_": 22},
+      {"year": 1998, "cost": 35, "_index_": 23},
+      {"year": 1999, "cost": 30, "_index_": 24},
+      {"year": 2000, "cost": 20, "_index_": 25},
+      {"year": 2001, "cost": 30, "_index_": 26},
+      {"year": 2002, "cost": 25, "_index_": 27},
+      {"year": 2003, "cost": 35, "_index_": 28},
+      {"year": 2004, "cost": 75, "_index_": 29},
+      {"year": 2005, "cost": 60, "_index_": 30},
+      {"year": 2006, "cost": 30, "_index_": 31},
+      {"year": 2007, "cost": 25, "_index_": 32},
+      {"year": 2008, "cost": 75, "_index_": 33},
+      {"year": 2009, "cost": 25, "_index_": 34},
+      {"year": 2010, "cost": 25, "_index_": 35},
+      {"year": 2011, "cost": 75, "_index_": 36},
+      {"year": 2012, "cost": 125, "_index_": 37},
+      {"year": 2013, "cost": 40, "_index_": 38},
+      {"year": 2014, "cost": 30, "_index_": 39},
+      {"year": 2015, "cost": 40, "_index_": 40},
+      {"year": 2016, "cost": 45, "_index_": 41},
+      {"year": 2017, "cost": 25, "_index_": 42}
+    ]
+  },
+  "layer": [
+    {
+      "data": {"name": "values"},
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "nominal",
+          "axis": {
+            "domain": false,
+            "values": [1997, 2017],
+            "labelAngle": 0,
+            "labelFontSize": 10,
+            "title": false
+          }
+        },
+        "y": {
+          "field": "cost",
+          "type": "quantitative",
+          "axis": {
+            "title": false,
+            "domain": false,
+            "ticks": false,
+            "tickMinStep": 100,
+            "labelFontSize": 10,
+            "gridDash": [2, 2],
+            "values": [300]
+          },
+          "scale": {"domain": [0, 300]}
+        },
+        "detail": {"field": "order", "type": "quantitative"},
+        "fill": {
+          "field": "datumnamenull",
+          "_label": "=datum.name != null",
+          "scale": {"range": ["#d0d0d0", "firebrick"]},
+          "legend": false
+        }
+      },
+      "layer": [
+        {"mark": {"type": "bar"}, "transform": []},
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "bar"},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        }
+      ],
+      "transform": [
+        {"calculate": "datum.name != null", "as": "datumnamenull"},
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=5: false)",
+          "datum": {
+            "year": 1980,
+            "cost": 40,
+            "_index_": 5,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 40
+          },
+          "text": "1980",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=6: false)",
+          "datum": {
+            "year": 1981,
+            "cost": 5,
+            "_index_": 6,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 5
+          },
+          "text": "1981",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=7: false)",
+          "datum": {
+            "year": 1982,
+            "cost": 25,
+            "_index_": 7,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 25
+          },
+          "text": "1982",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=8: false)",
+          "datum": {
+            "year": 1983,
+            "cost": 35,
+            "_index_": 8,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 35
+          },
+          "text": "1983",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=9: false)",
+          "datum": {
+            "year": 1984,
+            "cost": 10,
+            "_index_": 9,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 10
+          },
+          "text": "1984",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=10: false)",
+          "datum": {
+            "year": 1985,
+            "cost": 25,
+            "_index_": 10,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 25
+          },
+          "text": "1985",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=11: false)",
+          "datum": {
+            "year": 1986,
+            "cost": 15,
+            "_index_": 11,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 15
+          },
+          "text": "1986",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=12: false)",
+          "datum": {
+            "year": 1987,
+            "cost": 0,
+            "_index_": 12,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 0
+          },
+          "text": "1987",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=13: false)",
+          "datum": {
+            "year": 1988,
+            "cost": 45,
+            "_index_": 13,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 45
+          },
+          "text": "1988",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=14: false)",
+          "datum": {
+            "year": 1989,
+            "cost": 35,
+            "_index_": 14,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 35
+          },
+          "text": "1989",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=15: false)",
+          "datum": {
+            "year": 1990,
+            "cost": 20,
+            "_index_": 15,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 20
+          },
+          "text": "1990",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=16: false)",
+          "datum": {
+            "year": 1991,
+            "cost": 30,
+            "_index_": 16,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 30
+          },
+          "text": "1991",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=17: false)",
+          "datum": {
+            "year": 1992,
+            "cost": 60,
+            "_index_": 17,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 60
+          },
+          "text": "1992",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=18: false)",
+          "datum": {
+            "year": 1993,
+            "cost": 50,
+            "_index_": 18,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 50
+          },
+          "text": "1993",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=19: false)",
+          "datum": {
+            "year": 1994,
+            "cost": 20,
+            "_index_": 19,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 20
+          },
+          "text": "1994",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=20: false)",
+          "datum": {
+            "year": 1995,
+            "cost": 25,
+            "_index_": 20,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 25
+          },
+          "text": "1995",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=21: false)",
+          "datum": {
+            "year": 1996,
+            "cost": 20,
+            "_index_": 21,
+            "datumnamenull": false,
+            "cost_start": 0,
+            "cost_end": 20
+          },
+          "text": "1996",
+          "marktype": "rect",
+          "path": ["layer", "0", "layer", "0"]
+        }
+      ]
+    },
+    {
+      "data": {"name": "values"},
+      "encoding": {
+        "x": {"field": "year", "type": "nominal"},
+        "y": {"field": "offset", "type": "quantitative"},
+        "detail": {"field": "order", "type": "quantitative"},
+        "text": {
+          "field": "replacedatumnameHurricane",
+          "_label": "=replace(datum.name, 'Hurricane ', '')"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": []
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==22: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==22: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==23: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==23: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==24: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==24: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==25: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==25: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==26: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==26: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==27: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==27: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==28: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==28: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==29: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==29: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==37: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==36: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==33: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==30: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==31: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==41: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==40: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==39: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==38: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==35: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==34: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==32: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==42: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==1: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==2: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==2: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==3: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==3: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==4: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -13,
+            "dy": 7,
+            "fontSize": 10
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==4: true)",
+              "_customized": true
+            }
+          ]
+        }
+      ],
+      "transform": [
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=5: false)",
+          "datum": {"year": 1980, "cost": 40, "_index_": 5},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=6: false)",
+          "datum": {"year": 1981, "cost": 5, "_index_": 6},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=7: false)",
+          "datum": {"year": 1982, "cost": 25, "_index_": 7},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=8: false)",
+          "datum": {"year": 1983, "cost": 35, "_index_": 8},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=9: false)",
+          "datum": {"year": 1984, "cost": 10, "_index_": 9},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=10: false)",
+          "datum": {"year": 1985, "cost": 25, "_index_": 10},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=11: false)",
+          "datum": {"year": 1986, "cost": 15, "_index_": 11},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=12: false)",
+          "datum": {"year": 1987, "cost": 0, "_index_": 12},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=13: false)",
+          "datum": {"year": 1988, "cost": 45, "_index_": 13},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=14: false)",
+          "datum": {"year": 1989, "cost": 35, "_index_": 14},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=15: false)",
+          "datum": {"year": 1990, "cost": 20, "_index_": 15},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=16: false)",
+          "datum": {"year": 1991, "cost": 30, "_index_": 16},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=17: false)",
+          "datum": {"year": 1992, "cost": 60, "_index_": 17},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=18: false)",
+          "datum": {"year": 1993, "cost": 50, "_index_": 18},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=19: false)",
+          "datum": {"year": 1994, "cost": 20, "_index_": 19},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=20: false)",
+          "datum": {"year": 1995, "cost": 25, "_index_": 20},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=21: false)",
+          "datum": {"year": 1996, "cost": 20, "_index_": 21},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=22: false)",
+          "datum": {"year": 1997, "cost": 15, "_index_": 22},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=23: false)",
+          "datum": {"year": 1998, "cost": 35, "_index_": 23},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=24: false)",
+          "datum": {"year": 1999, "cost": 30, "_index_": 24},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=25: false)",
+          "datum": {"year": 2000, "cost": 20, "_index_": 25},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=26: false)",
+          "datum": {"year": 2001, "cost": 30, "_index_": 26},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=27: false)",
+          "datum": {"year": 2002, "cost": 25, "_index_": 27},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=28: false)",
+          "datum": {"year": 2003, "cost": 35, "_index_": 28},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=29: false)",
+          "datum": {"year": 2004, "cost": 75, "_index_": 29},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=37: false)",
+          "datum": {"year": 2012, "cost": 125, "_index_": 37},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=36: false)",
+          "datum": {"year": 2011, "cost": 75, "_index_": 36},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=33: false)",
+          "datum": {"year": 2008, "cost": 75, "_index_": 33},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=30: false)",
+          "datum": {"year": 2005, "cost": 60, "_index_": 30},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=31: false)",
+          "datum": {"year": 2006, "cost": 30, "_index_": 31},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=41: false)",
+          "datum": {"year": 2016, "cost": 45, "_index_": 41},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=40: false)",
+          "datum": {"year": 2015, "cost": 40, "_index_": 40},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=39: false)",
+          "datum": {"year": 2014, "cost": 30, "_index_": 39},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=38: false)",
+          "datum": {"year": 2013, "cost": 40, "_index_": 38},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=35: false)",
+          "datum": {"year": 2010, "cost": 25, "_index_": 35},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=34: false)",
+          "datum": {"year": 2009, "cost": 25, "_index_": 34},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=32: false)",
+          "datum": {"year": 2007, "cost": 25, "_index_": 32},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=42: false)",
+          "datum": {"year": 2017, "cost": 25, "_index_": 42},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "calculate": "replace(datum.name, 'Hurricane ', '')",
+          "as": "replacedatumnameHurricane"
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=1: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 125,
+            "order": 4,
+            "name": "Hurricane Harvey",
+            "offset": 125,
+            "_index_": 1,
+            "replacedatumnameHurricane": "Harvey"
+          },
+          "text": "Harvey",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=2: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 90,
+            "order": 3,
+            "name": "Hurricane Maria",
+            "offset": 215,
+            "_index_": 2,
+            "replacedatumnameHurricane": "Maria"
+          },
+          "text": "Maria",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=3: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 50,
+            "order": 2,
+            "name": "Hurricane Irma",
+            "offset": 265,
+            "_index_": 3,
+            "replacedatumnameHurricane": "Irma"
+          },
+          "text": "Irma",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=4: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 18,
+            "order": 1,
+            "name": "California wildfires",
+            "offset": 300,
+            "_index_": 4,
+            "replacedatumnameHurricane": "California wildfires"
+          },
+          "text": "California wildfires",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        }
+      ]
+    },
+    {
+      "data": {"name": "values"},
+      "encoding": {
+        "x": {"field": "year", "type": "nominal"},
+        "y": {"field": "offset", "type": "quantitative"},
+        "detail": {"field": "order", "type": "quantitative"},
+        "text": {
+          "field": "datumcostbillion",
+          "_label": "='$' + datum.cost + ' billion'"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": []
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==22: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==22: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==23: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==23: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==24: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==24: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==25: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==25: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==26: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==26: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==27: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==27: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==28: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==28: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==29: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==29: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==37: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==36: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==33: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==30: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==31: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==41: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==40: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==39: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==38: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==35: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==34: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==32: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 22,
+            "dy": 11,
+            "fontWeight": "bold"
+          },
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==42: true)",
+              "_customized": true
+            }
+          ]
+        }
+      ],
+      "transform": [
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=5: false)",
+          "datum": {"year": 1980, "cost": 40, "_index_": 5},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=6: false)",
+          "datum": {"year": 1981, "cost": 5, "_index_": 6},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=7: false)",
+          "datum": {"year": 1982, "cost": 25, "_index_": 7},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=8: false)",
+          "datum": {"year": 1983, "cost": 35, "_index_": 8},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=9: false)",
+          "datum": {"year": 1984, "cost": 10, "_index_": 9},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=10: false)",
+          "datum": {"year": 1985, "cost": 25, "_index_": 10},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=11: false)",
+          "datum": {"year": 1986, "cost": 15, "_index_": 11},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=12: false)",
+          "datum": {"year": 1987, "cost": 0, "_index_": 12},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=13: false)",
+          "datum": {"year": 1988, "cost": 45, "_index_": 13},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=14: false)",
+          "datum": {"year": 1989, "cost": 35, "_index_": 14},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=15: false)",
+          "datum": {"year": 1990, "cost": 20, "_index_": 15},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=16: false)",
+          "datum": {"year": 1991, "cost": 30, "_index_": 16},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=17: false)",
+          "datum": {"year": 1992, "cost": 60, "_index_": 17},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=18: false)",
+          "datum": {"year": 1993, "cost": 50, "_index_": 18},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=19: false)",
+          "datum": {"year": 1994, "cost": 20, "_index_": 19},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=20: false)",
+          "datum": {"year": 1995, "cost": 25, "_index_": 20},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=21: false)",
+          "datum": {"year": 1996, "cost": 20, "_index_": 21},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=22: false)",
+          "datum": {"year": 1997, "cost": 15, "_index_": 22},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=23: false)",
+          "datum": {"year": 1998, "cost": 35, "_index_": 23},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=24: false)",
+          "datum": {"year": 1999, "cost": 30, "_index_": 24},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=25: false)",
+          "datum": {"year": 2000, "cost": 20, "_index_": 25},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=26: false)",
+          "datum": {"year": 2001, "cost": 30, "_index_": 26},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=27: false)",
+          "datum": {"year": 2002, "cost": 25, "_index_": 27},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=28: false)",
+          "datum": {"year": 2003, "cost": 35, "_index_": 28},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=29: false)",
+          "datum": {"year": 2004, "cost": 75, "_index_": 29},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=37: false)",
+          "datum": {"year": 2012, "cost": 125, "_index_": 37},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=36: false)",
+          "datum": {"year": 2011, "cost": 75, "_index_": 36},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=33: false)",
+          "datum": {"year": 2008, "cost": 75, "_index_": 33},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=30: false)",
+          "datum": {"year": 2005, "cost": 60, "_index_": 30},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=31: false)",
+          "datum": {"year": 2006, "cost": 30, "_index_": 31},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=41: false)",
+          "datum": {"year": 2016, "cost": 45, "_index_": 41},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=40: false)",
+          "datum": {"year": 2015, "cost": 40, "_index_": 40},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=39: false)",
+          "datum": {"year": 2014, "cost": 30, "_index_": 39},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=38: false)",
+          "datum": {"year": 2013, "cost": 40, "_index_": 38},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=35: false)",
+          "datum": {"year": 2010, "cost": 25, "_index_": 35},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=34: false)",
+          "datum": {"year": 2009, "cost": 25, "_index_": 34},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=32: false)",
+          "datum": {"year": 2007, "cost": 25, "_index_": 32},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=42: false)",
+          "datum": {"year": 2017, "cost": 25, "_index_": 42},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "calculate": "'$' + datum.cost + ' billion'",
+          "as": "datumcostbillion"
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=3: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 50,
+            "order": 2,
+            "name": "Hurricane Irma",
+            "offset": 265,
+            "_index_": 3,
+            "datumcostbillion": "$50 billion"
+          },
+          "text": "$50 billion",
+          "marktype": "text",
+          "path": ["layer", "2", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=0: false)",
+          "datum": {
+            "year": 2005,
+            "cost": 161,
+            "order": 1,
+            "name": "Hurricane Katrina",
+            "offset": 161,
+            "_index_": 0,
+            "datumcostbillion": "$161 billion"
+          },
+          "text": "$161 billion",
+          "marktype": "text",
+          "path": ["layer", "2", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=1: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 125,
+            "order": 4,
+            "name": "Hurricane Harvey",
+            "offset": 125,
+            "_index_": 1,
+            "datumcostbillion": "$125 billion"
+          },
+          "text": "$125 billion",
+          "marktype": "text",
+          "path": ["layer", "2", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=2: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 90,
+            "order": 3,
+            "name": "Hurricane Maria",
+            "offset": 215,
+            "_index_": 2,
+            "datumcostbillion": "$90 billion"
+          },
+          "text": "$90 billion",
+          "marktype": "text",
+          "path": ["layer", "2", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=4: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 18,
+            "order": 1,
+            "name": "California wildfires",
+            "offset": 300,
+            "_index_": 4,
+            "datumcostbillion": "$18 billion"
+          },
+          "text": "$18 billion",
+          "marktype": "text",
+          "path": ["layer", "2", "layer", "0"]
+        }
+      ]
+    },
+    {
+      "data": {"name": "values"},
+      "encoding": {
+        "x": {"field": "year", "type": "nominal"},
+        "y": {"field": "datumoffset27", "_label": "=datum.offset - 27"},
+        "detail": {"field": "order", "type": "quantitative"},
+        "text": {
+          "field": "replacedatumnameHurricane",
+          "_label": "=replace(datum.name, 'Hurricane ', '')"
+        },
+        "x2": {"field": "datumyear3", "_label": "=datum.year - 3"}
+      },
+      "layer": [
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": []
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==5: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==6: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==7: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==8: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==9: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==10: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==11: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==12: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==13: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==14: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==15: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==16: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==17: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==18: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==19: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==20: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==21: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==22: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==22: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==23: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==23: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==24: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==24: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==25: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==25: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==26: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==26: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==27: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==27: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==28: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==28: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==29: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==29: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==37: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==36: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==33: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==30: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==31: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==41: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==40: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==39: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==38: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==35: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==34: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==32: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==42: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==1: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==1: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==2: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==2: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==3: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==3: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==4: true)",
+              "_customized": true
+            }
+          ]
+        },
+        {
+          "mark": {"type": "rule", "align": "right", "dx": -11, "dy": 19},
+          "transform": [
+            {
+              "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]==4: true)",
+              "_customized": true
+            }
+          ]
+        }
+      ],
+      "transform": [
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=5: false)",
+          "datum": {"year": 1980, "cost": 40, "_index_": 5},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=6: false)",
+          "datum": {"year": 1981, "cost": 5, "_index_": 6},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=7: false)",
+          "datum": {"year": 1982, "cost": 25, "_index_": 7},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=8: false)",
+          "datum": {"year": 1983, "cost": 35, "_index_": 8},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=9: false)",
+          "datum": {"year": 1984, "cost": 10, "_index_": 9},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=10: false)",
+          "datum": {"year": 1985, "cost": 25, "_index_": 10},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=11: false)",
+          "datum": {"year": 1986, "cost": 15, "_index_": 11},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=12: false)",
+          "datum": {"year": 1987, "cost": 0, "_index_": 12},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=13: false)",
+          "datum": {"year": 1988, "cost": 45, "_index_": 13},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=14: false)",
+          "datum": {"year": 1989, "cost": 35, "_index_": 14},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=15: false)",
+          "datum": {"year": 1990, "cost": 20, "_index_": 15},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=16: false)",
+          "datum": {"year": 1991, "cost": 30, "_index_": 16},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=17: false)",
+          "datum": {"year": 1992, "cost": 60, "_index_": 17},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=18: false)",
+          "datum": {"year": 1993, "cost": 50, "_index_": 18},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=19: false)",
+          "datum": {"year": 1994, "cost": 20, "_index_": 19},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=20: false)",
+          "datum": {"year": 1995, "cost": 25, "_index_": 20},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=21: false)",
+          "datum": {"year": 1996, "cost": 20, "_index_": 21},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=22: false)",
+          "datum": {"year": 1997, "cost": 15, "_index_": 22},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=23: false)",
+          "datum": {"year": 1998, "cost": 35, "_index_": 23},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=24: false)",
+          "datum": {"year": 1999, "cost": 30, "_index_": 24},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=25: false)",
+          "datum": {"year": 2000, "cost": 20, "_index_": 25},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=26: false)",
+          "datum": {"year": 2001, "cost": 30, "_index_": 26},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=27: false)",
+          "datum": {"year": 2002, "cost": 25, "_index_": 27},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=28: false)",
+          "datum": {"year": 2003, "cost": 35, "_index_": 28},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=29: false)",
+          "datum": {"year": 2004, "cost": 75, "_index_": 29},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=37: false)",
+          "datum": {"year": 2012, "cost": 125, "_index_": 37},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=36: false)",
+          "datum": {"year": 2011, "cost": 75, "_index_": 36},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=33: false)",
+          "datum": {"year": 2008, "cost": 75, "_index_": 33},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=30: false)",
+          "datum": {"year": 2005, "cost": 60, "_index_": 30},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=31: false)",
+          "datum": {"year": 2006, "cost": 30, "_index_": 31},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=41: false)",
+          "datum": {"year": 2016, "cost": 45, "_index_": 41},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=40: false)",
+          "datum": {"year": 2015, "cost": 40, "_index_": 40},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=39: false)",
+          "datum": {"year": 2014, "cost": 30, "_index_": 39},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=38: false)",
+          "datum": {"year": 2013, "cost": 40, "_index_": 38},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=35: false)",
+          "datum": {"year": 2010, "cost": 25, "_index_": 35},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=34: false)",
+          "datum": {"year": 2009, "cost": 25, "_index_": 34},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=32: false)",
+          "datum": {"year": 2007, "cost": 25, "_index_": 32},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=42: false)",
+          "datum": {"year": 2017, "cost": 25, "_index_": 42},
+          "text": "undefined",
+          "marktype": "text",
+          "path": ["layer", "1", "layer", "0"]
+        },
+        {
+          "calculate": "replace(datum.name, 'Hurricane ', '')",
+          "as": "replacedatumnameHurricane"
+        },
+        {"calculate": "datum.year - 3", "as": "datumyear3"},
+        {"calculate": "datum.offset - 27", "as": "datumoffset27"},
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=1: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 125,
+            "order": 4,
+            "name": "Hurricane Harvey",
+            "offset": 125,
+            "_index_": 1,
+            "replacedatumnameHurricane": "Harvey",
+            "datumyear3": 2014,
+            "datumoffset27": 98
+          },
+          "text": "2017",
+          "marktype": "rule",
+          "path": ["layer", "3", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=2: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 90,
+            "order": 3,
+            "name": "Hurricane Maria",
+            "offset": 215,
+            "_index_": 2,
+            "replacedatumnameHurricane": "Maria",
+            "datumyear3": 2014,
+            "datumoffset27": 188
+          },
+          "text": "2017",
+          "marktype": "rule",
+          "path": ["layer", "3", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=3: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 50,
+            "order": 2,
+            "name": "Hurricane Irma",
+            "offset": 265,
+            "_index_": 3,
+            "replacedatumnameHurricane": "Irma",
+            "datumyear3": 2014,
+            "datumoffset27": 238
+          },
+          "text": "2017",
+          "marktype": "rule",
+          "path": ["layer", "3", "layer", "0"]
+        },
+        {
+          "filter": "((datum[\"_index_\"] != null) ? datum[\"_index_\"]!=4: false)",
+          "datum": {
+            "year": 2017,
+            "cost": 18,
+            "order": 1,
+            "name": "California wildfires",
+            "offset": 300,
+            "_index_": 4,
+            "replacedatumnameHurricane": "California wildfires",
+            "datumyear3": 2014,
+            "datumoffset27": 273
+          },
+          "text": "2017",
+          "marktype": "rule",
+          "path": ["layer", "3", "layer", "0"]
+        }
+      ]
+    },
+    {
+      "data": {"name": "_data_11", "values": [{"name": "default"}]},
+      "encoding": {
+        "text": {"value": "Total cost of major natural disasters"},
+        "y": {"value": 0}
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "text",
+            "dx": 0,
+            "dy": -45,
+            "fontSize": 16,
+            "fontWeight": "bold"
+          }
+        }
+      ],
+      "transform": [
+        {
+          "filter": "false",
+          "datum": {"name": "default"},
+          "text": "Total cost of major natural disasters",
+          "marktype": "text",
+          "path": ["layer", "4", "layer", "0"]
+        }
+      ]
+    },
+    {
+      "data": {"name": "_data_11_copy", "values": [{"name": "default"}]},
+      "encoding": {
+        "text": {
+          "value": "For disasters causing more than $1 billion in losses."
+        },
+        "y": {"value": 0}
+      },
+      "layer": [{"mark": {"type": "text", "dx": 0, "dy": -30, "fontSize": 12}}],
+      "transform": [
+        {
+          "filter": "false",
+          "datum": {"name": "default"},
+          "text": "For disasters causing more than $1 billion in losses.",
+          "marktype": "text",
+          "path": ["layer", "5", "layer", "0"]
+        }
+      ]
+    }
+  ]
+}

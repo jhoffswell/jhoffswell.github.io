@@ -8,7 +8,7 @@ function showAbout() {
 // Initialize the contents for the about block
 function initAbout() {
   var block = document.getElementById("publicationblock");
-  block.appendChild(getRecentPublicationBlock("Tables"));
+  block.appendChild(getRecentPublicationBlock("Responsive"));
   block.appendChild(getRecentPublicationBlock("SetCoLa"));
   block.appendChild(getRecentPublicationBlock("CodeAugmentations"));
 }

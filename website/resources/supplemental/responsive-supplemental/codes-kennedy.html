@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+
+  <h1>In close decisions, Kennedy voted in the majority 76 percent of the time.</h1>
+
+  <p>This visualization is from the New York Times article <a href="https://nyti.ms/2IyGAwh">With Kennedy’s Retirement, the Supreme Court Loses Its Center</a>. This visualization includes two drastically different designs (a horizontal dot plot and a vertical bar chart) depending on the device context. Both visualizations are static. To better understand the responsive techniques used, we performed an open-coding process of the changes between the desktop and mobile versions of the visualization. To view the mobile version of the visualization, we used the Device Mode provided by Chrome DevTools to simulated an iPhone X device in both a portrait and landscape orientation. Take a look at the article yourself, and the codes we generated here:</p>
+
+  <h2>Desktop vs. Mobile (Portrait)</h2>
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>change mark encoding</td>
+      <td>modify</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>label mark percentage</td>
+      <td>add</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>remove percentage axis</td>
+      <td>remove</td>
+      <td>axis</td>
+    </tr>
+    <tr>
+      <td>swap encoding axes</td>
+      <td>reposition</td>
+      <td>marks</td>
+    </tr>
+  </table>
+
+  <h2>Desktop vs. Mobile (Landscape)</h2>  
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>no changes</td>
+      <td>no changes</td>
+      <td>view</td>
+    </tr>
+  </table>
+
+</body>

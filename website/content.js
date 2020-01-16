@@ -1,4 +1,34 @@
 var publications = {
+  "Responsive": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1145/3313831.3376777",
+    "id": "2020-responsive-visualization",
+    "title": "Techniques for Flexible Responsive Visualization Design",
+    "authors": "Jane Hoffswell AND Wilmot Li AND Zhicheng Liu",
+    "booktitle": "ACM Human Factors in Computing Systems (CHI)",
+    "conference": "CHI",
+    "year": 2020,
+    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2020-ResponsiveVisualization-CHI.pdf",
+    "paper": "website/resources/papers/2020-ResponsiveVisualization-CHI.pdf",
+    "thumbnail": "website/resources/images/responsive-thumbnail.png",
+    "figure": "website/resources/images/responsive-figure.png",
+    "figurecaption": "Desktop (left) and mobile (right) visualizations from the New York Times article “The Places in the U.S. Where Disaster Strikes Again and Again” [A13]. This example demonstrates responsive techniques that: (A) resize the view to compress the width; (B) reposition content (e.g., axes, labels, and title); (C) remove unnecessary labels; (D) modify the text and axis labels to reduce complexity; and (E) add new line marks to annotate the bars.",
+    "abstract": "Responsive visualizations adapt to effectively present information based on the device context. Such adaptations are essential for news content that is increasingly consumed on mobile devices. However, existing tools provide little support for responsive visualization design. We analyze a corpus of 231 responsive news visualizations and discuss formative interviews with five journalists about responsive visualization design. These interviews motivate four central design guidelines: enable simultaneous cross-device edits, facilitate device-specific customization, show cross-device previews, and support propagation of edits. Based on these guidelines, we present a prototype system that allows users to preview and edit multiple visualization versions simultaneously. We demonstrate the utility of the system features by recreating four real-world responsive visualizations from our corpus.",
+    "supplemental": [
+      {
+        "name": "Video",
+        "link": "website/resources/videos/responsive-videofigure.mp4"
+      },
+      {
+        "name": "Interview Questions", 
+        "link": "website/resources/supplemental/responsive-interview.pdf"
+      },
+      {
+        "name": "Example Gallery", 
+        "link": "website/resources/supplemental/responsive-supplemental/index.html"
+      }
+    ]
+  },
   "Tables": {
     "type": "paper",
     "doi": "https://doi.org/10.1145/3290605.3300523",
@@ -13,7 +43,7 @@ var publications = {
     "thumbnail": "website/resources/images/tableErrors-thumbnail.png",
     "figure": "website/resources/images/tableErrors-figure.png",
     "figurecaption": "(a) PDF documents often contain rich data tables such as the one shown here. (b) However, techniques for extracting the data from static PDF tables can be error prone (errors are shown in red). In this example, the header has been split into two rows and a whitespace cell is missing in what is now the first row; in the body of the table, several of the data rows have been merged together (e.g., \"Squirrel\" and \"Deer\").",
-    "abstract": "PDF documents often contain rich data tables that offer opportunities for dynamic re-appropriation and visualization. We describe a pipeline for extracting, analyzing, and visualizing PDF tables based on existing machine learning and rule-based techniques. Implementing and deploying this pipeline on a corpus of 447 documents with 1,171 tables results in only $11$ tables that are correctly extracted and parsed for dynamic visualization. To improve the results of the automatic table analysis, we first present a taxonomy of errors that arise in the analysis pipeline and discuss the implications of cascading errors on the user experience. We then contribute a system with two lightweight interaction techniques (gesture and toolbar), for viewing, correcting, and visualizing PDF tables on mobile devices. In an evaluation with 17 users involving both a phone and a tablet, participants effectively repaired common errors in 10 tables, with an average time of about 2 minutes per table.",
+    "abstract": "PDF documents often contain rich data tables that offer opportunities for dynamic re-appropriation and visualization. We describe a pipeline for extracting, analyzing, and visualizing PDF tables based on existing machine learning and rule-based techniques. Implementing and deploying this pipeline on a corpus of 447 documents with 1,171 tables results in only 11 tables that are correctly extracted and parsed for dynamic visualization. To improve the results of the automatic table analysis, we first present a taxonomy of errors that arise in the analysis pipeline and discuss the implications of cascading errors on the user experience. We then contribute a system with two lightweight interaction techniques (gesture and toolbar), for viewing, correcting, and visualizing PDF tables on mobile devices. In an evaluation with 17 users involving both a phone and a tablet, participants effectively repaired common errors in 10 tables, with an average time of about 2 minutes per table.",
     "supplemental": [
       {
         "name": "Video",

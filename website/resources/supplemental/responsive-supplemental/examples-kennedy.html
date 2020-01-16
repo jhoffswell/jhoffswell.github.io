@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>In close decisions, Kennedy voted in the majority 76 percent of the time.</h1>
+
+  <p>This visualization is based on the New York Times article <a href="https://nyti.ms/2IyGAwh">With Kennedy’s Retirement, the Supreme Court Loses Its Center</a>.</p>
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 850px">
+      <h2>Desktop Visualization (810x418 px)</h2>
+      <p>For the desktop visualization, the New York Times uses a dot plot visualization to show the percent of times each justice votes in the majority. The main difference in our recreation is that we are missing the yellow background to highlight the text for Kennedy.</p>
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (325x585 px)</h2>
+      <p>The visualization exhibits a drastic change on mobile, in which the dot plot changes to a bar chart; the underlying data for each visualization is the same.</p>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <p>For the thumbnail, we use the desktop visualization as a base, and update the title for the smaller space; we also reduce the number of labels.</p>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/kennedy-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/kennedy-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/kennedy-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+</script>

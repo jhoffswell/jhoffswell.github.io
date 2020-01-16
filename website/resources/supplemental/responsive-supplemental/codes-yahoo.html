@@ -1,0 +1,124 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+
+  <h1>Was Yahoo Late to Mobile?</h1>
+
+  <p>This visualization is from the Harvard Business Review article <a href="https://hbr.org/2016/06/the-decline-of-yahoo-in-its-own-words">The Decline of Yahoo in Its Own Words</a>. This visualization includes two drastically different designs (a line chart and a heatmap) depending on the device context. Both visualizations are static and both are annotated with the same information. To better understand the responsive techniques used, we performed an open-coding process of the changes between the desktop and mobile versions of the visualization. To view the mobile version of the visualization, we used the Device Mode provided by Chrome DevTools to simulated an iPhone X device in both a portrait and landscape orientation. Take a look at the article yourself, and the codes we generated here:</p>
+
+  <h2>Desktop vs. Mobile (Portrait)</h2>
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>change visualization design (line to table)</td>
+      <td>modify</td>
+      <td>view</td>
+    </tr>
+    <tr>
+      <td>wrap subtitle text</td>
+      <td>reposition</td>
+      <td>title</td>
+    </tr>
+    <tr>
+      <td>modify color encoding</td>
+      <td>modify</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>swap axes</td>
+      <td>reposition</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>reposition text annotations</td>
+      <td>reposition</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>remove axis ticks</td>
+      <td>remove</td>
+      <td>axis ticks</td>
+    </tr>
+    <tr>
+      <td>remove count axis</td>
+      <td>remove</td>
+      <td>axis</td>
+    </tr>
+    <tr>
+      <td>add count labels</td>
+      <td>add</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>add company axis</td>
+      <td>add</td>
+      <td>axis</td>
+    </tr>
+  </table>
+
+  <h2>Desktop vs. Mobile (Landscape)</h2>  
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+        <tr>
+      <td>change visualization design (line to table)</td>
+      <td>modify</td>
+      <td>view</td>
+    </tr>
+    <tr>
+      <td>wrap subtitle text</td>
+      <td>reposition</td>
+      <td>title</td>
+    </tr>
+    <tr>
+      <td>modify color encoding</td>
+      <td>modify</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>swap axes</td>
+      <td>reposition</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>reposition text annotations</td>
+      <td>reposition</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>remove axis ticks</td>
+      <td>remove</td>
+      <td>axis ticks</td>
+    </tr>
+    <tr>
+      <td>remove count axis</td>
+      <td>remove</td>
+      <td>axis</td>
+    </tr>
+    <tr>
+      <td>add count labels</td>
+      <td>add</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>add company axis</td>
+      <td>add</td>
+      <td>axis</td>
+    </tr>
+  </table>
+
+</body>

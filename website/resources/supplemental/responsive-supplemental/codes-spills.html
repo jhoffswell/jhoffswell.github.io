@@ -1,0 +1,59 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+
+  <h1>Incidents at Sea</h1>
+
+  <p>This visualization is from the Reuters article <a href="https://graphics.reuters.com/OIL-SPILLS/010060SL1GQ/index.html">Oil spilled at sea: Putting the Sanchi disaster into perspecive</a>. This visualization is a static, annotated symbol map that adapts the visualization size and annotations to different device contexts. To better understand the responsive techniques used, we performed an open-coding process of the changes between the desktop and mobile versions of the visualization. To view the mobile version of the visualization, we used the Device Mode provided by Chrome DevTools to simulated an iPhone X device in both a portrait and landscape orientation. Take a look at the article yourself, and the codes we generated here:</p>
+
+  <h2>Desktop vs. Mobile (Portrait)</h2>
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>scale visualization smaller</td>
+      <td>resize</td>
+      <td>view</td>
+    </tr>
+    <tr>
+      <td>remove some text annotations</td>
+      <td>remove</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>change size encoding</td>
+      <td>resize</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>reduce legend marks</td>
+      <td>modify</td>
+      <td>legend</td>
+    </tr>
+  </table>
+
+  <h2>Desktop vs. Mobile (Landscape)</h2>  
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>scale visualization smaller</td>
+      <td>resize</td>
+      <td>view</td>
+    </tr>
+  </table>
+
+</body>

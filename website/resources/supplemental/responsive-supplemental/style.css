@@ -1,0 +1,74 @@
+body {
+  font-family: Avenir, Helvetica Neue, Helvetica, Arial;
+  margin: 0px 10%;
+  max-width: 1511
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* Container for flow layout */
+.container {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+/* Example block containing a thumbnail, title, and links */
+.example {
+  width: 280px;
+  height: 210px;
+  border: 1px black solid;
+  margin: 5px;
+  padding: 5px;
+}
+
+.example a, .example p {
+  display: inline;
+  margin: 0px;
+}
+
+img {
+  margin: 0px 20px;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.separator {
+  color:gray
+}
+
+/* A visualization section including the Vega-Lite chart and description */
+.section {
+  margin: 10px;
+}
+
+.section h2 {
+  margin: 5px 0px;
+}
+
+.section p {
+  font-size: 10pt;
+  margin: 5px 0px;
+}
+
+.vis {
+  border: 1px gray dashed;
+  padding: 5px;
+}
+
+/* Table of codes */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}

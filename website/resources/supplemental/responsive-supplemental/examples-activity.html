@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>Activity at the time of spill</h1>
+
+  <p>This visualization is based on the Reuters article <a href="https://graphics.reuters.com/OIL-SPILLS/010060SL1GQ/index.html">Oil spilled at sea: Putting the Sanchi disaster into perspective</a>. This article includes a stacked bar visualization showing the different activities that were underway when oil was spilled. Each device specific visualization uses a different binning scheme and labels for the activities.</p> 
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 1064px">
+      <h2>Desktop Visualization (1024x150 px)</h2>
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 625px">
+      <h2>Phone Visualization - Landscape (585x150 px)</h2>
+      <div class="vis" id="vis-landscape"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (375x150 px)</h2>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/activity-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-landscape", "specs/activity-landscape.vl.json")
+      .then(result => console.log("landscape:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/activity-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/activity-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+</script>

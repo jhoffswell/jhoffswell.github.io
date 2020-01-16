@@ -1,5 +1,18 @@
 [
   {
+    "country": "United States",
+    "state": "Hawaii",
+    "city": "Honolulu",
+    "year": 2020,
+    "date": "April 25, 2020",
+    "conference": "CHI",
+    "text": "CHI 2020",
+    "image": "website/resources/images/responsive-thumbnail.png",
+    "presented": true,
+    "latitude": 21.3,
+    "longitude": -157.816667
+  },
+  {
     "country": "Canada",
     "state": "British Columbia",
     "city": "Vancouver",

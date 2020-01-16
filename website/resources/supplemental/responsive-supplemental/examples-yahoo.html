@@ -1,0 +1,56 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>Was Yahoo Late to Mobile?</h1>
+
+  <p>This visualization is based on the Harvard Business Review article <a href="https://hbr.org/2016/06/the-decline-of-yahoo-in-its-own-words">The Decline of Yahoo in Its Own Words</a>. This article includes a single visualization with two drastically different designs (one for desktop, and one for the portrait orientation on mobile).</p> 
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 1064px">
+      <h2>Desktop Visualization (1024x400 px)</h2>
+      <p>The desktop visualization uses a multi-series line chart with annotations that fits well on standard screen sizes.</p>
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (275x875 px)</h2>
+      <p>The phone visualization uses a heatmap that fits the portrait orientation better. Interestingly, this visualization also requires users to scroll on the phone to see all the visualization content.</p>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 425px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/yahoo-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/yahoo-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/yahoo-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+</script>

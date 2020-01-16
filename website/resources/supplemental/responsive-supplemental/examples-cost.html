@@ -1,0 +1,72 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>Total Cost of Major Natural Disasters</h1>
+
+  <p>This visualization is based on the New York Times article <a href="https://nyti.ms/2GJjoe4">The Places in the U.S. Where Disaster Strikes Again and Again</a>. This visualization exhibits a number of interesting changes between the desktop and mobile visualization, primarily around the annotation strategy and title placement.</p>
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>. You can also view the <a href="walkthrough-cost.mp4">complete video walkthrough</a> of this example.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 1064px">
+      <h2>Desktop Visualization (1024x612 px)</h2>
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (375x325 px)</h2>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 625px">
+      <h2>Phone Visualization - Landscape (585x325 px)</h2>
+      <div class="vis" id="vis-landscape"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>CHI Thumbnail Visualization (100x100 px)</h2>
+      <div class="vis" id="vis-chithumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/cost-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/cost-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-landscape", "specs/cost-landscape.vl.json")
+      .then(result => console.log("landscape:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/cost-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-chithumbnail", "specs/cost-chithumbnail.vl.json")
+      .then(result => console.log("chithumbnail:", result))
+      .catch(console.warn);
+  
+</script>

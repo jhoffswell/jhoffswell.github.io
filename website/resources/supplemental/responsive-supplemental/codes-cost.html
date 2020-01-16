@@ -1,0 +1,89 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+
+  <h1>Total Cost of Major Natural Disasters</h1>
+
+  <p>This visualization is from the New York Times article <a href="https://nyti.ms/2GJjoe4">The Places in the U.S. Where Disaster Strikes Again and Again</a>. This visualization is a static, annotated bar chart that adapts the visualization size and annotations to different device contexts. To better understand the responsive techniques used, we performed an open-coding process of the changes between the desktop and mobile versions of the visualization. To view the mobile version of the visualization, we used the Device Mode provided by Chrome DevTools to simulated an iPhone X device in both a portrait and landscape orientation. Take a look at the article yourself, and the codes we generated here:</p>
+
+  <h2>Desktop vs. Mobile (Portrait)</h2>
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>reposition title text</td>
+      <td>reposition</td>
+      <td>title</td>
+    </tr>
+    <tr>
+      <td>shorten annotations</td>
+      <td>modify</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>remove annotation details</td>
+      <td>modify</td>
+      <td>labels</td>
+    </tr>
+    <tr>
+      <td>shorten axis year labels</td>
+      <td>modify</td>
+      <td>axis labels</td>
+    </tr>
+    <tr>
+      <td>reduce bar width</td>
+      <td>resize</td>
+      <td>marks</td>
+    </tr>
+    <tr>
+      <td>width compressed</td>
+      <td>resize</td>
+      <td>view</td>
+    </tr>
+    <tr>
+      <td>align axis labels</td>
+      <td>reposition</td>
+      <td>axis labels</td>
+    </tr>
+    <tr>
+      <td>remove wrap title text</td>
+      <td>reposition</td>
+      <td>title</td>
+    </tr>
+    <tr>
+      <td>y axis gridline changes</td>
+      <td>resize</td>
+      <td>gridlines</td>
+    </tr>
+    <tr>
+      <td>remove y axis ticks</td>
+      <td>remove</td>
+      <td>axis ticks</td>
+    </tr>
+  </table>
+
+  <h2>Desktop vs. Mobile (Landscape)</h2>  
+
+  <table>
+    <tr style="background-color: #dddddd;">
+      <th>Code</th>
+      <th>Action</th>
+      <th>Component</th>
+    </tr>
+    <tr>
+      <td>no changes</td>
+      <td>no changes</td>
+      <td>view</td>
+    </tr>
+  </table>
+
+</body>

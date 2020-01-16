@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Jane Hoffswell">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@4"></script>
+</head>
+
+<body>
+
+  <h1>Beijing Air Quality Index (PM2.5)</h1>
+
+  <p>This visualization is based on data from <a href="https://chartaccent.github.io/">ChartAccent</a> showing the Beijing Air Quality Index (PM2.5) of December 2014. The provided sample data was used for a <a href="https://vega.github.io/editor/#/examples/vega-lite/layer_bar_annotations">Vega-Lite example</a> to show a simple layered bar chart visualization, with an annotation. For this example, we use the Vega-Lite data to (1) reproduce the ChartAccent example with highlighted bands, (2) reproduce the Vega-Lite visualization, and (3) create a thumbnail combining features of both.</p>
+
+  <p>For each visualization, you can use the three dots to (1) save the image, (2) view the Vega-Lite spec, and (3) see the result in the <a href="https://vega.github.io/editor/">Online Vega Editor</a>.</p>
+
+  <div class="container">
+
+    <div class="section" style="width: 865px">
+      <h2>Desktop Visualization (825x585 px)</h2>
+      <p>This example is based on data and a sample visualization from <a href="https://chartaccent.github.io/">ChartAccent</a>, which shows an annotated line chart visualization of PM2.5 values in December 2014; this recreation shows a smaller sample of data similar to the Vega-Lite visualization.
+      <div class="vis" id="vis-desktop"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Phone Visualization - Portrait (332x310 px)</h2>
+      <p>This example is a recreation of one of the <a href="https://vega.github.io/editor/#/examples/vega-lite/layer_bar_annotations">Vega-Lite Examples</a>, which uses data from ChartAccent. It is a bar chart of PM2.5 values, with annotated hazardous air levels.</p>
+      <div class="vis" id="vis-portrait"></div>
+    </div>
+
+    <div class="section" style="width: 500px">
+      <h2>Thumbnail Visualization (240x120 px)</h2>
+      <p>The thumbnail for this visualization combines features of the other two to show a line chart and annotate the threshold for hazardous values.</p>
+      <div class="vis" id="vis-thumbnail"></div>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+
+  vegaEmbed("#vis-desktop", "specs/hazardous-desktop.vl.json")
+      .then(result => console.log("desktop:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-portrait", "specs/hazardous-portrait.vl.json")
+      .then(result => console.log("portrait:", result))
+      .catch(console.warn);
+
+  vegaEmbed("#vis-thumbnail", "specs/hazardous-thumbnail.vl.json")
+      .then(result => console.log("thumbnail:", result))
+      .catch(console.warn);
+
+</script>
