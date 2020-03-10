@@ -27,9 +27,31 @@
       "on": [{"events": "symbol:click", "update": "datum"}]
     },
     {
+      "name": "interacted",
+      "value": [],
+      "on": [{
+        "events": "symbol:mouseover", 
+        "update": "if(indexof(interacted, datum.text) != -1, interacted, if(interacted == '', [datum.text], split(interacted + ',' + datum.text, ',')))"
+      }]
+    },
+    {
+      "name": "complete",
+      "value": false,
+      "on": [{
+        "events": {"signal": "interacted"}, 
+        "update": "length(interacted) == length(data('conferences'))"
+      }]
+    },
+    {
       "name": "showTravel",
       "value": false,
       "on": [{"events": "dblclick", "update": "!showTravel"}]
+    },
+    {"name": "canadaPath", "value": "M150 0 L75 200 L225 200 Z"},
+    {"name": "costaRicaPath", "value": "M150 0 L75 200 L225 200 Z"},
+    {
+      "name": "mexicoPath",
+      "value": "M150 0 L75 200 L225 200 Z"
     }
   ],
 
@@ -117,6 +139,12 @@
         {"text": "World Map of Conference Travel", "weight": "bold", "y": 30, "size": 20},
         {"text": "Hover over a conference to view the name and year. Click on", "y": 45},
         {"text": "an image to view the corresponding publication information.", "y": 60}
+      ]
+    },
+    {
+      "name": "hint",
+      "values": [
+        {"text": "Hint: double click to see everywhere I have traveled, in pictures.", "dy": 0}
       ]
     }
   ],
@@ -316,6 +344,74 @@
           }
         }
       ]
+    },
+    {
+      "type": "group",
+      "interactive": false,
+      "marks": [
+        {
+          "from": {"data": "hint"},
+          "type": "text",
+          "encode": {
+            "enter": {
+              "align": {"value": "right"},
+              "text": {"field": "text"},
+              "fontStyle": {"value": "italic"},
+              "fontSize": {"field": "size"},
+              "x": {"signal": "width"},
+              "dx": {"value": -15},
+              "y": {"signal": "height"},
+              "opacity": {"value": 0}
+            },
+            "update": {
+              "opacity": [
+                {"test": "showTravel", "value": 0},
+                {"test": "complete", "value": 1},
+                {"value": 0}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "clip": {"path": {"signal": "canadaPath"}},
+      "type": "image",
+      "aspect": true,
+      "encode": {
+        "update": {
+          "x": {"value": 0},
+          "y": {"value": 0},
+          "width": {"value": 1000},
+          "url": {"value": "https://uploads-ssl.webflow.com/5c7da11f03dd897c90e6ef71/5c7da11f03dd896b1fe6f071_pink-flowers-700x371.jpg"}
+        }
+      }
+    },
+    {
+      "clip": {"path": {"signal": "costaRicaPath"}},
+      "type": "image",
+      "aspect": true,
+      "encode": {
+        "update": {
+          "x": {"value": 0},
+          "y": {"value": 0},
+          "width": {"value": 1000},
+          "url": {"value": "https://uploads-ssl.webflow.com/5c7da11f03dd897c90e6ef71/5c7da11f03dd896b1fe6f071_pink-flowers-700x371.jpg"}
+        }
+      }
+    },
+    {
+      "clip": {"path": {"signal": "mexicoPath"}},
+      "type": "image",
+      "aspect": true,
+      "encode": {
+        "update": {
+          "x": {"value": 0},
+          "y": {"value": 0},
+          "width": {"value": 1000},
+          "url": {"value": "https://uploads-ssl.webflow.com/5c7da11f03dd897c90e6ef71/5c7da11f03dd896b1fe6f071_pink-flowers-700x371.jpg"}
+        }
+      }
     }
   ]
 }
