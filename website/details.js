@@ -39,6 +39,7 @@ function createHeaderBlock(div, info) {
   // Create the paper title and author list
   div.appendChild(createElement("h2", null, info.title));
   div.appendChild(createElement("h3", null, getAuthorsHTML(info.authors)));
+  if(info.award) div.appendChild(createIconElement("trophy", "h3", {class: "award noselect"}, info.award));
 }
 
 function createFigureBlock(div, info) {

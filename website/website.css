@@ -332,8 +332,18 @@ html, body {
   }
 
   .paper-details h3 {
+    display: inline-block;
     font-weight: normal;
-    margin-top: 0px;
+    margin: 0px 10px 0px 0px;
+  }
+
+  .paper-details h3.award {
+    color: #B27300;
+    font-weight: bold;
+  }
+
+  .paper-details .icon {
+    margin: 0px 5px;
   }
 
   .paper-details h4 {
