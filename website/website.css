@@ -216,6 +216,13 @@ html, body {
     margin: 5px 0px;
   }
 
+  .publication img.small {
+    flex: none;
+    width: 120px;
+    height: 60px;
+    margin: 5px 0px;
+  }
+
   .publication img:hover, .recent img:hover {
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 5px 3px #ddd;
@@ -245,7 +252,6 @@ html, body {
   }
 
   .publication .jane, .recent .jane {
-    /*font-weight: bold;*/
     color: #B27300;
   }
 

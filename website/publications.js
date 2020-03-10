@@ -23,7 +23,8 @@ function getPublicationListBlock(name, includeLinks) {
   var info = publications[name];
   var div = createElement("div", {class: "publication"});
 
-  createPubImageBlock(div, info, name);   // Paper thumbnail
+  var small = includeLinks ? "" : " small";
+  createPubImageBlock(div, info, name, small); // Paper thumbnail
 
   // Create a div to hold the paper info
   var paper = createElement("div", {class: "paper"});
@@ -40,9 +41,9 @@ function getPublicationListBlock(name, includeLinks) {
   return div;
 }
 
-function createPubImageBlock(div, info, name) {
+function createPubImageBlock(div, info, name, small) {
   var options = {
-    class: "link", 
+    class: "link" + small, 
     href: "#" + name, 
     src: info.thumbnail, 
     onclick: "openTab(event,'" + name + "')"};
