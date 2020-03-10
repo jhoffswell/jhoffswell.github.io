@@ -14,6 +14,7 @@ var publications = {
     "figure": "website/resources/images/responsive-figure.png",
     "figurecaption": "Desktop (left) and mobile (right) visualizations from the New York Times article “The Places in the U.S. Where Disaster Strikes Again and Again” [A13]. This example demonstrates responsive techniques that: (A) resize the view to compress the width; (B) reposition content (e.g., axes, labels, and title); (C) remove unnecessary labels; (D) modify the text and axis labels to reduce complexity; and (E) add new line marks to annotate the bars.",
     "abstract": "Responsive visualizations adapt to effectively present information based on the device context. Such adaptations are essential for news content that is increasingly consumed on mobile devices. However, existing tools provide little support for responsive visualization design. We analyze a corpus of 231 responsive news visualizations and discuss formative interviews with five journalists about responsive visualization design. These interviews motivate four central design guidelines: enable simultaneous cross-device edits, facilitate device-specific customization, show cross-device previews, and support propagation of edits. Based on these guidelines, we present a prototype system that allows users to preview and edit multiple visualization versions simultaneously. We demonstrate the utility of the system features by recreating four real-world responsive visualizations from our corpus.",
+    "award": "Best Paper Award",
     "supplemental": [
       {
         "name": "Video",
@@ -46,12 +47,12 @@ var publications = {
     "abstract": "PDF documents often contain rich data tables that offer opportunities for dynamic re-appropriation and visualization. We describe a pipeline for extracting, analyzing, and visualizing PDF tables based on existing machine learning and rule-based techniques. Implementing and deploying this pipeline on a corpus of 447 documents with 1,171 tables results in only 11 tables that are correctly extracted and parsed for dynamic visualization. To improve the results of the automatic table analysis, we first present a taxonomy of errors that arise in the analysis pipeline and discuss the implications of cascading errors on the user experience. We then contribute a system with two lightweight interaction techniques (gesture and toolbar), for viewing, correcting, and visualizing PDF tables on mobile devices. In an evaluation with 17 users involving both a phone and a tablet, participants effectively repaired common errors in 10 tables, with an average time of about 2 minutes per table.",
     "supplemental": [
       {
-        "name": "Video",
-        "link": "website/resources/videos/tables-videofigure.mp4"
-      },
-      {
         "name": "Video Preview",
         "link": "website/resources/videos/tables-preview.mp4"
+      },
+      {
+        "name": "Video",
+        "link": "website/resources/videos/tables-videofigure.mp4"
       },
       {
         "name": "Supplemental Materials", 
@@ -132,12 +133,12 @@ var publications = {
     "abstract": "Programmers must draw explicit connections between their code and runtime state to properly assess the correctness of their programs. However, debugging tools often decouple the program state from the source code and require explicitly invoked views to bridge the rift between program editing and program understanding. To unobtrusively reveal runtime behavior during both normal execution and debugging, we contribute techniques for visualizing program variables directly within the source code. We describe a design space and placement criteria for embedded visualizations. We evaluate our in situ visualizations in an editor for the Vega visualization grammar. Compared to a baseline development environment, novice Vega users improve their overall task grade by about 2 points when using the in situ visualizations and exhibit significant positive effects on their self-reported speed and accuracy.",
     "supplemental": [
       {
-        "name": "Video",
-        "link": "website/resources/videos/codeAugmentations-videofigure.mp4"
-      },
-      {
         "name": "Video Preview",
         "link": "website/resources/videos/codeAugmentations-preview.mp4"
+      },
+      {
+        "name": "Video",
+        "link": "website/resources/videos/codeAugmentations-videofigure.mp4"
       },
       {
         "name": "Supplemental Materials", 
@@ -214,7 +215,7 @@ var publications = {
     "abstract": "We present Reactive Vega, a system architecture that provides the first robust and comprehensive treatment of declarative visual and interaction design for data visualization. Starting from a single declarative specification, Reactive Vega constructs a dataflow graph in which input data, scene graph elements, and interaction events are all treated as first-class streaming data sources. To support expressive interactive visualizations that may involve time-varying scalar, relational, or hierarchical data, Reactive Vega's dataflow graph can dynamically re-write itself at runtime by extending or pruning branches in a data-driven fashion. We discuss both compile- and run-time optimizations applied within Reactive Vega, and share the results of benchmark studies that indicate superior interactive performance to both D3 and the original, non-reactive Vega system.",
     "supplemental": [
       {
-        "name": "Software",
+        "name": "Website",
         "link": "http://vega.github.io/vega/"
       }
     ]

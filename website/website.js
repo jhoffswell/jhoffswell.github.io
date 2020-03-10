@@ -98,3 +98,18 @@ function createElement(type, options, content) {
   Object.keys((options || {})).forEach(o => element.setAttribute(o, options[o]));
   return element;
 }
+
+function createIconElement(icon, type, options, content) {
+  var span = document.createElement("a");
+  if(options.href) span.setAttribute("href", options.href);
+
+  var iconElement = createElement("span", {class: "fa fa-" + icon + " icon"});
+  span.appendChild(iconElement);
+
+  var element = document.createElement(type);
+  if(content) element.innerHTML = content;
+  Object.keys((options || {})).forEach(o => element.setAttribute(o, options[o]));
+  span.appendChild(element);
+
+  return span;
+}

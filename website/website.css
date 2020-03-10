@@ -211,8 +211,8 @@ html, body {
 
   .publication img {
     flex: none;
-    width: 120px;
-    height: 60px;
+    width: 156px;
+    height: 78px;
     margin: 5px 0px;
   }
 
@@ -245,7 +245,7 @@ html, body {
   }
 
   .publication .jane, .recent .jane {
-    font-weight: bold;
+    /*font-weight: bold;*/
     color: #B27300;
   }
 
@@ -259,15 +259,28 @@ html, body {
     color: black;
   }
 
+  .publication .icon {
+    color: gray;
+    font-size: 11pt;
+    margin: 0px 5px 0px 0px;
+    cursor: pointer;
+  }
+
   .publication a, .recent a {
     text-decoration: none;
     color: gray;
+    margin: 0px 5px 0px 0px;
   }
 
   .publication a:hover, .recent a:hover { 
     cursor: pointer;
     color: #B27300;
     text-decoration: underline;
+  }
+
+  .publication .award, .icon.fa-trophy {
+    color: #B27300;
+    font-weight: bold;
   }
 
 /************************** Citation (Recent) *************************/

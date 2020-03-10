@@ -34,7 +34,7 @@ function getPublicationListBlock(name, includeLinks) {
   createPubAuthorBlock(paper, info);      // Paper authors
   createPubLongVenueBlock(paper, info);   // Paper venue (long)
 
-  // Add links according if specified
+  // Add links accordingly if specified
   if(includeLinks) createPubLinksBlock(paper, info, name);
 
   return div;
@@ -79,14 +79,42 @@ function createPubLongVenueBlock(div, info) {
 }
 
 function createPubLinksBlock(div, info, name) {
-  div.appendChild(createElement("p", {style: "color:gray"}, " | "));
-  div.appendChild(createElement("a", {class: "pdf", href: info.paper}, "PDF"));
-  div.appendChild(createElement("p", {style: "color:gray"}, " | "));
+  div.appendChild(document.createElement("br"));
 
+  // Show the best paper award info
+  if(info.award) div.appendChild(createIconElement("trophy", "a", {class: "award noselect"}, info.award));
+
+  // Link to the PDF
+  var link = info.paper;
+  var options = {class: "pdf noselect", href: link};
+  div.appendChild(createIconElement("file-text", "a", options, "PDF", link));
+
+  // Link to the DOI
+  var options = {class: "link noselect", href: info.doi};
+  div.appendChild(createIconElement("search", "a", options, "DOI"));
+
+  // Display other supplemental information
+  for (var i = 0; i < info.supplemental.length; i++) {
+    var supplement = info.supplemental[i];
+    var toShow = {
+      "Video Preview": {"name": "Preview", "icon": "eye"},
+      "Video":         {"name": "Video",   "icon": "film"},
+      "GitHub":        {"name": "Code",    "icon": "github"},
+      "Website":       {"name": "Website", "icon": "link"}
+    };
+
+    if(toShow.hasOwnProperty(supplement.name)) {
+      var show = toShow[supplement.name];
+      var options = {class: "link noselect", href: supplement.link};
+      div.appendChild(createIconElement(show.icon, "a", options, show.name));
+    }
+  }
+
+  // Display the BibTeX box
   var options = {
-    class: "link bibtex-text noselect",
+    class: "link noselect",
     onclick: "showBibTeX(event, '" + name + "')"};
-  div.appendChild(createElement("a", options, "BibTeX"));
+  div.appendChild(createIconElement("quote-left", "a", options, "BibTeX"));
 }
 
 function getAuthorsHTML(authors) {
@@ -120,11 +148,11 @@ function showBibTeX(evt, type) {
 
   if(classname.indexOf("selected") !== -1) {
     src.className = classname.replace(" selected", "");
-    src.parentNode.removeChild(document.getElementById(divid));
+    src.parentNode.parentNode.removeChild(document.getElementById(divid));
   } else {
     src.className += " selected";
     var div = createElement("div", {class: "bibtex", id: divid});
-    src.parentNode.append(div);
+    src.parentNode.parentNode.append(div);
 
     // Add the bibtex contents
     div.append(createElement("pre", null, getBibTeXString(publications[type])));
