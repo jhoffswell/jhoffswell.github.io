@@ -1,11 +1,6 @@
 function init() {
   if(location.hash == "") location.hash = "#" + "About"; 
 
-  // Set the size of the page
-  document.documentElement.scrollTop = document.body.scrollTop = 0;
-  window.onresize = function() { setDisplayType(); };
-  setDisplayType();
-
   // Initialize the page elements
   initAbout();
   initPublications();
@@ -17,22 +12,6 @@ function init() {
 
   // Show the page content
   showTab();
-}
-
-// Get the width of the page
-function getWidth() {
-  return Math.max(
-    document.body.scrollWidth,
-    document.documentElement.scrollWidth,
-    document.body.offsetWidth,
-    document.documentElement.offsetWidth,
-    document.documentElement.clientWidth
-  );
-}
-
-// Set the display type for the page
-function setDisplayType() {
-  document.body.className = getWidth() < 1000 ? "mobile" : "";
 }
 
 // Open a particular tab
@@ -101,6 +80,7 @@ function createElement(type, options, content) {
 
 function createIconElement(icon, type, options, content) {
   var span = document.createElement("a");
+  span.className = "iconelement";
   if(options.href) span.setAttribute("href", options.href);
 
   var iconElement = createElement("span", {class: "fa fa-" + icon + " icon"});

@@ -1,7 +1,8 @@
+@media only screen and (min-width: 1000px) {
+
 html, body {
   height: 100%;
   margin: 0;
-
   font-family: Avenir, Helvetica Neue, Helvetica, Arial;
 }
 
@@ -13,6 +14,7 @@ html, body {
 
 .margin {
   flex: 1 1 auto;
+  min-width: 25px;
 }
 
 .center {
@@ -72,6 +74,14 @@ html, body {
     height: 125px;
   }
 
+  .header .background #name {
+    height: 125px;
+  }
+
+  .header #profile {
+    display: none;
+  }
+
   .header .background h1 {
     margin: 14px 0px 0px 25px;
     color: #B27300;
@@ -93,15 +103,18 @@ html, body {
 /******************************** Menu ********************************/
 
   #menu {
+    display: block;
+    width: 200px;
     float: right;
     padding: 13px;
   }
 
   .menuitem {
+    flex: none;
+    float: right;
     font-size: 17px;
     cursor: pointer;
-    float: right;
-    margin-top: 2px;
+    margin: 1.5px;
   }
 
   .menuitem:hover, .menuitem a:hover {
@@ -153,6 +166,7 @@ html, body {
     display: flex;
     flex-flow: row;
     margin: 20px 0px 0px 0px;
+    font-size: 12pt;
   }
 
   #aboutblock {
@@ -162,6 +176,7 @@ html, body {
   }
 
   #profileblock {
+    display: block;
     margin: 20px 20px 0px 0px;
     font-size: 11pt;
   }
@@ -234,6 +249,7 @@ html, body {
     flex: 80% 0 auto;
     display: inline-block;
     padding: 0px 0px 0px 15px;
+    font-size: 12pt;
   }
 
   .publication p {
@@ -263,6 +279,7 @@ html, body {
   .publication .venue, .recent .venue {
     font-style: oblique;
     color: black;
+    margin: 0px 0px 0px 0px;
   }
 
   .publication .icon {
@@ -276,6 +293,10 @@ html, body {
     text-decoration: none;
     color: gray;
     margin: 0px 5px 0px 0px;
+  }
+
+  .publication br {
+    display: block;
   }
 
   .publication a:hover, .recent a:hover { 
@@ -297,20 +318,26 @@ html, body {
   }
 
   .recent {
-    width: 320px;
-    height: 250px;
-    margin: 0px 15px 0px 0px;
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 350px;
+    /*width: 320px;*/
+    /*height: 250px;*/
+    margin: 0px 15px 15px 0px;
   }
 
   .recent img {
-    flex: none;
-    width: 320px;
-    height: 160px;
+    /*flex: 1 1 auto;*/
+    width: 100%;
+    height: auto;
+    /*width: 320px;*/
+    /*height: 160px;*/
   }
 
   .recent .paper {
     display: block;
-    width: 320px;
+    width: 100%;
+    min-height: 50px;
     padding: 0px;
     font-size: 10pt;
     line-height: 12pt;
@@ -323,6 +350,7 @@ html, body {
 
   .recent .title {
     font-weight: bold;
+    display: inline;
   }
 
 /**************************** Paper Details ***************************/
@@ -428,3 +456,5 @@ html, body {
     font-size: 10pt;
     margin: 0px;
   }
+
+}

@@ -42,6 +42,7 @@ function getPublicationListBlock(name, includeLinks) {
 }
 
 function createPubImageBlock(div, info, name, small) {
+  if(!small) small = "";
   var options = {
     class: "link" + small, 
     href: "#" + name, 
