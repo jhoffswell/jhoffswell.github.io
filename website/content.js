@@ -103,16 +103,16 @@ var publications = {
         "link": "website/resources/videos/setcola-preview.m4v"
       },
       {
-        "name": "Reapplication Example (Supplemental)", 
-        "link": "website/resources/supplemental/setcola-supplemental.pdf"
-      },
-      {
         "name": "GitHub",
         "link": "https://github.com/uwdata/setcola"
       },
       {
         "name": "Website",
         "link": "https://uwdata.github.io/setcola/"
+      },
+      {
+        "name": "Reapplication Example (Supplemental)", 
+        "link": "website/resources/supplemental/setcola-supplemental.pdf"
       }
     ]
   },

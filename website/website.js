@@ -80,15 +80,19 @@ function createElement(type, options, content) {
 
 function createIconElement(icon, type, options, content) {
   var span = document.createElement("a");
-  span.className = "iconelement";
+  span.className = "iconelement " + options.class;
   if(options.href) span.setAttribute("href", options.href);
 
-  var iconElement = createElement("span", {class: "fa fa-" + icon + " icon"});
+  var properties = Object.keys((options || {}));
+
+  var iconElement = document.createElement("span");
+  properties.forEach(o => iconElement.setAttribute(o, options[o]));
+  iconElement.className = iconElement.className + " icon fa fa-" + icon;
   span.appendChild(iconElement);
 
   var element = document.createElement(type);
   if(content) element.innerHTML = content;
-  Object.keys((options || {})).forEach(o => element.setAttribute(o, options[o]));
+  properties.forEach(o => element.setAttribute(o, options[o]));
   span.appendChild(element);
 
   return span;

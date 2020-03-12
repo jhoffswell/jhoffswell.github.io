@@ -1,78 +1,88 @@
-html, body {
-  font-family: Avenir, Helvetica Neue, Helvetica, Arial;
-  height: 100%;
-  margin: 0;
-}
-
-.container {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-}
-
-.margin {
-  flex: 1 1 auto;
-  min-width: 25px;
-}
-
-.center {
-  max-width: 1095px;
-}
-
-.separator {
-  color: #B27300;
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-}
-
 /**********************************************************************/
-/*************************** Header, Footer ***************************/
+/** Basic Tag Properties **********************************************/
 /**********************************************************************/
 
-  .header, .footer {
-    flex: 0 0 auto;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
+  html, body {
+    font-family: Avenir, Helvetica Neue, Helvetica, Arial;
+    font-size: 26pt;
+    height: 100%;
+    margin: 0;
+
   }
 
-  .header img, .footer img {
-    object-fit: contain;
-    width: 100%;
+  h2 {
+    font-size: 36pt;
   }
 
-  .header .background, .footer .background {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    background: rgba(256, 256, 256, 0.75);
+  h4 {
+    font-size: 28pt;
+    font-variant: small-caps;
+    margin: 10px 0px 0px 0px;
   }
 
 /**********************************************************************/
-/******************************* Header *******************************/
+/** Basic Layout Classes **********************************************/
+/**********************************************************************/
+
+  .container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+  }
+
+  .margin {
+    flex: 1 1 auto;
+    min-width: 25px;
+  }
+
+/**********************************************************************/
+/** General Style Classes *********************************************/
+/**********************************************************************/
+
+  .separator {
+    color: #B27300;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+  }
+
+/**********************************************************************/
+/** Header ************************************************************/
 /**********************************************************************/
 
   .header {
+    z-index: 1;
+    width: 100%;
     height: 240px;
+    flex: 0 0 auto;
+    overflow: hidden;
+    position: relative;
     box-shadow: 0px 1px 4px 0px #bbb;
     -moz-box-shadow: 0px 1px 4px 0px #bbb;
     -webkit-box-shadow: 0px 1px 4px 0px #bbb;
   }
 
   .header .background {
+    background: rgba(256, 256, 256, 0.75);
+    position: absolute;
     height: 240px;
+    width: 100%;
+    top: 0px;
   }
 
-  .header .background #name {
+  .header #backgroundimg {
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .header .background #information {
     height: 195px;
   }
 
@@ -84,16 +94,16 @@ html, body {
   }
 
   .header .background h1 {
+    margin: 0px;
     display: flex;
     color: #B27300;
     font-size: 98px;
     font-family: Georgia, serif;
-    margin: 0px;
   }
 
   .header .background p {
-    margin: 0px;
     font-size: 21.5pt;
+    margin: 0px;
   }
 
   .column {
@@ -103,7 +113,9 @@ html, body {
     top: 0px;
   }
 
-/******************************** Menu ********************************/
+/**********************************************************************/
+/** Menu **************************************************************/
+/**********************************************************************/
 
   #menu {
     display: flex;
@@ -120,10 +132,6 @@ html, body {
     margin: 5px 0px 5px 35px;
   }
 
-  .menuitem:hover, .menuitem a:hover {
-    color: #B27300;
-  }
-
   .menuitem a  {
     text-decoration: none;
     color: black;
@@ -135,21 +143,39 @@ html, body {
   }
 
 /**********************************************************************/
-/******************************* Footer *******************************/
+/** Footer ************************************************************/
 /**********************************************************************/
 
-  .footer, .footer .background {
+  .footer {
+    flex: 0 0 auto;
     height: 40px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .footer .background {
+    background: rgba(256, 256, 256, 0.75);
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+  }
+
+  .footer #backgroundimg {
+    object-fit: contain;
+    width: 100%;
   }
 
   .footer .background p {
     float: right;
-    margin-right: 10px;
-    font-size: 10pt;
+    font-size: 16pt;
+    margin: 8px 10px 0px 0px;
   }
 
 /**********************************************************************/
-/******************************** Body ********************************/
+/** Body **************************************************************/
 /**********************************************************************/
 
   .body {
@@ -163,45 +189,14 @@ html, body {
     flex: 1 1 auto;
   }
 
-/******************************** About *******************************/
+/**********************************************************************/
+/** About *************************************************************/
+/**********************************************************************/
   
   #About {
     display: flex;
     flex-flow: row;
     margin: 20px 0px 0px 0px;
-    font-size: 21pt;
-  }
-
-  #aboutblock {
-    display: flex;
-    flex-flow: row;
-    min-height: 30px;
-  }
-
-  #profileblock {
-    display: none;
-    margin: 20px 20px 0px 0px;
-    font-size: 11pt;
-  }
-
-  #profileblock img {
-    flex: none;
-    align-self: center;
-    width: 155px;
-    height: 155px;
-    border-radius: 10px;
-  }
-
-  #profileblock .fa {
-    display: inline-block;
-    color: #636363;
-  }
-
-  #profileblock a {
-    display: inline-block;
-    text-decoration: none;
-    margin: 0px 5px 0px 5px;
-    color: #636363;
   }
 
   #objective {
@@ -213,47 +208,32 @@ html, body {
     color: #B27300;
   }
 
-  #objective .link:hover, #background .link:hover {
-    cursor: pointer;
-    text-decoration: underline;
+/**********************************************************************/
+/** Profile ***********************************************************/
+/**********************************************************************/
+
+  #profileblock {
+    display: none;
   }
 
-/************************* Citation (General) *************************/
+/**********************************************************************/
+/** Publication (General) *********************************************/
+/**********************************************************************/
 
   .publication {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column;
+    margin: 0px 15px 60px 0px;
     min-height: 60px;
     padding: 0px;
-    display: flex;
-    flex-flow: column;
-    margin: 0px;
   }
 
   .publication img {
     flex: 1 1 auto;
-    width: 100%;
     height: auto;
     margin: 0px;
-  }
-
-  .publication img.small {
-    flex: none;
-    width: 120px;
-    height: 60px;
-    margin: 5px 0px;
-  }
-
-  .publication img:hover, .recent img:hover {
-    cursor: pointer;
-    -webkit-box-shadow: 0px 0px 5px 3px #ddd;
-    -moz-box-shadow: 0px 0px 5px 3px #ddd;
-    box-shadow: 0px 0px 5px 3px #ddd;
-  }
-
-  .paper {
-    flex: 80% 0 auto;
-    display: inline-block;
-    padding: 0px 0px 0px 15px;
-    font-size: 19pt;
+    width: 100%;
   }
 
   .publication p {
@@ -263,130 +243,105 @@ html, body {
 
   .publication .title {
     font-weight: bold;
-    display: inline;
   }
 
-  .publication .title:hover, .recent .title:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .publication .jane, .recent .jane {
+  .publication .jane {
     color: #B27300;
+    display: inline-block;
   }
 
-  .publication .authors {
-    display: inline;
-    color: black;
-  }
-
-  .publication .venue, .recent .venue {
+  .publication .venue {
     font-style: oblique;
-    color: black;
-    margin: 0px 15px 0px 0px;
+  }
+
+  .publication .links {
+    display: block;
+  }
+
+  .publication .iconelement {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    text-decoration: none;
+  }
+
+  .publication .iconelement a {
+    color: gray;
+    cursor: pointer;
+    text-decoration: none;
   }
 
   .publication .icon {
     color: gray;
-    font-size: 18pt;
-    margin: 0px 5px 0px 0px;
-    cursor: pointer;
-  }
-
-  .publication a, .recent a {
-    text-decoration: none;
-    color: gray;
     margin: 0px 10px 0px 0px;
   }
 
-  .publication .iconelement {
-    display: inline-block;
-  }
-
-  .publication a:hover, .recent a:hover { 
-    cursor: pointer;
+  .publication .award, .publication .award a {
     color: #B27300;
-    text-decoration: underline;
-  }
-
-  .publication br {
-    display: none;
-  }
-
-  .publication .award, .icon.fa-trophy {
-    color: #B27300;
+    cursor: default;
     font-weight: bold;
   }
 
-/************************** Citation (Recent) *************************/
+/**********************************************************************/
+/** Publication (Featured) ********************************************/
+/**********************************************************************/
 
   #publicationblock {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .recent {
-    display: flex;
-    flex-flow: column;
-    flex: 1 1 auto;
-    margin: 0px 15px 30px 0px;
+  #publicationblock .publication .venue.long {
+    display: none;
   }
 
-  .recent img {
-    width: 100%;
-    height: auto;
+/**********************************************************************/
+/** Publication (List) ************************************************/
+/**********************************************************************/
+
+  #Publications .publication .venue.short {
+    display: none;
   }
 
-  .recent .paper {
-    display: block;
-    width: 100%;
-    min-height: 50px;
-    padding: 0px;
-    font-size: 19pt;
-    line-height: 22pt;
-  }
-
-  .recent p {
+  #Publications .publication .links {
     display: inline;
-    margin: 0px;
   }
 
-  .recent .title {
-    font-weight: bold;
-    display: block;
+/**********************************************************************/
+/** Publication (Citation) ********************************************/
+/**********************************************************************/
+
+  .citation .links, 
+  .citation .venue.short {
+    display: none;
   }
 
-/**************************** Paper Details ***************************/
+/**********************************************************************/
+/** Paper Details *****************************************************/
+/**********************************************************************/
 
   .paper-details h2 {
     margin-bottom: 0px;
   }
 
   .paper-details h3 {
-    display: inline-block;
     font-weight: normal;
     margin: 0px 10px 0px 0px;
   }
 
   .paper-details h3.award {
     color: #B27300;
+    display: inline-block;
     font-weight: bold;
   }
 
   .paper-details .icon {
+    color: #B27300;
     margin: 0px 5px;
-  }
-
-  .paper-details h4 {
-    font-size: 14pt;
-    font-variant: small-caps;
-    margin: 10px 0px 0px 0px;
   }
 
   .figure {
     margin: 0px;
-    min-width: 350px;
-    max-width: 1090px;
   }
 
   .figure img {
@@ -396,14 +351,8 @@ html, body {
 
   .figure p {
     font-style: italic;
-    font-size: 10pt;
+    font-size: 17pt;
     margin: 0px;
-  }
-
-  .abstract {
-    flex: 40% 0 auto;
-    min-width: 350px;
-    max-width: 1090px;
   }
 
   .abstract p {
@@ -412,17 +361,14 @@ html, body {
   }
 
   .materials a {
-    text-decoration: none;
     color: gray;
     display: inline-block;
+    text-decoration: none;
   }
 
-  .materials a:hover {
-    cursor: pointer;
-    color: #B27300;
-  }
-
-/************************** Curriculum Vitae **************************/
+/**********************************************************************/
+/** Curriculum Vitae **************************************************/
+/**********************************************************************/
 
   #CurriculumVitae {
     padding: 0px;
@@ -434,14 +380,18 @@ html, body {
     height: 100%;
   }
 
-/*************************** Conference Map ***************************/
+/**********************************************************************/
+/** Conference Map ****************************************************/
+/**********************************************************************/
 
   #ConferenceMap {
     padding: 0px;
     overflow: hidden;
   }
 
-/**************************** BibTeX Block ****************************/
+/**********************************************************************/
+/** BibTeX Block ******************************************************/
+/**********************************************************************/
 
   .bibtex-text.selected {
     font-weight: bold;
@@ -449,13 +399,13 @@ html, body {
   }
 
   .bibtex {
-    cursor: text;
     background: #eee;
+    cursor: text;
     overflow-y: scroll;
     padding: 10px;
   }
 
   .bibtex pre {
-    font-size: 10pt;
+    font-size: 24pt;
     margin: 0px;
   }

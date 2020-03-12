@@ -13,18 +13,16 @@ function initPublications() {
   var names = Object.keys(publications);
   for (var i = 0; i < names.length; i++) {
     var info = publications[names[i]];
-    var block = getPublicationListBlock(names[i]);
-    ((info.type == "paper") ? pubsblock : workblock).appendChild(block);
+    var block = getPublicationBlock(names[i]);
+    var container = (info.type == "paper") ? pubsblock : workblock;
+    container.appendChild(block);
   }
 }
 
-function getPublicationListBlock(name, includeLinks) {
-  if(includeLinks == undefined) includeLinks = true;
+function getPublicationBlock(name) {
   var info = publications[name];
   var div = createElement("div", {class: "publication"});
-
-  var small = includeLinks ? "" : " small";
-  createPubImageBlock(div, info, name, small); // Paper thumbnail
+  createPubImageBlock(div, info, name);   // Paper thumbnail
 
   // Create a div to hold the paper info
   var paper = createElement("div", {class: "paper"});
@@ -34,17 +32,15 @@ function getPublicationListBlock(name, includeLinks) {
   createPubTitleBlock(paper, info, name); // Paper title
   createPubAuthorBlock(paper, info);      // Paper authors
   createPubLongVenueBlock(paper, info);   // Paper venue (long)
-
-  // Add links accordingly if specified
-  if(includeLinks) createPubLinksBlock(paper, info, name);
+  createPubShortVenueBlock(paper, info);  // Paper venue (short)
+  createPubLinksBlock(paper, info, name); // Paper links
 
   return div;
 }
 
-function createPubImageBlock(div, info, name, small) {
-  if(!small) small = "";
+function createPubImageBlock(div, info, name) {
   var options = {
-    class: "link" + small, 
+    class: "link", 
     href: "#" + name, 
     src: info.thumbnail, 
     onclick: "openTab(event,'" + name + "')"};
@@ -69,31 +65,32 @@ function createPubAuthorBlock(div, info) {
 }
 
 function createPubShortVenueBlock(div, info) {
-  var options = {class: "venue"};
+  var options = {class: "venue short"};
   var content =  " " + info.conference + " " + info.year + ".";
   div.appendChild(createElement("p", options, content));
 }
 
 function createPubLongVenueBlock(div, info) {
-  var options = {class: "venue"};
+  var options = {class: "venue long"};
   var content = " " + info.booktitle + ", " + info.year + ".";
   div.appendChild(createElement("p", options, content));
 }
 
 function createPubLinksBlock(div, info, name) {
-  div.appendChild(document.createElement("br"));
+  var links = div.appendChild(document.createElement("p"));
+  links.className = "links";
 
   // Show the best paper award info
-  if(info.award) div.appendChild(createIconElement("trophy", "a", {class: "award noselect"}, info.award));
+  if(info.award) links.appendChild(createIconElement("trophy", "a", {class: "award noselect"}, info.award));
 
   // Link to the PDF
   var link = info.paper;
   var options = {class: "pdf noselect", href: link};
-  div.appendChild(createIconElement("file-text", "a", options, "PDF", link));
+  links.appendChild(createIconElement("file-text", "a", options, "PDF", link));
 
   // Link to the DOI
   var options = {class: "link noselect", href: info.doi};
-  div.appendChild(createIconElement("search", "a", options, "DOI"));
+  links.appendChild(createIconElement("search", "a", options, "DOI"));
 
   // Display other supplemental information
   for (var i = 0; i < info.supplemental.length; i++) {
@@ -108,15 +105,15 @@ function createPubLinksBlock(div, info, name) {
     if(toShow.hasOwnProperty(supplement.name)) {
       var show = toShow[supplement.name];
       var options = {class: "link noselect", href: supplement.link};
-      div.appendChild(createIconElement(show.icon, "a", options, show.name));
+      links.appendChild(createIconElement(show.icon, "a", options, show.name));
     }
   }
 
   // Display the BibTeX box
   var options = {
-    class: "link noselect",
+    class: "link bib noselect",
     onclick: "showBibTeX(event, '" + name + "')"};
-  div.appendChild(createIconElement("quote-left", "a", options, "BibTeX"));
+  links.appendChild(createIconElement("quote-left", "a", options, "BibTeX"));
 }
 
 function getAuthorsHTML(authors) {

@@ -1,106 +1,72 @@
-@media only screen and (min-width: 1000px) {
-
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: Avenir, Helvetica Neue, Helvetica, Arial;
-}
-
-.container {
-  display: flex;
-  flex-flow: column;
-  height: 100%;
-}
-
-.margin {
-  flex: 1 1 auto;
-  min-width: 25px;
-}
-
-.center {
-  max-width: 1095px;
-}
-
-.separator {
-  color: #B27300;
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Opera and Firefox */
-}
+@media only screen and (min-width: 1145px) {
 
 /**********************************************************************/
-/*************************** Header, Footer ***************************/
+/** Basic Tag Properties **********************************************/
 /**********************************************************************/
 
-  .header, .footer {
-    flex: 0 0 auto;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    z-index: 1;
+  html, body {
+    font-size: 12pt;
   }
 
-  .header img, .footer img {
-    width: 100%;
-    object-fit: contain;
+  h2 {
+    font-size: 18pt;
   }
 
-  .header .background, .footer .background {
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    background: rgba(256, 256, 256, 0.75);
+  h4 {
+    font-size: 14pt;
   }
 
 /**********************************************************************/
-/******************************* Header *******************************/
+/** Basic Layout Classes **********************************************/
+/**********************************************************************/
+
+  .center {
+    max-width: 1095px;
+  }
+
+/**********************************************************************/
+/** General Style Classes *********************************************/
+/**********************************************************************/
+
+  /* See website-mobile.css */
+
+/**********************************************************************/
+/** Header ************************************************************/
 /**********************************************************************/
 
   .header {
     height: 125px;
-    -webkit-box-shadow: 0px 1px 4px 0px #bbb;
-    -moz-box-shadow: 0px 1px 4px 0px #bbb;
-    box-shadow: 0px 1px 4px 0px #bbb;
   }
 
   .header .background {
     height: 125px;
   }
 
-  .header .background #name {
+  .header .background #information {
     height: 125px;
   }
 
-  .header #profile {
+  .header .background #profile {
     display: none;
   }
 
   .header .background h1 {
-    margin: 14px 0px 0px 25px;
-    color: #B27300;
     font-size: 54px;
-    font-family: Georgia, serif;
+    margin: 14px 0px 0px 25px;
   }
 
   .header .background p {
-    margin: 0px 0px 0px 25px;
     font-size: 12pt;
+    margin: 0px 0px 0px 25px;
   }
 
   .column {
     display: inline-block;
-    height: 100%;
-    top: 0px;
   }
 
-/******************************** Menu ********************************/
+/**********************************************************************/
+/** Menu **************************************************************/
+/**********************************************************************/
 
   #menu {
     display: block;
@@ -112,8 +78,7 @@ html, body {
   .menuitem {
     flex: none;
     float: right;
-    font-size: 17px;
-    cursor: pointer;
+    font-size: 13pt;
     margin: 1.5px;
   }
 
@@ -121,59 +86,39 @@ html, body {
     color: #B27300;
   }
 
-  .menuitem a  {
-    text-decoration: none;
-    color: black;
-  }
-
-  .menuitem.selected, .menuitem.selected a {
-    color: #B27300;
-    font-weight: bold; 
-  }
-
 /**********************************************************************/
-/******************************* Footer *******************************/
+/** Footer ************************************************************/
 /**********************************************************************/
-
-  .footer, .footer .background {
-    height: 40px;
-  }
 
   .footer .background p {
-    float: right;
-    margin-right: 10px;
     font-size: 10pt;
+    margin: 12px 10px 0px 0px;
   }
 
 /**********************************************************************/
-/******************************** Body ********************************/
+/** Body **************************************************************/
 /**********************************************************************/
 
-  .body {
-    display: flex;
-    flex: 1 1 auto;
-    flex-flow: row;
-    width: 100%;
-  }
+  /* See website-mobile.css */
 
-  .content {
-    flex: 1 1 auto;
-  }
-
-/******************************** About *******************************/
-  
-  #About {
-    display: flex;
-    flex-flow: row;
-    margin: 20px 0px 0px 0px;
-    font-size: 12pt;
-  }
+/**********************************************************************/
+/** About *************************************************************/
+/**********************************************************************/
 
   #aboutblock {
     display: flex;
     flex-flow: row;
     min-height: 30px;
   }
+
+  #objective .link:hover, #background .link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+/**********************************************************************/
+/** Profile ***********************************************************/
+/**********************************************************************/
 
   #profileblock {
     display: block;
@@ -201,260 +146,157 @@ html, body {
     color: #636363;
   }
 
-  #objective {
-    margin: 22px 0px 0px 0px;
-  }
+/**********************************************************************/
+/** Publication (General) *********************************************/
+/**********************************************************************/
 
-  #objective a, #background a {
-    text-decoration: none;
-    color: #B27300;
-  }
-
-  #objective .link:hover, #background .link:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-/************************* Citation (General) *************************/
-
-  .publication {
-    min-height: 60px;
-    padding: 5px 0px;
-    display: flex;
-    flex-flow: row;
-  }
-
-  .publication img {
-    flex: none;
-    width: 156px;
-    height: 78px;
-    margin: 5px 0px;
-  }
-
-  .publication img.small {
-    flex: none;
-    width: 120px;
-    height: 60px;
-    margin: 5px 0px;
-  }
-
-  .publication img:hover, .recent img:hover {
+  .publication img:hover {
     cursor: pointer;
     -webkit-box-shadow: 0px 0px 5px 3px #ddd;
     -moz-box-shadow: 0px 0px 5px 3px #ddd;
     box-shadow: 0px 0px 5px 3px #ddd;
   }
 
-  .paper {
-    flex: 80% 0 auto;
-    display: inline-block;
-    padding: 0px 0px 0px 15px;
-    font-size: 12pt;
-  }
-
-  .publication p {
-    display: inline;
-    margin: 0px;
-  }
-
-  .publication .title {
-    font-weight: bold;
-    display: block;
-  }
-
-  .publication .title:hover, .recent .title:hover {
+  .publication .title:hover {
     cursor: pointer;
     text-decoration: underline;
   }
 
-  .publication .jane, .recent .jane {
-    color: #B27300;
-  }
-
-  .publication .authors {
-    display: block;
-    color: black;
-  }
-
-  .publication .venue, .recent .venue {
-    font-style: oblique;
-    color: black;
-    margin: 0px 0px 0px 0px;
-  }
-
-  .publication .icon {
-    color: gray;
-    font-size: 11pt;
-    margin: 0px 5px 0px 0px;
-    cursor: pointer;
-  }
-
-  .publication a, .recent a {
-    text-decoration: none;
-    color: gray;
-    margin: 0px 5px 0px 0px;
-  }
-
-  .publication br {
-    display: block;
-  }
-
-  .publication a:hover, .recent a:hover { 
+  .publication a:hover { 
     cursor: pointer;
     color: #B27300;
     text-decoration: underline;
   }
 
-  .publication .award, .icon.fa-trophy {
-    color: #B27300;
-    font-weight: bold;
-  }
+/**********************************************************************/
+/** Publication (Featured) ********************************************/
+/**********************************************************************/
 
-/************************** Citation (Recent) *************************/
-
-  #publicationblock {
+  #publicationblock .publication {
     display: flex;
-    flex-wrap: wrap;
-  }
-
-  .recent {
-    display: flex;
-    flex-flow: column;
     flex: 1 1 350px;
-    /*width: 320px;*/
-    /*height: 250px;*/
+    flex-flow: column;
     margin: 0px 15px 15px 0px;
+    min-height: 60px;
+    font-size: 9.2pt;
   }
 
-  .recent img {
-    /*flex: 1 1 auto;*/
+  #publicationblock .publication img {
+    flex: none;
     width: 100%;
     height: auto;
-    /*width: 320px;*/
-    /*height: 160px;*/
+    margin: 5px 0px;
   }
 
-  .recent .paper {
-    display: block;
-    width: 100%;
-    min-height: 50px;
-    padding: 0px;
-    font-size: 10pt;
-    line-height: 12pt;
+  #publicationblock .venue {
+    margin: 0px 10px 0px 0px;
+  }
+  
+  #publicationblock .publication .icon,
+  #publicationblock .publication .iconelement {
+    margin: 0px 5px 0px 0px;
   }
 
-  .recent p {
-    display: inline;
+  #publicationblock .publication .links {
+    display: inline-block;
+  }
+
+  #publicationblock .publication .bib {
+    display: none;
+  }
+
+/**********************************************************************/
+/** Publication (List) ************************************************/
+/**********************************************************************/
+
+  #Publications .publication {
+    display: flex;
+    flex-flow: row;
     margin: 0px;
+    padding: 5px 0px;
   }
 
-  .recent .title {
-    font-weight: bold;
-    display: inline;
+  #Publications .publication img {
+    flex: none;
+    width: 176px;
+    height: 88px;
   }
 
-/**************************** Paper Details ***************************/
-
-  .paper-details h2 {
-    margin-bottom: 0px;
+  #Publications .publication .paper {
+    padding: 0px 0px 0px 15px;
   }
+
+  #Publications p {
+    display: block;
+  }
+
+  #Publications .publication .icon,
+  #Publications .publication .iconelement {
+    margin: 0px 5px 0px 0px;
+  }
+
+/**********************************************************************/
+/** Publication (Citation) ********************************************/
+/**********************************************************************/
+
+  .citation .publication {
+    display: flex;
+    flex-flow: row;
+    margin: 0px 0px 10px 0px;
+    line-height: 15pt;
+  }
+
+  .citation .publication img {
+    flex: none;
+    width: 120px;
+    height: 60px;
+  }
+
+  .citation .publication .paper {
+    padding: 0px 0px 0px 15px;
+  }
+
+  .citation p {
+    display: block;
+  }
+
+/**********************************************************************/
+/** Paper Details *****************************************************/
+/**********************************************************************/
 
   .paper-details h3 {
     display: inline-block;
-    font-weight: normal;
-    margin: 0px 10px 0px 0px;
-  }
-
-  .paper-details h3.award {
-    color: #B27300;
-    font-weight: bold;
-  }
-
-  .paper-details .icon {
-    margin: 0px 5px;
-  }
-
-  .paper-details h4 {
-    font-size: 14pt;
-    font-variant: small-caps;
-    margin: 10px 0px 0px 0px;
-  }
-
-  .figure {
-    margin: 0px;
-    min-width: 350px;
-    max-width: 1090px;
-  }
-
-  .figure img {
-    width: 100%;
-    object-fit: contain;
+    margin: 0px 10px 10px 0px;
   }
 
   .figure p {
-    font-style: italic;
     font-size: 10pt;
-    margin: 0px;
-  }
-
-  .abstract {
-    flex: 40% 0 auto;
-    min-width: 350px;
-    max-width: 1090px;
-  }
-
-  .abstract p {
-    margin: 0px;
-    text-align: justify;
-  }
-
-  .materials a {
-    text-decoration: none;
-    color: gray;
-    display: inline-block;
   }
 
   .materials a:hover {
     cursor: pointer;
     color: #B27300;
+    text-decoration: underline;
   }
 
-/************************** Curriculum Vitae **************************/
+/**********************************************************************/
+/** Curriculum Vitae **************************************************/
+/**********************************************************************/
 
-  #CurriculumVitae {
-    padding: 0px;
-    overflow: hidden;
-  }
+  /* See website-mobile.css */
 
-  #CurriculumVitae embed {
-    width: 100%;
-    height: 100%;
-  }
+/**********************************************************************/
+/** Conference Map ****************************************************/
+/**********************************************************************/
 
-/*************************** Conference Map ***************************/
+  /* See website-mobile.css */
 
-  #ConferenceMap {
-    padding: 0px;
-    overflow: hidden;
-  }
-
-/**************************** BibTeX Block ****************************/
-
-  .bibtex-text.selected {
-    font-weight: bold;
-    color: #B27300;
-  }
-
-  .bibtex {
-    cursor: text;
-    background: #eee;
-    overflow-y: scroll;
-    padding: 10px;
-  }
+/**********************************************************************/
+/** BibTeX Block ******************************************************/
+/**********************************************************************/
 
   .bibtex pre {
     font-size: 10pt;
-    margin: 0px;
   }
 
 }

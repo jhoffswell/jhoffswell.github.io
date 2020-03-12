@@ -100,5 +100,5 @@ function createCitationBlock(div, name) {
 
   // Create the section title and citation
   container.appendChild(createElement("h4", null, "citation"));
-  container.appendChild(getPublicationListBlock(name, false));
+  container.appendChild(getPublicationBlock(name, false));
 }
