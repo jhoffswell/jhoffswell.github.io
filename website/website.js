@@ -3,6 +3,7 @@ function init() {
 
   // Initialize the page elements
   initAbout();
+  initResources();
   initPublications();
   initDetails();
 
@@ -31,8 +32,8 @@ function showTab() {
     case "About":
       showAbout();
       break;
-    case "CurriculumVitae":
-      showCurriculumVitae();
+    case "Resources":
+      showResources();
       break;
     case "Publications":
       showPublications();

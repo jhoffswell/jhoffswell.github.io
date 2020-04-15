@@ -367,17 +367,75 @@
   }
 
 /**********************************************************************/
-/** Curriculum Vitae **************************************************/
+/** Resource (Button) *************************************************/
 /**********************************************************************/
 
-  #CurriculumVitae {
-    padding: 0px;
-    overflow: hidden;
+  #resourceblock {
+    flex-flow: wrap;
+    margin: 0px 0px 5px 0px;
   }
 
-  #CurriculumVitae embed {
-    width: 100%;
-    height: 100%;
+  #resourceblock .resource {
+    background: #ccc;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    margin: 3px;
+    padding: 5px 10px;
+    text-decoration: none;
+  }
+
+  #resourceblock .resource .fa {
+    margin: 0px 0px 0px 5px;
+  }
+
+/**********************************************************************/
+/** Resource (Full) ***************************************************/
+/**********************************************************************/
+
+  #Resources #resblock {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  #Resources .resource {
+    border: 2px #aaa solid;
+    color: black;
+    display: flex;
+    flex-flow: column;
+    margin: 8px;
+    padding: 6px;
+    text-decoration: none;
+  }
+
+  #resblock img {
+    flex: 1 1 auto;
+  }
+
+  #resblock .title {
+    color: black;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+    text-decoration: none;
+  }
+
+  #resblock .fa {
+    margin: 0px 0px 0px 5px;
+  }
+
+  #resblock .text {
+    display: inline-block;
+    margin: 0px;
+  }
+
+  #resblock .date {
+    color: gray;
+    font-size: 20pt;
+    font-style: italic;
+    margin: 4px 0px 0px 0px;
   }
 
 /**********************************************************************/

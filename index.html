@@ -6,11 +6,12 @@
   <link rel="stylesheet" type="text/css" href="website/website-mobile.css"/>
   <link rel="stylesheet" type="text/css" href="website/website-desktop.css"/>
   <link rel="stylesheet" href="website/resources/font-awesome-4.7.0/css/font-awesome.min.css">
-  <script src="website/content.js" charset="utf-8"></script>
+  <script src="website/data/publications.js" charset="utf-8"></script>
+  <script src="website/data/resources.js" charset="utf-8"></script>
   <script src="website/about.js" charset="utf-8"></script>
-  <script src="website/curriculumvitae.js" charset="utf-8"></script>
-  <script src="website/publications.js" charset="utf-8"></script>
   <script src="website/conferencemap.js" charset="utf-8"></script>
+  <script src="website/resources.js" charset="utf-8"></script>
+  <script src="website/publications.js" charset="utf-8"></script>
   <script src="website/details.js" charset="utf-8"></script>
   <script src="website/website.js" charset="utf-8"></script>
   <script src="https://vega.github.io/vega/vega.min.js"></script>
@@ -41,8 +42,8 @@
         <a href="#About">About</a>
         <span class="fa fa-info-circle"></span>
       </span>
-      <span class="menuitem" onclick="openTab(event, 'CurriculumVitae')">
-        <a href="#CurriculumVitae">Curriculum Vitae</a>
+      <span class="menuitem" onclick="openTab(event, 'Resources')">
+        <a href="#Resources">Resources</a>
         <span class="fa fa-file-text"></span>
       </span>
       <span class="menuitem" onclick="openTab(event, 'Publications')">
@@ -81,14 +82,23 @@
 
       <h2>Featured Publications</h2>
       <div id="publicationblock"></div>
+
+      <h2 style="margin-bottom: 5px">Resources</h2>
+      <div id="resourceblock"></div>
+
     </div>
+
     <div class="margin"></div>
   </div>
 
   <!-- ******************** Curriculum Vitae *********************** -->
-  <div class="main content" id="CurriculumVitae" style="display:none">
-    <embed src="website/resources/JaneHoffswell-Resume.pdf"/>
-    <embed src="website/resources/JaneHoffswell-CurriculumVitae.pdf"/>
+  <div class="main content" id="Resources" style="display:none">
+    <div class="margin"></div>
+    <div class="center">
+      <h2>Resources</h2>
+      <div id="resblock"></div>
+    </div>
+    <div class="margin"></div>
   </div>
 
   <!-- *********************** Publications ************************ -->
