@@ -1,4 +1,21 @@
 var publications = {
+  "Dissertation": {
+    "type": "thesis",
+    "doi": "http://hdl.handle.net/1773/45922",
+    "id": "2020-hoffswell-dissertation",
+    "title": "Languages and Visualization Tools for Data-Centric End-User Programming of Interactive Visualization Designs",
+    "authors": "Jane Hoffswell",
+    "booktitle": "PhD Thesis from the University of Washington",
+    "school": "University of Washington",
+    "year": 2020,
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/JaneHoffswell-Dissertation.pdf",
+    "paper": "website/resources/JaneHoffswell-Dissertation.pdf",
+    "thumbnail": "website/resources/images/dissertation-thumbnail.png",
+    "figure": "",
+    "figurecaption": "",
+    "abstract": "Visualizations can facilitate data exploration and communication of insights. While many tools exist to support the design of interactive visualizations, the development process relies heavily on the user's domain and programming expertise. To facilitate interactive visualization design, improved tools should better align with and enrich the user's mental model. This dissertation contributes three projects to help end-user programmers more effectively author, understand, and reuse both code and data to design interactive visualizations. To this end, this dissertation explores (1) the design of customized graph layouts, (2) the development and debugging process for interactive visualizations, and (3) the synchronization and customization of multiple visualization versions for responsive visualization design.<br><br>Across these projects, this dissertation explores how new techniques that raise the level of abstraction can help users focus on the domain-specific concepts of interest, while deferring low-level implementation details to the underlying system. A crucial step in this process is to identify and communicate actionable information to the end user. To accomplish this goal, this dissertation contributes three sets of formative interviews with potential users to identify unique challenges and design opportunities for the given domain. These interviews illustrate the disconnect between users' expectations and the functionality provided by existing systems or development workflows, and further highlight the types of tangential, low-level information that systems should hide from the user's view to improve the development process. While this information may be useful for completely or accurately representing the program behavior, such details can unnecessarily complicate the program understanding or debugging process.<br><br>Motivated by these challenges and interviews, this dissertation contributes new programming languages and program visualization tools to better help end-user programmers understand the underlying system behavior. These approaches raise the level of abstraction to reflect the user's unique domain expertise and obfuscate unnecessary system details. To this end, the proposed techniques aim to communicate relevant and actionable information to the user, and better prioritize the user's most important development tasks.<br><br>This dissertation first contributes SetCoLa: a domain-specific language for custom graph layout that leverages high-level constraints to encode the user's domain knowledge. SetCoLa facilitates code authoring and reuse by reducing the number of user-authored constraints by one to two orders of magnitude. However, the declarative nature of this language requires users to map between their high-level input and the system-produced output to debug or interpret the behavior. To explore the unique challenges and novel solutions for program understanding of declarative languages, this dissertation next turns to Vega: a declarative grammar for interactive visualization design. This dissertation then contributes a series of three projects for program understanding in Vega, which evolve to address the unique development needs of users at different stages in the development process. These techniques support (1) low-level system development via a data flow graph visualization, (2) debugging interactions with visualizations of contextually relevant details, and (3) unobtrusively revealing details of the runtime behavior during both normal execution and debugging. Whereas Vega focuses on the design of a single interactive visualization, responsive visualizations require designers to develop multiple concurrent designs that adapt based on the screen size or interactive capabilities of the end user's device. To support this process, this dissertation contributes four design guidelines and a set of core system features for a responsive visualization design system that supports simultaneous editing and device-specific customizations.<br><br>For each of these projects, this dissertation further contributes evaluations of this work via user studies or reproductions of real-world examples. The user evaluations demonstrate the utility of the proposed approaches for improving how end users interact with and understand the system functionality, whereas the reproductions illustrate the flexibility and expressiveness of the proposed techniques. Overall, this dissertation aims to better understand people and to help people better understand systems. This dissertation contributes novel techniques to support end-user programmers in developing, understanding, and debugging custom interactive visualization designs, and suggests new avenues for future work.",
+    "supplemental": []
+  },
   "Responsive": {
     "type": "paper",
     "doi": "https://doi.org/10.1145/3313831.3376777",
@@ -8,7 +25,7 @@ var publications = {
     "booktitle": "ACM Human Factors in Computing Systems (CHI)",
     "conference": "CHI",
     "year": 2020,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2020-ResponsiveVisualization-CHI.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2020-ResponsiveVisualization-CHI.pdf",
     "paper": "website/resources/papers/2020-ResponsiveVisualization-CHI.pdf",
     "thumbnail": "website/resources/images/responsive-thumbnail.png",
     "figure": "website/resources/images/responsive-figure.png",
@@ -16,6 +33,18 @@ var publications = {
     "abstract": "Responsive visualizations adapt to effectively present information based on the device context. Such adaptations are essential for news content that is increasingly consumed on mobile devices. However, existing tools provide little support for responsive visualization design. We analyze a corpus of 231 responsive news visualizations and discuss formative interviews with five journalists about responsive visualization design. These interviews motivate four central design guidelines: enable simultaneous cross-device edits, facilitate device-specific customization, show cross-device previews, and support propagation of edits. Based on these guidelines, we present a prototype system that allows users to preview and edit multiple visualization versions simultaneously. We demonstrate the utility of the system features by recreating four real-world responsive visualizations from our corpus.",
     "award": "Best Paper Award",
     "supplemental": [
+      {
+        "name": "Twitter",
+        "link": "https://twitter.com/janehoffswell/status/1255594695591211008"
+      },
+      {
+        "name": "Blog Post",
+        "link": "https://research.adobe.com/news/designing-responsive-visualizations/"
+      },
+      {
+        "name": "Presentation",
+        "link": "https://youtu.be/EcqJxoK0nng"
+      },
       {
         "name": "Video",
         "link": "website/resources/videos/responsive-videofigure.mp4"
@@ -39,7 +68,7 @@ var publications = {
     "booktitle": "ACM Human Factors in Computing Systems (CHI)",
     "conference": "CHI",
     "year": 2019,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2019-InteractiveTableRepair-CHI.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2019-InteractiveTableRepair-CHI.pdf",
     "paper": "website/resources/papers/2019-InteractiveTableRepair-CHI.pdf",
     "thumbnail": "website/resources/images/tableErrors-thumbnail.png",
     "figure": "website/resources/images/tableErrors-figure.png",
@@ -69,7 +98,7 @@ var publications = {
     "booktitle": "CHI Conference on Human Factors in Computing Systems Extended Abstracts (CHI'19 Extended Abstracts)",
     "conference": "CHI EA",
     "year": 2019,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2019-DoctoralConsortium-CHI.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2019-DoctoralConsortium-CHI.pdf",
     "paper": "website/resources/papers/2019-DoctoralConsortium-CHI.pdf",
     "thumbnail": "website/resources/images/chidc-thumbnail.png",
     "figure": "website/resources/images/chidc-figure.png",
@@ -91,7 +120,7 @@ var publications = {
     "booktitle": "Computer Graphics Forum (Proc. EuroVis)",
     "conference": "EuroVis",
     "year": 2018,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2018-SetCoLa-EuroVis.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2018-SetCoLa-EuroVis.pdf",
     "paper": "website/resources/papers/2018-SetCoLa-EuroVis.pdf",
     "thumbnail": "website/resources/images/setcola-thumbnail.png",
     "figure": "website/resources/images/setcola-figure.png",
@@ -125,7 +154,7 @@ var publications = {
     "booktitle": "ACM Human Factors in Computing Systems (CHI)",
     "conference": "CHI",
     "year": 2018,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2018-AugmentingCode-CHI.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2018-AugmentingCode-CHI.pdf",
     "paper": "website/resources/papers/2018-AugmentingCode-CHI.pdf",
     "thumbnail": "website/resources/images/augmentations-thumbnail.png",
     "figure": "website/resources/images/augmentations-figure.png",
@@ -155,7 +184,7 @@ var publications = {
     "booktitle": "ACM Computer-Supported Cooperative Work (CSCW)",
     "conference": "CSCW",
     "year": 2017,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2017-Triggers-CSCW.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2017-Triggers-CSCW.pdf",
     "paper": "website/resources/papers/2017-Triggers-CSCW.pdf",
     "thumbnail": "website/resources/images/triggers-thumbnail.png",
     "figure": "website/resources/images/triggers-figure.png",
@@ -177,7 +206,7 @@ var publications = {
     "booktitle": "Computer Graphics Forum (Proc. EuroVis)",
     "conference": "EuroVis",
     "year": 2016,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2016-VegaDebugging-EuroVis.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2016-VegaDebugging-EuroVis.pdf",
     "paper": "website/resources/papers/2016-VegaDebugging-EuroVis.pdf",
     "thumbnail": "website/resources/images/vegaDebugging-thumbnail.png",
     "figure": "website/resources/images/vegaDebugging-figure.png",
@@ -207,7 +236,7 @@ var publications = {
     "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. InfoVis '15)",
     "conference": "InfoVis",
     "year": 2016,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2015-ReactiveVega-InfoVis.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2015-ReactiveVega-InfoVis.pdf",
     "paper": "website/resources/papers/2016-ReactiveVega-InfoVis.pdf",
     "thumbnail": "website/resources/images/reactive-vega-architecture.png",
     "figure": "website/resources/images/reactiveVega-figure.png",
@@ -229,7 +258,7 @@ var publications = {
     "booktitle": "EuroVis Workshop on Reproducibility, Verification, and Validation in Visualization (EuroRV3)",
     "conference": "EuroRV3",
     "year": 2015,
-    "url": "https://homes.cs.washington.edu/~jhoffs/papers/2015-DataFlow-EuroRV3.pdf",
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2015-DataFlow-EuroRV3.pdf",
     "paper": "website/resources/papers/2015-DataFlow-EuroRV3.pdf",
     "thumbnail": "website/resources/images/eurorv3-thumbnail.png",
     "figure": "website/resources/images/eurorv3-figure.png",

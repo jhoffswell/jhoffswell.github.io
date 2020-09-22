@@ -14,7 +14,7 @@ function initPublications() {
   for (var i = 0; i < names.length; i++) {
     var info = publications[names[i]];
     var block = getPublicationBlock(names[i]);
-    var container = (info.type == "paper") ? pubsblock : workblock;
+    var container = (info.type == "paper" || info.type == "thesis") ? pubsblock : workblock;
     container.appendChild(block);
   }
 }
@@ -128,6 +128,23 @@ function getAuthorsHTML(authors) {
 }
 
 function getBibTeXString(info) {
+  var bibtex = info.type == "thesis" ? getBibTeXThesis(info) : getBibTeXProceedings(info);
+  return bibtex;
+}
+
+function getBibTeXThesis(info) {
+  var str = "@PhdThesis{";
+  str += info.id + ",\n";
+  str += "  title = {" + info.title + "},\n";
+  str += "  author = {" + info.authors + "},\n";
+  str += "  school = {" + info.school + "},\n";
+  str += "  year = {" + info.year + "},\n";
+  str += "  url = {" + info.doi + "},\n";
+  str += "}";
+  return str;
+}
+
+function getBibTeXProceedings(info) {
   var str = "@inproceedings{";
   str += info.id + ",\n";
   str += "  title = {" + info.title + "},\n";

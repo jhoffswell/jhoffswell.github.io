@@ -268,7 +268,7 @@
               "y": {"field": "y", "offset": -8},
               "width": {"value": 120},
               "height": {"value": 14},
-              "fill": {"value": "777"},
+              "fill": {"value": "#777777"},
               "opacity": {"value": 0},
               "cornerRadius": {"value": 4}
             },

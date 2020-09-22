@@ -106,6 +106,15 @@
     margin: 0px;
   }
 
+  .header .background .icon {
+    margin: 0px 8px 0px 4px;
+  }
+
+  .header .background a {
+    color: black;
+    text-decoration: none;
+  }
+
   .column {
     display: flex;
     flex-flow: row;

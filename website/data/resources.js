@@ -1,13 +1,13 @@
 var resources = {
   "Resume": {
-    "date": "March 10th, 2020",
+    "date": "September 21st, 2020",
     "description": "A brief overview of my skills, background, and selected publication history (1 page).",
     "link": "website/resources/JaneHoffswell-Resume.pdf",
     "thumbnail": "website/resources/images/resume-thumbnail.png",
     "icon": "file-text"
   },
   "Curriculum Vitae": {
-    "date": "April 13th, 2020",
+    "date": "September 21st, 2020",
     "description": "A full list of my background, skills, employment, publications, and other activities (4 pages).",
     "link": "website/resources/JaneHoffswell-CurriculumVitae.pdf",
     "thumbnail": "website/resources/images/curriculumVitae-thumbnail.png",
@@ -33,5 +33,12 @@ var resources = {
     "link": "https://youtu.be/EJtakt7I3BQ",
     "thumbnail": "website/resources/images/researchOverview-thumbnail.png",
     "icon": "play-circle"
+  },
+  "Dissertation": {
+    "date": "June 24, 2020",
+    "description": "My PhD dissertation from the Allen School at the University of Washington (251 pages).",
+    "link": "website/resources/JaneHoffswell-Dissertation.pdf",
+    "thumbnail": "website/resources/images/dissertation-thumbnail.png",
+    "icon": "file-text"
   }
 }
