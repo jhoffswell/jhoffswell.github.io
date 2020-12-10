@@ -1,13 +1,13 @@
 var resources = {
   "Resume": {
-    "date": "September 21st, 2020",
+    "date": "November 25th, 2020",
     "description": "A brief overview of my skills, background, and selected publication history (1 page).",
     "link": "website/resources/JaneHoffswell-Resume.pdf",
     "thumbnail": "website/resources/images/resume-thumbnail.png",
     "icon": "file-text"
   },
   "Curriculum Vitae": {
-    "date": "September 21st, 2020",
+    "date": "November 25th, 2020",
     "description": "A full list of my background, skills, employment, publications, and other activities (4 pages).",
     "link": "website/resources/JaneHoffswell-CurriculumVitae.pdf",
     "thumbnail": "website/resources/images/curriculumVitae-thumbnail.png",
