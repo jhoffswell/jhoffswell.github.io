@@ -344,9 +344,13 @@
     font-weight: bold;
   }
 
+  .paper-details .iconelement {
+    display: block;
+  }
+
   .paper-details .icon {
     color: #B27300;
-    margin: 0px 5px;
+    margin: 0px 5px 0px 0px;
   }
 
   .figure {

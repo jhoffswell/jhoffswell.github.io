@@ -1,4 +1,22 @@
 var publications = {
+  "Framework": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/TVCG.2021.3114814",
+    "id": "2021-recommendation-framework",
+    "title": "An Evaluation-Focused Framework for Visualization Recommendation Algorithms",
+    "authors": "Zehua Zeng AND Phoebe Moh AND Fan Du AND Jane Hoffswell AND Tak Yeon Lee AND Sana Malik AND Eunyee Koh AND Leilani Battle",
+    "booktitle": "(to appear in) IEEE Trans. Visualization \& Comp. Graphics",
+    "conference": "VIS",
+    "year": 2021,
+    "url": "https://homes.cs.washington.edu/~jhoffs/website/resources/papers/2021-RecommendationFramework-VIS.pdf",
+    "paper": "website/resources/papers/2021-RecommendationFramework-VIS.pdf",
+    "thumbnail": "website/resources/images/recommendationFramework-thumbnail.png",
+    "figure": "website/resources/images/recommendationFramework-figure.png",
+    "figurecaption": "Illustration of the visualization design space and the enumeration step of a hybrid recommendation algorithm, using movies data as an example. The user's current visualization is at n0.",
+    "abstract": "Although we have seen a proliferation of algorithms for recommending visualizations, these algorithms are rarely compared with one another, making it difficult to ascertain which algorithm is best for a given visual analysis scenario. Though several formal frameworks have been proposed in response, we believe this issue persists because visualization recommendation algorithms are inadequately specified from an evaluation perspective. In this paper, we propose an evaluation-focused framework to contextualize and compare a broad range of visualization recommendation algorithms. We present the structure of our framework, where algorithms are specified using three components: (1) a graph representing the full space of possible visualization designs, (2) the method used to traverse the graph for potential candidates for recommendation, and (3) an oracle used to rank candidate designs. To demonstrate how our framework guides the formal comparison of algorithmic performance, we not only theoretically compare five existing representative recommendation algorithms, but also empirically compare four new algorithms generated based on our findings from the theoretical comparison. Our results show that these algorithms behave similarly in terms of user performance, highlighting the need for more rigorous formal comparisons of recommendation algorithms to further clarify their benefits in various analysis scenarios.",
+    "award": "Best Paper Honorable Mention",
+    "supplemental": []
+  },
   "Dissertation": {
     "type": "thesis",
     "doi": "http://hdl.handle.net/1773/45922",
