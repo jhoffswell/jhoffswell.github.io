@@ -241,7 +241,7 @@ var publications = {
       },
       {
         "name": "Interview Protocol (Supplemental)",
-        "link": "website/resources/supplemental/vegaDebugging-historical.pdf"
+        "link": "website/resources/supplemental/vegaDebugging-interviewProtocol.pdf"
       }
     ]
   },
