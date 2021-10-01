@@ -1,4 +1,4 @@
-@media only screen and (min-width: 862px) {
+@media (min-device-width: 862px) and (min-width:  862px) {
 
 /**********************************************************************/
 /** Basic Tag Properties **********************************************/
@@ -128,6 +128,10 @@
   #objective .link:hover, #background .link:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+
+  .flower {
+    font-size: 13pt;
   }
 
 /**********************************************************************/
@@ -359,7 +363,7 @@
     display: inherit;
   }
 
-@media only screen and (min-width: 1210px) {
+@media (min-width: 1210px) {
 
 /**********************************************************************/
 /** Basic Layout Classes **********************************************/
@@ -385,10 +389,6 @@
 
   #objective {
     margin: 20px 0px 0px 0px;
-  }
-
-  .flower {
-    font-size: 13pt;
   }
 
 /**********************************************************************/
