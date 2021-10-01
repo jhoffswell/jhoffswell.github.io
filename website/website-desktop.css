@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1145px) {
+@media only screen and (min-width: 862px) {
 
 /**********************************************************************/
 /** Basic Tag Properties **********************************************/
@@ -21,7 +21,7 @@
 /**********************************************************************/
 
   .center {
-    max-width: 1095px;
+    max-width: 820px;
   }
 
 /**********************************************************************/
@@ -35,15 +35,25 @@
 /**********************************************************************/
 
   .header {
-    height: 125px;
+    height: 100px;
+  }
+
+  .header-content {
+    display: flex;
+    flex: 1 1 auto;
   }
 
   .header .background {
-    height: 125px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    max-width: 820px;
   }
 
   .header .background #information {
-    height: 125px;
+    height: 100px;
+    min-width: 350px;
+    text-align: left;
   }
 
   .header .background #profile {
@@ -51,13 +61,14 @@
   }
 
   .header .background h1 {
-    font-size: 53px;
-    margin: 14px 0px 0px 25px;
+    font-size: 41px;
+    height: 50px;
+    margin: 14px 0px 0px 0px;
   }
 
   .header .background p {
-    font-size: 12pt;
-    margin: 0px 0px 0px 25px;
+    font-size: 10.5pt;
+    margin: 0px 0px 0px 0px;
   }
 
   .column {
@@ -69,21 +80,20 @@
 /**********************************************************************/
 
   #menu {
-    display: block;
-    width: 160px;
-    float: right;
-    padding: 13px;
+    display: inline-block;
   }
 
   .menuitem {
-    flex: none;
-    float: right;
-    font-size: 13pt;
-    margin: 1.5px;
+    display: inline-block;
+    font-size: 14pt;
+    font-weight: 300;
+    cursor: pointer;
+    margin: 0px 15px 0px 0px;
   }
 
   .menuitem:hover, .menuitem a:hover {
-    color: #B27300;
+    color: #4fa053;
+    text-decoration: underline;
   }
 
 /**********************************************************************/
@@ -109,6 +119,10 @@
     display: flex;
     flex-flow: row;
     min-height: 30px;
+  }
+
+  #objective {
+    margin: 30px 0px 0px 0px;
   }
 
   #objective .link:hover, #background .link:hover {
@@ -282,7 +296,10 @@
 /** Resource (Button) *************************************************/
 /**********************************************************************/
 
-  /* See website-mobile.css */
+  #resourceblock {
+    height: 40px;
+    overflow: hidden;
+  }
 
 /**********************************************************************/
 /** Resource (Full) ***************************************************/
@@ -326,6 +343,70 @@
 
   .bibtex pre {
     font-size: 10pt;
+  }
+
+}
+
+/**********************************************************************/
+/** Visibility ********************************************************/
+/**********************************************************************/
+
+  .big-only, .mobile-only {
+    display: none;
+  }
+
+  .small-only {
+    display: inherit;
+  }
+
+@media only screen and (min-width: 1210px) {
+
+/**********************************************************************/
+/** Basic Layout Classes **********************************************/
+/**********************************************************************/
+
+  .center {
+    max-width: 1160px;
+    min-width: 1160px;
+  }
+
+/**********************************************************************/
+/** Header ************************************************************/
+/**********************************************************************/
+
+
+  .header .background {
+    max-width: 1160px;
+  }
+
+/**********************************************************************/
+/** About *************************************************************/
+/**********************************************************************/
+
+  #objective {
+    margin: 20px 0px 0px 0px;
+  }
+
+  .flower {
+    font-size: 13pt;
+  }
+
+/**********************************************************************/
+/** Resource (Button) *************************************************/
+/**********************************************************************/
+
+
+
+/**********************************************************************/
+/** Visibility ********************************************************/
+/**********************************************************************/
+
+  .small-only, .mobile-only {
+    display: none;
+  }
+
+  .big-only {
+    display: inherit;
   }
 
 }

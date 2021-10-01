@@ -16,7 +16,8 @@ function initResources() {
 
 function getResourceButton(name) {
   var info = resources[name];
-  var options = {class: "resource", href: info.link};
+  var className = "resource" + (info.priority != "high" ? " big-only" : "")
+  var options = {class: className, href: info.link};
   var div = createElement("a", options);
   div.innerHTML = name + "<span class='fa fa-" + info.icon + "'/>";
   return div;
