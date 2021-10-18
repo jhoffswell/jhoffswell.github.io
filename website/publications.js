@@ -8,14 +8,22 @@ function showPublications() {
 // Initialize the list of publications
 function initPublications() {
   var pubsblock = document.getElementById("pubsblock");
-  var workblock = document.getElementById("workblock");
+  var currentYear;
 
   var names = Object.keys(publications);
   for (var i = 0; i < names.length; i++) {
     var info = publications[names[i]];
+    
+    // Add year subheading as needed
+    var year = info.year;
+    if(year != currentYear) {
+      currentYear = year;
+      var yearBlock = createElement("h2", {class: "year"}, year);
+      pubsblock.appendChild(yearBlock);
+    }
+
     var block = getPublicationBlock(names[i]);
-    var container = (info.type == "paper" || info.type == "thesis") ? pubsblock : workblock;
-    container.appendChild(block);
+    pubsblock.appendChild(block);
   }
 }
 
