@@ -27,11 +27,11 @@
 /**********************************************************************/
 
   .big-only, .small-only {
-    display: none;
+    display: none !important;
   }
 
   .mobile-only {
-    display: inherit;
+    display: inherit !important;
   }
 
 /**********************************************************************/
@@ -330,6 +330,24 @@
 
   #publicationblock .publication .venue.long {
     display: none;
+  }
+
+  #featuredblock h2 {
+    cursor: pointer;
+    display: inline-block
+  }
+
+  #featuredblock span {
+    opacity: 0;
+    padding-left: 8px;
+    color: gray;
+    font-style: italic;
+    transition: 0.3s;
+  }
+
+  #featuredblock:hover span {
+    opacity: 1;
+    
   }
 
 /**********************************************************************/

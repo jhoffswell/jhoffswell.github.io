@@ -356,11 +356,11 @@
 /**********************************************************************/
 
   .big-only, .mobile-only {
-    display: none;
+    display: none !important;
   }
 
   .small-only {
-    display: inherit;
+    display: inherit !important;
   }
 
 @media (min-width: 1210px) {
@@ -402,11 +402,11 @@
 /**********************************************************************/
 
   .small-only, .mobile-only {
-    display: none;
+    display: none !important;
   }
 
   .big-only {
-    display: inherit;
+    display: inherit !important;
   }
 
 }

@@ -9,6 +9,11 @@ function showAbout() {
 function initAbout() {
   var block = document.getElementById("publicationblock");
   block.appendChild(getPublicationBlock("Responsive"));
+
+  var tablesBlock = getPublicationBlock("Tables");
+  tablesBlock.className += " small-only";
+  block.appendChild(tablesBlock);  
+
   block.appendChild(getPublicationBlock("SetCoLa"));
   block.appendChild(getPublicationBlock("CodeAugmentations"));
 
