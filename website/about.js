@@ -8,6 +8,8 @@ function showAbout() {
 // Initialize the contents for the about block
 function initAbout() {
   var block = document.getElementById("publicationblock");
+
+  block.appendChild(getPublicationBlock("Cicero"));
   block.appendChild(getPublicationBlock("Responsive"));
 
   var tablesBlock = getPublicationBlock("Tables");
@@ -15,7 +17,6 @@ function initAbout() {
   block.appendChild(tablesBlock);  
 
   block.appendChild(getPublicationBlock("SetCoLa"));
-  block.appendChild(getPublicationBlock("CodeAugmentations"));
 
   var block = document.getElementById("resourceblock");
   var names = Object.keys(resources);
