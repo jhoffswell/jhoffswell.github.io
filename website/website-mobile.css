@@ -229,6 +229,10 @@
     margin-top: 0px;
   }
 
+  #background {
+    margin-top: 4px;
+  }
+
   #objective a, #background a {
     text-decoration: none;
     color: #4fa053;
