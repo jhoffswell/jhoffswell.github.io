@@ -46,5 +46,13 @@ var resources = {
     "thumbnail": "website/resources/images/researchOverview-thumbnail.png",
     "icon": "play-circle",
     "priority": "low"
+  },
+  "LaTeX Tips & Tricks": {
+    "date": "June 7th, 2022",
+    "description": "A brief slide deck on my personal tips, tricks, and preferences for organizing papers in LaTeX.",
+    "link": "website/resources/JaneHoffswell-LaTeXTipsTricks.pdf",
+    "thumbnail": "website/resources/images/latexTips-thumbnail.png",
+    "icon": "picture-o",
+    "priority": "low"
   }
 }
