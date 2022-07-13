@@ -1,4 +1,8 @@
 [
+  {"country": "USA", "state": "New Mexico", "year": 2022},
+  {"country": "USA", "state": "Hawaii", "year": 2022},
+  {"country": "USA", "state": "Hawaii", "year": 2022},
+  {"country": "USA", "state": "Illinois", "year": 2021},
   {"country": "Spain", "state": "", "year": 2020},
   {"country": "Portugal", "state": "", "year": 2020},
   {"country": "Canada", "state": "", "year": 2019},
