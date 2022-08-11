@@ -363,7 +363,7 @@
   }
 
   #Publications .publication .links {
-    display: inline;
+    display: block;
   }
 
 /**********************************************************************/

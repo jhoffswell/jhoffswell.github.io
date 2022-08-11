@@ -29,7 +29,13 @@ function initPublications() {
 
 function getPublicationBlock(name) {
   var info = publications[name];
-  var div = createElement("div", {class: "publication"});
+
+  var extraTag = "";
+  if(info.title.length > 85) extraTag += " longTitle";
+  if(info.authors.length > 95) extraTag += " longAuthors";
+  if(info.booktitle.length > 85) extraTag += " longAuthors";
+
+  var div = createElement("div", {class: "publication" + extraTag});
   createPubImageBlock(div, info, name);   // Paper thumbnail
 
   // Create a div to hold the paper info

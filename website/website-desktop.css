@@ -238,6 +238,7 @@
     flex: none;
     width: 176px;
     height: 88px;
+    margin-top: 5px;
   }
 
   #Publications .publication .paper {
@@ -246,6 +247,17 @@
 
   #Publications p {
     display: block;
+  }
+
+  #Publications .longTitle .paper .title,
+  #Publications .longTitle .paper .authors,
+  #Publications .longTitle .paper .long {
+    display: inline;
+  }
+
+  #Publications .longAuthors .paper .authors,
+  #Publications .longAuthors .paper .long {
+    display: inline;
   }
 
   #Publications .publication .icon,
@@ -407,6 +419,17 @@
 
   .big-only {
     display: inherit !important;
+  }
+
+  #Publications .longTitle .paper .title,
+  #Publications .longTitle .paper .authors,
+  #Publications .longTitle .paper .long {
+    display: block;
+  }
+
+  #Publications .longAuthors .paper .authors,
+  #Publications .longAuthors .paper .long {
+    display: block;
   }
 
 }
