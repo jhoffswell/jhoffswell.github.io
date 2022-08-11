@@ -31,7 +31,12 @@ var publications = {
     "figure": "website/resources/images/CODAS-figure.png",
     "figurecaption": "An overview of the report authoring workflow: (A) Explore data using initial static dashboards from business analysts; (B) Author interactive data-driven reports using CODAS; (C) Share the final report with stakeholders using a shareable link.",
     "abstract": "Business analysts create rich dashboards to find data insights and subsequently communicate these findings with data-driven reports that combine visualization screenshots and descriptive text. Conventional analytics reports convey findings statically and passively, which suffers from limited interactivity and adaptability to data changes. There is therefore a need to facilitate authoring of interactive reports in business analytics. To better support the needs of business analysts, we developed CODAS: a report authoring tool that allows analysts to transform dashboards into interactive, web-based reports through a no-coding user interface and a workflow that is compatible to business analysts' existing data analytics pipelines. CODAS supports authoring multiple levels of interactions, organizing story elements, and generating the final artifact. Through our case studies with two expert analysts, we discuss the usefulness of our system and report our findings on analysts' report authoring workflow. Our findings suggest that CODAS enables business analysts to create interactive, data-driven reports comfortably, and can complement their exisitng data analytics workflow without extra learning effort.",
-    "supplemental": []
+    "supplemental": [
+      {
+        "name": "Video",
+        "link": "website/resources/videos/CODAS-videofigure.mp4"
+      },
+    ]
   },
   "Cicero": {
     "type": "paper",
@@ -50,8 +55,20 @@ var publications = {
     "abstract": "Designing responsive visualizations can be cast as applying transformations to a source view to render it suitable for a different screen size. However, designing responsive visualizations is often tedious as authors must manually apply and reason about candidate transformations. We present Cicero, a declarative grammar for concisely specifying responsive visualization transformations which paves the way for more intelligent responsive visualization authoring tools. Cicero's flexible specifier syntax allows authors to select visualization elements to transform, independent of the source view's structure. Cicero encodes a concise set of actions to encode a diverse set of transformations in both desktop-first and mobile-first design processes. Authors can ultimately reuse design-agnostic transformations across different visualizations. To demonstrate the utility of Cicero, we develop a compiler to an extended version of Vega-Lite, and provide principles for our compiler. We further discuss the incorporation of Cicero into responsive visualization authoring tools, such as a design recommender.",
     "supplemental": [
       {
-        "name": "Supplemental Materials", 
+        "name": "Twitter",
+        "link": "https://twitter.com/hyeok__kim/status/1506395763928096770"
+      },
+      {
+        "name": "Presentation",
+        "link": "https://youtu.be/2sawlX9PsBQ"
+      },
+      {
+        "name": "Supplemental Materials (OSF)", 
         "link": "https://osf.io/eg4xq"
+      },
+      {
+        "name": "Example Gallery", 
+        "link": "https://see-mike-out.github.io/cicero-supplemental/"
       }
     ]
   },
@@ -88,7 +105,12 @@ var publications = {
     "figurecaption": "Illustration of the visualization design space and the enumeration step of a hybrid recommendation algorithm, using movies data as an example. The user's current visualization is at n0.",
     "abstract": "Although we have seen a proliferation of algorithms for recommending visualizations, these algorithms are rarely compared with one another, making it difficult to ascertain which algorithm is best for a given visual analysis scenario. Though several formal frameworks have been proposed in response, we believe this issue persists because visualization recommendation algorithms are inadequately specified from an evaluation perspective. In this paper, we propose an evaluation-focused framework to contextualize and compare a broad range of visualization recommendation algorithms. We present the structure of our framework, where algorithms are specified using three components: (1) a graph representing the full space of possible visualization designs, (2) the method used to traverse the graph for potential candidates for recommendation, and (3) an oracle used to rank candidate designs. To demonstrate how our framework guides the formal comparison of algorithmic performance, we not only theoretically compare five existing representative recommendation algorithms, but also empirically compare four new algorithms generated based on our findings from the theoretical comparison. Our results show that these algorithms behave similarly in terms of user performance, highlighting the need for more rigorous formal comparisons of recommendation algorithms to further clarify their benefits in various analysis scenarios.",
     "award": "Best Paper Honorable Mention",
-    "supplemental": []
+    "supplemental": [
+      {
+        "name": "Supplemental Materials (OSF)", 
+        "link": "https://osf.io/txqsu/?view_only=17a4bbf7239547f18305584c842c5a3c"
+      }
+    ]
   },
   "Dissertation": {
     "type": "thesis",
