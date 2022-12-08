@@ -1,19 +1,113 @@
 var publications = {
-  "ReportAuthoring": {
-    "type": "workshop",
-    "doi": "https://doi.org/10.2312/eurova.20221076",
-    "id": "2022-ba-report-authoring",
-    "title": "Understanding Business Analysts' Needs for Data Report Authoring",
-    "authors": "Zhuohao Zhang AND Sana Malik AND Shunan Guo AND Jane Hoffswell AND Ryan Rossi AND Fan Du AND Eunyee Koh",
-    "booktitle": "EuroVis Workshop on Visual Analytics (EuroVA)",
-    "conference": "EuroVA",
+  "VisualizationMAR": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/TVCG.2022.3209348",
+    "id": "2022-uncertainty-visualization-mar",
+    "title": "Evaluating the Use of Uncertainty Visualisations for Imputations of Data Missing At Random in Scatterplots",
+    "authors": "Abhraneel Sarma AND Shunan Guo AND Jane Hoffswell AND Ryan Rossi AND Fan Du AND Eunyee Koh AND Matthew Kay",
+    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. VIS)",
+    "conference": "VIS",
     "year": 2022,
-    "url": "https://jhoffswell.github.io/website/resources/papers/2022-ReportAuthoring-EuroVA.pdf",
-    "paper": "website/resources/papers/2022-ReportAuthoring-EuroVA.pdf",
-    "thumbnail": "website/resources/images/ReportAuthoring-thumbnail.png",
-    "figure": "website/resources/images/ReportAuthoring-figure.png",
-    "figurecaption": "Based on formative interviews with fifteen professional business analysts, we propose five design guidelines for developing effective authoring tools for business analysts creating interactive, data-driven reports: (1) Complement busniess analysts' current workflows; (2) Enable GUI-based creation of data-driven reports; (3) Preserve interactivity of the visualizations; (4) Support customized narratives and flexible links to visualizations; (5) Include out-of-the-box methods to generate dynamic insights.",
-    "abstract": "Business analysts often create static, data-driven reports to summarize and communicate findings from marketing dashboards. However, the requirements and workflow for creating data-driven reports in business analytics have not been fully investigated. In this work, we interviewed fifteen professional analysts to understand their unique needs for data-driven report authoring and identify gaps between their goals, technical skills, and existing reporting tools. Our findings suggest eight fundamental takeaways for report authoring, such as the need for persistent interactive experiences combined with more robust narrative authoring for linking story pieces and customizing the narrative layout. Based on these interviews, we synthesize the results into five design guidelines to direct future analytic reporting tools.",
+    "url": "https://jhoffswell.github.io/website/resources/papers/2022-VisualizationMAR-VIS.pdf",
+    "paper": "website/resources/papers/2022-VisualizationMAR-VIS.pdf",
+    "thumbnail": "website/resources/images/VisualizationMAR-thumbnail.png",
+    "figure": "website/resources/images/VisualizationMAR-figure.png",
+    "figurecaption": "Experiment results for the mean estimation tasks: posterior probability densities, mean and 95% credible intervals for bias and precision for an average participant in each representation condition (left). We compare the difference in bias and precision compared to the baseline (right) and estimate the probability of improvement for each representation condition.",
+    "abstract": "Most real-world datasets contain missing values yet most exploratory data analysis (EDA) systems only support visualising data points with complete cases. This omission may potentially lead the user to biased analyses and insights. Imputation techniques can help estimate the value of a missing data point, but introduces additional uncertainty. In this work, we investigate the effects of visualising imputed values in charts using different types of uncertainty visualisation techniques---no imputation, mean, 95% confidence intervals, probability density plots, gradient intervals and hypothetical outcome plots. We focus on scatterplots, which is a commonly used chart type, and conduct a crowdsourced study with 202 participants. We measure users' bias and precision in performing two tasks---estimating average and detecting trend---and their self-reported confidence in performing these tasks. When estimating averages, uncertainty representations may reduce bias but at the cost of decreasing precision. When estimating trend, only hypothetical outcome plots may lead to a small probability of reducing bias while increasing precision. Participants in every uncertainty representation were less certain about their response when compared to the baseline. Our results point towards potential trade-offs in using uncertainty encodings for datasets with a large number of missing values.",
+    "award": "Best Paper Honorable Mention",
+    "supplemental": [
+      {
+        "name": "Supplemental Materials (OSF)", 
+        "link": "https://osf.io/q4y5r/"
+      }
+    ]
+  },
+  "ComparisonConundrum": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/TVCG.2022.3209456",
+    "id": "2022-comparison-conundrum",
+    "title": "Comparison Conundrum and the Chamber of Visualizations: An Exploration of How Language Influences Visual Design",
+    "authors": "Aimen Gaba AND Vidya Setlur AND Arjun Srinivasan AND Jane Hoffswell AND Cindy Xiong",
+    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. VIS)",
+    "conference": "VIS",
+    "year": 2022,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2022-ComparisonConundrum-VIS.pdf",
+    "paper": "website/resources/papers/2022-ComparisonConundrum-VIS.pdf",
+    "thumbnail": "website/resources/images/ComparisonConundrum-thumbnail.png",
+    "figure": "website/resources/images/ComparisonConundrum-figure.png",
+    "figurecaption": "Four comparison utterances from our design space with varying cardinalities for the comparison entities (1-1, 1-n, n-m, n) and different levels of concreteness (explicit and implicit). Each of these comparison utterances was included in our online survey in which participants ranked their preference for the different visualization types; the most preferred visualization(s) have a colored border.",
+    "abstract": "The language for expressing comparisons is often complex and nuanced, which makes supporting natural language-based visual comparison a non-trivial task. To better understand how people reason about comparisons in natural language, we explore a design space of utterances for comparing data entities. We identified different parameters of comparison utterances that indicate what is being compared (i.e., data variables and attributes) as well as how these parameters are specified (i.e., explicitly or implicitly). We conducted a user study with sixteen data visualization experts and non-experts to investigate how they designed visualizations for comparisons in our design space. Based on the rich set of visualization techniques observed, we extracted key design features from the visualizations and synthesized them into a subset of sixteen representative visualization designs for our design space. We then conducted a follow-up study to cross-validate user preferences for the sixteen representative visualizations corresponding to utterances in our design space. Findings from these studies suggest guidelines and future directions for designing natural language interfaces and recommendation tools to better support natural language comparisons in the context of visual analysis.",
+    "supplemental": [
+      {
+        "name": "Supplemental Materials (OSF)", 
+        "link": "https://osf.io/zp6kh/?view_only=dfcf6012d3654fd99884ae8523e4f1aa"
+      }
+    ]
+  },
+  "ARShopping": {
+    "type": "paper",
+    "doi": "",
+    "id": "2022-arshopping",
+    "title": "ARShopping: In-Store Shopping Decision Support Through Augmented Reality and Immersive Visualization",
+    "authors": "Bingjie Xu AND Shunan Guo AND Eunyee Koh AND Jane Hoffswell AND Ryan Rossi AND Fan Du",
+    "booktitle": "IEEE VIS Short Papers",
+    "conference": "VIS",
+    "year": 2022,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2022-ARShopping-VIS.pdf",
+    "paper": "website/resources/papers/2022-ARShopping-VIS.pdf",
+    "thumbnail": "website/resources/images/ARShopping-thumbnail.png",
+    "figure": "website/resources/images/ARShopping-figure.png",
+    "figurecaption": "A comparison of product detection and glyph placement results with (a) marker detection only and (b) marker+object detection.",
+    "abstract": "Online shopping gives customers boundless options to choose from, backed by extensive product details and customer reviews, all from the comfort of home; yet, no amount of detailed, online information can outweigh the instant gratification and hands-on understanding of a product that is provided by physical stores. However, making purchasing decisions in physical stores can be challenging due to a large number of similar alternatives and limited accessibility of the relevant product information (e.g., features, ratings, and reviews). \rv{In this work, we present ARShopping: a web-based prototype to visually communicate detailed product information from an online setting on portable smart devices (e.g., phones, tablets, glasses)}, within the physical space at the point of purchase. This prototype uses augmented reality (AR) to identify products and display detailed information to help consumers make purchasing decisions that fulfill their needs while decreasing the decision-making time. In particular, we use a data fusion algorithm to improve the precision of the product detection; we then integrate AR visualizations into the scene to facilitate comparisons across multiple products and features. We designed our prototype based on interviews with 14 participants to better understand the utility and ease of use of the prototype.",
+    "award": "Best Short Paper Honorable Mention",
+    "supplemental": [
+      {
+        "name": "Video", 
+        "link": "website/resources/videos/ARShopping-videofigure.mp4"
+      }
+    ]
+  },
+  "PersonalizedVisualization": {
+    "type": "paper",
+    "doi": "",
+    "id": "2022-personalized",
+    "title": "Let's Get Personal: Exploring the Design of Personalized Visualizations",
+    "authors": "Beleicia Bullock AND Shunan Guo AND Eunyee Koh AND Ryan Rossi AND Fan Du AND Jane Hoffswell",
+    "booktitle": "IEEE VIS Short Papers",
+    "conference": "VIS",
+    "year": 2022,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2022-PersonalizedVisualization-VIS.pdf",
+    "paper": "website/resources/papers/2022-PersonalizedVisualization-VIS.pdf",
+    "thumbnail": "website/resources/images/PersonalizedVisualization-thumbnail.png",
+    "figure": "website/resources/images/PersonalizedVisualization-figure.png",
+    "figurecaption": "An overview of the personalized visualizations corpus based on the (a) personalized attributes contained in the article, (b) granularity, and (c) resulting codes for different publications.",
+    "abstract": "Media outlets often publish visualizations that can be personalized based on users' demographics, such as location, race, and age. However, the design of such personalized visualizations remains underexplored. In this work, we contribute a design space analysis of 47 public-facing articles with personalized visualizations to understand how designers structure content, encourage exploration, and present insights. We find that articles often lack explicit exploration suggestions or instructions, data notices, and personalized visual insights. We then outline three trajectories for future research: (1) explore how users choose to personalize visualizations, (2) examine how exploration suggestions and examples impact user interaction, and (3) investigate how personalization influences user insights.",
+    "supplemental": [
+      {
+        "name": "Codebook", 
+        "link": "website/resources/supplemental/PersonalizedVisualization-codebook.xlsx"
+      },
+      {
+        "name": "Coding Guide", 
+        "link": "website/resources/supplemental/PersonalizedVisualization-codingGuide.pdf"
+      }
+    ]
+  },
+  "ViSRE": {
+    "type": "paper",
+    "doi": "",
+    "id": "2022-visre",
+    "title": "ViSRE: A Unified Visual Analysis Dashboard for Proactive Cloud Outage Management",
+    "authors": "Paula Kayongo AND Jane Hoffswell AND Shiv Saini AND Shaddy Garg AND Eunyee Koh AND Haoliang Wang AND Tom Jacobs",
+    "booktitle": "IEEE Working Conference on Software Visualization",
+    "conference": "VISSOFT",
+    "year": 2022,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2022-ViSRE-VISSOFT.pdf",
+    "paper": "website/resources/papers/2022-ViSRE-VISSOFT.pdf",
+    "thumbnail": "website/resources/images/ViSRE-thumbnail.png",
+    "figure": "website/resources/images/ViSRE-figure.png",
+    "figurecaption": "The ViSRE interface includes five components: (A) The code change timeline; (B) The threshold configuration drawer; (C) The causal metric directed acyclic graph with (D) enhanced node glyphs showing the raw and predicted values in two half arcs; (E) The horizon charts of the raw metric values with an interactive bounding box corresponding to the region visualized in the causal graph; (F) The probability overview chart for long-range values with an interactive bounding box corresponding to the region visualized in the horizon chart. In this example, metric glyphs on the causal graph show increased load and error count and reduced user satisfaction (#apdex) in a 30-minute analysis interval. At the beginning of the analysis period, the grey color in the left half of the #apdex node glyph indicates an anomalous metric value. The outage prediction value on the right half of the #apdex node indicates that an outage is likely within 30 minutes. Hovering over a region of high outage probability in the glyph generates the code change timeline (A). Later in the analysis period, a spike in server errors (#5xx) results in an outage, visualized in the left arc of the #5xx glyph that transitions from blue to red. The probability overview chart (F) shows a period of high outage prediction around June 26th; brushing this region updates the horizon chart to visualize the corresponding metric values, which show extended periods of threshold violation for client errors (#4xx) interspersed with shorter periods for server errors (#5xx).",
+    "abstract": "Efficient outage detection and remediation is crucial for effectively operating cloud computing systems. To remediate outages, system engineers must quickly identify the causal relationships between metrics and correlate events across multiple monitoring tools. In practice, this process largely remains reactive due to the complexity and general lack of interpretability within such monitoring environments. This work presents ViSRE: an integrated visual analytics system that integrates causal and predictive models with interactive visualizations to aid in proactive cloud outage management. We develop enhanced node representations for our causal graph representation to support system engineers in performing root cause analysis and reasoning about causality chains in multi-dimensional temporal data. We report the results of a quantitative assessment of the proposed predictive models, which show good performance guarantees. To evaluate and refine our system, we conduct a study with six cloud system engineers who verify that our proposed techniques can support proactive cloud maintenance by intuitively displaying temporal relationships between predicted and raw data. By correlating and presenting data from disparate sources, ViSRE also reduces context switching costs and reduces the time spent on manually correlating events during remediation of time-critical outages.",
     "supplemental": []
   },
   "CODAS": {
@@ -31,12 +125,24 @@ var publications = {
     "figure": "website/resources/images/CODAS-figure.png",
     "figurecaption": "An overview of the report authoring workflow: (A) Explore data using initial static dashboards from business analysts; (B) Author interactive data-driven reports using CODAS; (C) Share the final report with stakeholders using a shareable link.",
     "abstract": "Business analysts create rich dashboards to find data insights and subsequently communicate these findings with data-driven reports that combine visualization screenshots and descriptive text. Conventional analytics reports convey findings statically and passively, which suffers from limited interactivity and adaptability to data changes. There is therefore a need to facilitate authoring of interactive reports in business analytics. To better support the needs of business analysts, we developed CODAS: a report authoring tool that allows analysts to transform dashboards into interactive, web-based reports through a no-coding user interface and a workflow that is compatible to business analysts' existing data analytics pipelines. CODAS supports authoring multiple levels of interactions, organizing story elements, and generating the final artifact. Through our case studies with two expert analysts, we discuss the usefulness of our system and report our findings on analysts' report authoring workflow. Our findings suggest that CODAS enables business analysts to create interactive, data-driven reports comfortably, and can complement their exisitng data analytics workflow without extra learning effort.",
-    "supplemental": [
-      {
-        "name": "Video",
-        "link": "website/resources/videos/CODAS-videofigure.mp4"
-      },
-    ]
+    "supplemental": []
+  },
+  "ReportAuthoring": {
+    "type": "workshop",
+    "doi": "https://doi.org/10.2312/eurova.20221076",
+    "id": "2022-ba-report-authoring",
+    "title": "Understanding Business Analysts' Needs for Data Report Authoring",
+    "authors": "Zhuohao Zhang AND Sana Malik AND Shunan Guo AND Jane Hoffswell AND Ryan Rossi AND Fan Du AND Eunyee Koh",
+    "booktitle": "EuroVis Workshop on Visual Analytics (EuroVA)",
+    "conference": "EuroVA",
+    "year": 2022,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2022-ReportAuthoring-EuroVA.pdf",
+    "paper": "website/resources/papers/2022-ReportAuthoring-EuroVA.pdf",
+    "thumbnail": "website/resources/images/ReportAuthoring-thumbnail.png",
+    "figure": "website/resources/images/ReportAuthoring-figure.png",
+    "figurecaption": "Based on formative interviews with fifteen professional business analysts, we propose five design guidelines for developing effective authoring tools for business analysts creating interactive, data-driven reports: (1) Complement busniess analysts' current workflows; (2) Enable GUI-based creation of data-driven reports; (3) Preserve interactivity of the visualizations; (4) Support customized narratives and flexible links to visualizations; (5) Include out-of-the-box methods to generate dynamic insights.",
+    "abstract": "Business analysts often create static, data-driven reports to summarize and communicate findings from marketing dashboards. However, the requirements and workflow for creating data-driven reports in business analytics have not been fully investigated. In this work, we interviewed fifteen professional analysts to understand their unique needs for data-driven report authoring and identify gaps between their goals, technical skills, and existing reporting tools. Our findings suggest eight fundamental takeaways for report authoring, such as the need for persistent interactive experiences combined with more robust narrative authoring for linking story pieces and customizing the narrative layout. Based on these interviews, we synthesize the results into five design guidelines to direct future analytic reporting tools.",
+    "supplemental": []
   },
   "Cicero": {
     "type": "paper",
@@ -95,7 +201,7 @@ var publications = {
     "id": "2021-recommendation-framework",
     "title": "An Evaluation-Focused Framework for Visualization Recommendation Algorithms",
     "authors": "Zehua Zeng AND Phoebe Moh AND Fan Du AND Jane Hoffswell AND Tak Yeon Lee AND Sana Malik AND Eunyee Koh AND Leilani Battle",
-    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics",
+    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. VIS)",
     "conference": "VIS",
     "year": 2021,
     "url": "https://jhoffswell.github.io/website/resources/papers/2021-RecommendationFramework-VIS.pdf",
