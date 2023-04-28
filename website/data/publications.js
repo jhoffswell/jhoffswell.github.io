@@ -1,4 +1,21 @@
 var publications = {
+  "DataPilot": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1145/3544548.3581509",
+    "id": "2023-datapilot",
+    "title": "DataPilot: Utilizing Quality and Usage Information for Subset Selection during Visual Data Preparation",
+    "authors": "Arpit Narechania AND Fan Du AND Atanu R. Sinha AND Ryan A. Rossi AND Jane Hoffswell AND Shunan Guo AND Eunyee Koh AND Shamkant B. Navathe AND Alex Endert",
+    "booktitle": "ACM Human Factors in Computing Systems (CHI)",
+    "conference": "CHI",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-DataPilot-CHI.pdf",
+    "paper": "website/resources/papers/2023-DataPilot-CHI.pdf",
+    "thumbnail": "website/resources/images/DataPilot-thumbnail.png",
+    "figure": "website/resources/images/DataPilot-figure.png",
+    "figurecaption": "The DataPilot user interface showing Step 1 (Review Raw Data) of the three-step workflow. Users can inspect the list of dataset attributes (A. Attribute View), inspect quality and usage dimension scores for an attribute (B. Attribute Detail View), visualize attribute distributions and navigate dataset records (C. Data View), incrementally filter records by attribute values (D. Attribute Filter View), incrementally filter attributes and records by both quality (E. Quality Filters View) and usage dimensions (F. Usage Filters View) to reduce the search space, get a visual summary of this filtered dataset (G. Minimap View), and explicitly select attributes (A. Attribute View) and records (automatically selected based on filters) for the desired subset.",
+    "abstract": "Selecting relevant data subsets from large, unfamiliar datasets can be difficult. We address this challenge by modeling and visualizing two kinds of auxiliary information: (1) quality – the validity and appropriateness of data required to perform certain analytical tasks; and (2) usage – the historical utilization characteristics of data across multiple users. Through a design study with 14 data workers, we integrate this information into a visual data preparation and analysis tool, DataPilot. DataPilot presents visual cues about “the good, the bad, and the ugly” aspects of data and provides graphical user interface controls as interaction affordances, guiding users to perform subset selection. Through a study with 36 participants, we investigate how DataPilot helps users navigate a large, unfamiliar tabular dataset, prepare a relevant subset, and build a visualization dashboard.We find that users selected smaller, effective subsets with higher quality and usage, and with greater success and confidence.",
+    "supplemental": []
+  },
   "VisualizationMAR": {
     "type": "paper",
     "doi": "https://doi.org/10.1109/TVCG.2022.3209348",
@@ -46,7 +63,7 @@ var publications = {
   },
   "ARShopping": {
     "type": "paper",
-    "doi": "",
+    "doi": "https://doi.org/10.1109/VIS54862.2022.00033",
     "id": "2022-arshopping",
     "title": "ARShopping: In-Store Shopping Decision Support Through Augmented Reality and Immersive Visualization",
     "authors": "Bingjie Xu AND Shunan Guo AND Eunyee Koh AND Jane Hoffswell AND Ryan Rossi AND Fan Du",
@@ -60,16 +77,11 @@ var publications = {
     "figurecaption": "A comparison of product detection and glyph placement results with (a) marker detection only and (b) marker+object detection.",
     "abstract": "Online shopping gives customers boundless options to choose from, backed by extensive product details and customer reviews, all from the comfort of home; yet, no amount of detailed, online information can outweigh the instant gratification and hands-on understanding of a product that is provided by physical stores. However, making purchasing decisions in physical stores can be challenging due to a large number of similar alternatives and limited accessibility of the relevant product information (e.g., features, ratings, and reviews). \rv{In this work, we present ARShopping: a web-based prototype to visually communicate detailed product information from an online setting on portable smart devices (e.g., phones, tablets, glasses)}, within the physical space at the point of purchase. This prototype uses augmented reality (AR) to identify products and display detailed information to help consumers make purchasing decisions that fulfill their needs while decreasing the decision-making time. In particular, we use a data fusion algorithm to improve the precision of the product detection; we then integrate AR visualizations into the scene to facilitate comparisons across multiple products and features. We designed our prototype based on interviews with 14 participants to better understand the utility and ease of use of the prototype.",
     "award": "Best Short Paper Honorable Mention",
-    "supplemental": [
-      {
-        "name": "Video", 
-        "link": "website/resources/videos/ARShopping-videofigure.mp4"
-      }
-    ]
+    "supplemental": []
   },
   "PersonalizedVisualization": {
     "type": "paper",
-    "doi": "",
+    "doi": "https://doi.org/10.1109/VIS54862.2022.00026",
     "id": "2022-personalized",
     "title": "Let's Get Personal: Exploring the Design of Personalized Visualizations",
     "authors": "Beleicia Bullock AND Shunan Guo AND Eunyee Koh AND Ryan Rossi AND Fan Du AND Jane Hoffswell",
@@ -82,20 +94,11 @@ var publications = {
     "figure": "website/resources/images/PersonalizedVisualization-figure.png",
     "figurecaption": "An overview of the personalized visualizations corpus based on the (a) personalized attributes contained in the article, (b) granularity, and (c) resulting codes for different publications.",
     "abstract": "Media outlets often publish visualizations that can be personalized based on users' demographics, such as location, race, and age. However, the design of such personalized visualizations remains underexplored. In this work, we contribute a design space analysis of 47 public-facing articles with personalized visualizations to understand how designers structure content, encourage exploration, and present insights. We find that articles often lack explicit exploration suggestions or instructions, data notices, and personalized visual insights. We then outline three trajectories for future research: (1) explore how users choose to personalize visualizations, (2) examine how exploration suggestions and examples impact user interaction, and (3) investigate how personalization influences user insights.",
-    "supplemental": [
-      {
-        "name": "Codebook", 
-        "link": "website/resources/supplemental/PersonalizedVisualization-codebook.xlsx"
-      },
-      {
-        "name": "Coding Guide", 
-        "link": "website/resources/supplemental/PersonalizedVisualization-codingGuide.pdf"
-      }
-    ]
+    "supplemental": []
   },
   "ViSRE": {
     "type": "paper",
-    "doi": "",
+    "doi": "https://doi.org/10.1109/VISSOFT55257.2022.00010",
     "id": "2022-visre",
     "title": "ViSRE: A Unified Visual Analysis Dashboard for Proactive Cloud Outage Management",
     "authors": "Paula Kayongo AND Jane Hoffswell AND Shiv Saini AND Shaddy Garg AND Eunyee Koh AND Haoliang Wang AND Tom Jacobs",

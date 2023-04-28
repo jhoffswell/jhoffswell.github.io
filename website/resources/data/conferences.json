@@ -1,6 +1,19 @@
 [
   {
     "country": "United States",
+    "state": "Oklahoma",
+    "city": "Oklahoma City",
+    "year": 2022,
+    "date": "October 17, 2022",
+    "conference": "VIS",
+    "text": "VIS 2022",
+    "image": "website/resources/images/VisualizationMAR-thumbnail.png",
+    "presented": false,
+    "latitude": 35.468611,
+    "longitude": -97.521389
+  },
+  {
+    "country": "United States",
     "state": "Hawaii",
     "city": "Honolulu",
     "year": 2020,
