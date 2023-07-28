@@ -55,7 +55,7 @@ var resources = {
     "icon": "picture-o",
     "priority": "low"
   },
-  "LaTeX Tips & Tricks": {
+  "LaTeX Template": {
     "date": "July 28th, 2023",
     "description": "A simple Overleaf template of my preferred LaTeX structure and helper commands.",
     "link": "https://www.overleaf.com/read/ntgpckzbfhnm",
