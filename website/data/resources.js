@@ -48,11 +48,19 @@ var resources = {
     "priority": "low"
   },
   "LaTeX Tips & Tricks": {
-    "date": "June 7th, 2022",
+    "date": "July 28th, 2023",
     "description": "A brief slide deck on my personal tips, tricks, and preferences for organizing papers in LaTeX.",
     "link": "website/resources/JaneHoffswell-LaTeXTipsTricks.pdf",
     "thumbnail": "website/resources/images/latexTips-thumbnail.png",
     "icon": "picture-o",
+    "priority": "low"
+  },
+  "LaTeX Tips & Tricks": {
+    "date": "July 28th, 2023",
+    "description": "A simple Overleaf template of my preferred LaTeX structure and helper commands.",
+    "link": "https://www.overleaf.com/read/ntgpckzbfhnm",
+    "thumbnail": "website/resources/images/latexTemplate-thumbnail.png",
+    "icon": "globe",
     "priority": "low"
   }
 }
