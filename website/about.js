@@ -9,14 +9,13 @@ function showAbout() {
 function initAbout() {
   var block = document.getElementById("publicationblock");
 
-  block.appendChild(getPublicationBlock("Cicero"));
-  block.appendChild(getPublicationBlock("Responsive"));
+  block.appendChild(getPublicationBlock("Dupo"));
+  block.appendChild(getPublicationBlock("Socrates"));
+  block.appendChild(getPublicationBlock("WhatsNext"));
 
-  var tablesBlock = getPublicationBlock("Tables");
-  tablesBlock.className += " small-only";
-  block.appendChild(tablesBlock);  
-
-  block.appendChild(getPublicationBlock("SetCoLa"));
+  var extraBlock = getPublicationBlock("DataPilot");
+  extraBlock.className += " small-only";
+  block.appendChild(extraBlock);  
 
   var block = document.getElementById("resourceblock");
   var names = Object.keys(resources);

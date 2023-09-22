@@ -1,4 +1,128 @@
 var publications = {
+  "Dupo": {
+    "type": "paper",
+    "doi": "",
+    "id": "2023-dupo",
+    "title": "Dupo: A Mixed-Initiative Authoring Tool for Responsive Visualization",
+    "authors": "Hyeok Kim AND Ryan Rossi AND Jessica Hullman AND Jane Hoffswell",
+    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. VIS)",
+    "conference": "VIS",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-Dupo-VIS.pdf",
+    "paper": "website/resources/papers/2023-Dupo-VIS.pdf",
+    "thumbnail": "website/resources/images/Dupo-thumbnail.png",
+    "figure": "website/resources/images/Dupo-figure.png",
+    "figurecaption": "Selective design outcomes from the user study with six expert responsive visualization authors. Participants provided their own visualizations for use in the study. For anonymization purposes, we replaced participants’ data sets while maintaining the cardinality and data type, edited the text content but preserved annotation length, and altered the color schemes. A star icon indicates an edit from the recommendations, a pencil icon denotes a manual edit made by a participant, and a cursor icon represents a manual edit using direct manipulation.",
+    "abstract": "Designing responsive visualizations for various screen types can be tedious as authors must manage multiple chart~versions across design iterations. Automated approaches for responsive visualization must take into account the user's need for agency in exploring possible design ideas and applying customizations based on their own goals. We design and implement Dupo, a mixed-initiative approach to creating responsive visualizations that combines the agency afforded by a manual interface with automation provided by a recommender system. Given an initial design, users can browse automated design suggestions for a different screen type and make edits to a chosen design, thereby supporting quick prototyping and customizability. Dupo employs a two-step recommender pipeline that first suggests significant design changes (Exploration) followed by more subtle changes (Alteration). We evaluated Dupo with six expert responsive visualization authors. While creating responsive versions of a source design in Dupo, participants could reason about different design suggestions without having to manually prototype them, and thus avoid prematurely fixating on a particular design. This process led participants to create designs that they were satisfied with but which they had previously overlooked.",
+    "supplemental": [
+      {
+        "name": "arXiv", 
+        "link": "https://doi.org/10.48550/arXiv.2308.05136"
+      },
+      {
+        "name": "Video",
+        "link": "https://youtu.be/NpFMUXXeaK0"
+      },
+      {
+        "name": "Supplemental Material", 
+        "link": "https://see-mike-out.github.io/dupo-supplementary/index.html"
+      },
+      {
+        "name": "Demo System", 
+        "link": "https://see-mike-out.github.io/dupo-public/"
+      },
+    ]
+  },
+  "Socrates": {
+    "type": "paper",
+    "doi": "",
+    "id": "2023-socrates",
+    "title": "Socrates: Data Story Generation via Adaptive Machine-Guided Elicitation of User Feedback",
+    "authors": "Guande Wu AND Shunan Guo AND Jane Hoffswell AND Gromit Yeuk-Yin Chan AND Ryan Rossi AND Eunyee Koh",
+    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. VIS)",
+    "conference": "VIS",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-Socrates-VIS.pdf",
+    "paper": "website/resources/papers/2023-Socrates-VIS.pdf",
+    "thumbnail": "website/resources/images/Socrates-thumbnail.png",
+    "figure": "website/resources/images/Socrates-figure.png",
+    "figurecaption": "The prototype interface for Socrates consists of four views. (A) The Story Preference View shows the system-generated questions and user-provided feedback. (B) The Data Story Flow View presents a flowchart representing the structure of the data story, as well as alternative facts that could be added to the data story. Each node represents a fact, and the width encodes the score of the narrative transition between the two connected facts. Some facts' descriptions are hidden due to the limited space. The user can hover over a fact to view the detailed description and choose whether to add it to the story. (C) The Interesting Facts View presents all the potential facts from the dataset. This view provides a filter panel and search bar to help the user explore the facts. (D) The Story Preview allows the user to scroll through the generated data story",
+    "abstract": "Visual data stories can effectively convey insights from data, yet their creation often necessitates intricate data exploration, insight discovery, narrative organization, and customization to meet the communication objectives of the storyteller. Existing automated data storytelling system, however, tends to overlook the importance of user customization during the data story authoring process, limiting the system’s ability to create tailored narratives that reflect the user’s intentions. We present a novel data story generation workflow that leverages adaptive machine-guided elicitation of user feedback to customize the story. Our approach employs an adaptive plug-in module for existing story generation systems, which incorporates user feedback through interactive questioning based on the conversation history and dataset. This adaptability refines the system’s understanding of the user’s intentions, ensuring the final narrative aligns with their goals. We demonstrate the feasibility of our approach through the implementation of an interactive prototype Socrates. Through a quantitative user study with 18 participants that compares our method to a state-of-the-art data story generation algorithm, we show that Socrates produces more relevant stories with a larger overlap of insights compared to human-generated stories. We also demonstrate the usability of Socrates via interviews with three data analysts and highlight areas of future work.Soc",
+    "supplemental": []
+  },
+  "WhatsNext": {
+    "type": "short paper",
+    "doi": "",
+    "id": "2023-whatsNext",
+    "title": "WhatsNext: Guidance-enriched Exploratory Data Analysis with Interactive, Low-Code Notebooks",
+    "authors": "Chen Chen AND Jane Hoffswell AND Shunan Guo AND Ryan Rossi AND Gromit Yeuk-Yin Chan AND Fan Du AND Eunyee Koh AND Zhicheng Liu",
+    "booktitle": "IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)",
+    "conference": "VL/HCC",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-WhatsNext-VLHCC.pdf",
+    "paper": "website/resources/papers/2023-WhatsNext-VLHCC.pdf",
+    "thumbnail": "website/resources/images/WhatsNext-thumbnail.png",
+    "figure": "website/resources/images/WhatsNext-figure.png",
+    "figurecaption": "The interface and sample use case of WhatsNext. The core UI features are a new, no-code interaction panel that recommends follow-up questions (A) and the analysis thread visualization of the exploration structure (B); the user can quickly generate new notebook cells (2-6, orange) by selecting recommended follow-up questions (2-6, green). Other simple interactions allow the user to explore, delete, and restore cells from the analysis history (C-E).",
+    "abstract": "Computational notebooks such as Jupyter are popular for exploratory data analysis and insight finding. Despite the module-based structure, notebooks visually appear as a single thread of interleaved cells containing text, code, visualizations, and tables, which can be unorganized and obscure users' data analysis workflow. Furthermore, users with limited coding expertise may struggle to quickly engage in the analysis process. In this work, we design and implement an interactive notebook framework, WhatsNext, with the goal of supporting low-code visual data exploration with insight-based user guidance. In particular, we (1) re-design a standard notebook cell to include a recommendation panel that suggests possible next-step exploration questions or analysis actions to take, and (2) create an interactive, dynamic tree visualization that reflects the analytic dependencies between notebook cells to make it easy for users to see the structure of the data exploration threads and trace back to previous steps.",
+    "supplemental": [
+      {
+        "name": "arXiv", 
+        "link": "https://doi.org/10.48550/arXiv.2308.09802"
+      }
+    ]
+  },
+  "PredictiveInvestigative": {
+    "type": "poster",
+    "doi": "https://doi.org/10.1145/3543873.3587317",
+    "id": "2023-predictiveInvestigative",
+    "title": "Augmenting Visualizations with Predictive and Investigative Insights to Facilitate Decision Making",
+    "authors": "Md Main Uddin Rony AND Fan Du AND Ryan Rossi AND Jane Hoffswell AND Niyati Chhaya AND Iftikhar Burhanuddin AND Eunyee Koh",
+    "booktitle": "Companion Proceedings of the ACM Web Conference",
+    "conference": "WebConf Companion",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-PredictiveInvestigative-WebConf.pdf",
+    "paper": "website/resources/papers/2023-PredictiveInvestigative-WebConf.pdf",
+    "thumbnail": "website/resources/images/PredictiveInvestigative-thumbnail.png",
+    "figure": "website/resources/images/PredictiveInvestigative-figure.png",
+    "figurecaption": "Overview of the different types of insights.",
+    "abstract": "Many people find it difficult to comprehend basic charts on the web, let alone make effective decisions from them. To address this gap, several ML models aim to automatically detect useful insights from charts and narrate them in a simpler textual format. However, most of these solutions can only detect basic factual insights (a.k.a. descriptive insights) that are already present in the chart, which may help with chart comprehension, but not decision-making. In this work, we study whether more advanced predictive and investigative insights can help users understand what will happen next and what actions they should take. These advanced insights can help decision-makers better understand the reasons behind anomaly events, predict future unfolding trends, and recommend possible actions for optimizing business outcomes. Through a study with 18 participants, we found that predictive and investigative insights lead to more insights recorded by users on average and better effectiveness ratings.",
+    "supplemental": []
+  },
+  "StyleRecommendation": {
+    "type": "poster",
+    "doi": "https://doi.org/10.1145/3543873.3587300",
+    "id": "2023-styleRecommendation",
+    "title": "A ML-based Approach for HTML-based Style Recommendation",
+    "authors": "Ryan Aponte AND Ryan Rossi AND Shunan Guo AND Jane Hoffswell AND Nedim Lipka AND Chang Xiao AND Gromit Yeuk-Yin Chan AND Eunyee Koh AND Nesreen Ahmed",
+    "booktitle": "Companion Proceedings of the ACM Web Conference",
+    "conference": "WebConf Companion",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-StyleRecommendation-WebConf.pdf",
+    "paper": "website/resources/papers/2023-StyleRecommendation-WebConf.pdf",
+    "thumbnail": "website/resources/images/StyleRecommendation-thumbnail.png",
+    "figure": "website/resources/images/StyleRecommendation-figure.png",
+    "figurecaption": "Our approach is trained on a large corpus of HTML documents, that is, marketing emails as shown in (A). Every HTML document is then decomposed into HTML fragments and a set of entities are extracted from each (B).",
+    "abstract": "Given a large corpus of HTML-based emails (or websites, posters, documents) collected from the web, how can we train a model capable of learning from such rich heterogeneous data for HTML-based style recommendation tasks such as recommending useful design styles or suggesting alternative HTML designs? To address this new learning task, we first decompose each HTML document in the corpus into a sequence of smaller HTML fragments where each fragment may consist of a set of HTML entities such as buttons, images, textual content (titles, paragraphs) and stylistic entities such as background-style, font-style, button-style, among others. From these HTML fragments, we then derive a single large heterogeneous hypergraph that captures the higher-order dependencies between HTML fragments and entities in such fragments, both within the same HTML document as well as across the HTML documents in the corpus. We then formulate this new HTML style recommendation task as a hypergraph representation learning problem and propose an approach to solve it. Our approach is able to learn effective low-dimensional representations of the higher-order fragments that consist of sets of heterogeneous entities as well as low-dimensional representations of the individual entities themselves. We demonstrate the effectiveness of the approach across several design style recommendation tasks. To the best of our knowledge, this work is the first to develop an ML-based model for the task of HTML-based email style recommendation.",
+    "supplemental": []
+  },
+  "SpotLight": {
+    "type": "poster",
+    "doi": "https://doi.org/10.1145/3543873.3587302",
+    "id": "2023-spotlight",
+    "title": "SpotLight: Visual Insight Recommendation",
+    "authors": "Camille Harris AND Ryan Rossi AND Sana Malik AND Jane Hoffswell AND Fan Du AND Tak Yeon Lee AND Eunyee Koh AND Handong Zhao",
+    "booktitle": "Companion Proceedings of the ACM Web Conference",
+    "conference": "WebConf Companion",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-SpotLight-WebConf.pdf",
+    "paper": "website/resources/papers/2023-SpotLight-WebConf.pdf",
+    "thumbnail": "website/resources/images/SpotLight-thumbnail.png",
+    "figure": "website/resources/images/SpotLight-figure.png",
+    "figurecaption": "SpotLight is a web-based system for visual insight recommendation that automatically recommends visualizations for the most relevant insights in the data: (a) insights are automatically discovered; (b) insights are grouped into rows, scored, and ranked based on the insight-type; (c) these rows are then globally ranked and sorted; (d) users can interactively query recommendations through attribute flters; and (e) users can bookmark the most important insights.",
+    "abstract": "Visualization recommendation systems make understanding data more accessible to users of all skill levels by automatically generating visualizations for users to explore. However, most existing visualization recommendation systems focus on ranking all possible visualizations based on the attributes or encodings, which makes it difficult to find the most relevant insights. We therefore introduce a novel class of insight-based visualization recommendation systems that automatically rank and recommend groups of related insights as well as the most important insights within each group. Our approach combines results from different learning-based methods to discover insights automatically and generalizes to a variety of attribute types (e.g., categorical, numerical, and temporal), including non-trivial combinations of these attribute types. To demonstrate the utility of this approach, we implemented a insight-centric visualization recommendation system, SpotLight, and conducted a user study with twelve participants, which showed that users are able to quickly find and understand relevant insights in unfamiliar data.",
+    "supplemental": []
+  },
   "DataPilot": {
     "type": "paper",
     "doi": "https://doi.org/10.1145/3544548.3581509",
@@ -62,7 +186,7 @@ var publications = {
     ]
   },
   "ARShopping": {
-    "type": "paper",
+    "type": "short paper",
     "doi": "https://doi.org/10.1109/VIS54862.2022.00033",
     "id": "2022-arshopping",
     "title": "ARShopping: In-Store Shopping Decision Support Through Augmented Reality and Immersive Visualization",
@@ -80,7 +204,7 @@ var publications = {
     "supplemental": []
   },
   "PersonalizedVisualization": {
-    "type": "paper",
+    "type": "short paper",
     "doi": "https://doi.org/10.1109/VIS54862.2022.00026",
     "id": "2022-personalized",
     "title": "Let's Get Personal: Exploring the Design of Personalized Visualizations",

@@ -153,7 +153,7 @@ function getBibTeXThesis(info) {
   str += "  author = {" + info.authors + "},\n";
   str += "  school = {" + info.school + "},\n";
   str += "  year = {" + info.year + "},\n";
-  str += "  url = {" + info.doi + "},\n";
+  str += "  doi = {" + info.doi + "},\n";
   str += "}";
   return str;
 }
@@ -165,7 +165,7 @@ function getBibTeXProceedings(info) {
   str += "  author = {" + info.authors + "},\n";
   str += "  booktitle = {" + info.booktitle + "},\n";
   str += "  year = {" + info.year + "},\n";
-  str += "  url = {" + info.url + "},\n";
+  str += "  doi = {" + info.doi + "},\n";
   str += "}";
   return str;
 }
