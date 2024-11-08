@@ -1,7 +1,174 @@
 var publications = {
+  "Aligned": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/TVCG.2024.3456378",
+    "id": "2024-aligned",
+    "title": "How Aligned are Human Chart Takeaways and LLM Predictions? A Case Study on Bar Charts with Varying Layouts",
+    "authors": "Huichen Will Wang AND Jane Hoffswell AND Sao Myat Thazin Thane AND Victor S. Bursztyn AND Cindy Xiong Bearfield",
+    "booktitle": "IEEE Trans. Visualization \& Comp. Graphics (Proc. VIS)",
+    "conference": "VIS",
+    "year": 2024,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2024-Aligned-VIS.pdf",
+    "paper": "website/resources/papers/2024-Aligned-VIS.pdf",
+    "thumbnail": "website/resources/images/Aligned-thumbnail.png",
+    "figure": "website/resources/images/Aligned-figure.png",
+    "figurecaption": "Our case study includes three experiments. In Experiment 1, we varied the LLM, decoding temperature, chart specification, and prompting strategy, and identified optimal configurations to elicit LLM chart takeaways for both zero-shot and one-shot settings. In Experiment 2, we generated takeaways using optimal configurations and examined whether LLMs’ comparisons are perceptually sensitive to bar arrangement like humans are. In Experiment 3, we examined whether LLMs’ comparisons are insensitive to data and context like humans are.",
+    "abstract": "Large Language Models (LLMs) have been adopted for a variety of visualizations tasks, but how far are we from perceptually aware LLMs that can predict human takeaways? Graphical perception literature has shown that human chart takeaways are sensitive to visualization design choices, such as spatial layouts. In this work, we examine the extent to which LLMs exhibit such sensitivity when generating takeaways, using bar charts with varying spatial layouts as a case study. We conducted three experiments and tested four common bar chart layouts: vertically juxtaposed, horizontally juxtaposed, overlaid, and stacked. In Experiment 1, we identified the optimal configurations to generate meaningful chart takeaways by testing four LLMs, two temperature settings, nine chart specifications, and two prompting strategies. We found that even state-of-the-art LLMs struggled to generate semantically diverse and factually accurate takeaways. In Experiment 2, we used the optimal configurations to generate 30 chart takeaways each for eight visualizations across four layouts and two datasets in both zero-shot and one-shot settings. Compared to human takeaways, we found that the takeaways LLMs generated often did not match the types of comparisons made by humans. In Experiment 3, we examined the effect of chart context and data on LLM takeaways. We found that LLMs, unlike humans, exhibited variation in takeaway comparison types for different bar charts using the same bar layout. Overall, our case study evaluates the ability of LLMs to emulate human interpretations of data and points to challenges and opportunities in using LLMs to predict human chart takeaways.",
+    "supplemental": []
+  },
+  "Explanations": {
+    "type": "short paper",
+    "doi": "",
+    "id": "2024-explanations",
+    "title": "Representing Charts as Text for Language Models: An In-Depth Study of Question Answering for Bar Charts",
+    "authors": "Victor S. Bursztyn AND Jane Hoffswell AND Shunan Guo AND Eunyee Koh",
+    "booktitle": "IEEE VIS Short Papers",
+    "conference": "VIS",
+    "year": 2024,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2024-Explanations-VIS.pdf",
+    "paper": "website/resources/papers/2024-Explanations-VIS.pdf",
+    "thumbnail": "website/resources/images/Explanations-thumbnail.png",
+    "figure": "website/resources/images/Explanations-figure.png",
+    "figurecaption": "We explore two main tasks related to chart-grounded Q&A: question answering (QA) and visual explanation generation (VEG). QA leverages templated domain facts (DF) from the chart’s CSV file, whereas VEG relies on visual context (VC) from its JSON file. In the first fine-tuning step, the charts’ underlying text files are injected into the language models (LMs). We then fine-tune the QA and VEG steps on 90% of the charts, with 10% held out for testing during our evaluation in §4. To understand the robustness of our LMs to natural language variation, we also perform a question paraphrasing task to rephrase our template-generated questions more naturally.",
+    "abstract": "Machine Learning models for chart-grounded Q&A (CQA) often treat charts as images, but performing CQA on pixel values has proven challenging. We thus investigate a resource overlooked by current ML-based approaches: the declarative documents describing how charts should visually encode data (i.e., chart specifications). In this work, we use chart specifications to enhance language models (LMs) for chart-reading tasks, such that the resulting system can robustly understand language for CQA. Through a case study with 359 bar charts, we test novel fine tuning schemes on both GPT-3 and T5 using a new dataset curated for two CQA tasks: question-answering and visual explanation generation. Our text-only approaches strongly outperform vision-based GPT-4 on explanation generation (99% vs. 63% accuracy), and show promising results for question-answering (57-67% accuracy). Through in-depth experiments, we also show that our text-only approaches are mostly robust to natural language variation.",
+    "supplemental": []
+  },
+  "Aletheia": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1145/3672539.3686353",
+    "id": "2024-aletheia",
+    "title": '"The Data Says Otherwise" — Towards Automated Fact-checking and Communication of Data Claims',
+    "authors": "Yu Fu AND Shunan Guo AND Jane Hoffswell AND Victor S. Bursztyn AND Ryan Rossi AND John Stasko",
+    "booktitle": "ACM Symposium on User Interface Software and Technology (UIST)",
+    "conference": "UIST",
+    "year": 2024,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2024-Aletheia-UIST.pdf",
+    "paper": "website/resources/papers/2024-Aletheia-UIST.pdf",
+    "thumbnail": "website/resources/images/Aletheia-thumbnail.png",
+    "figure": "website/resources/images/Aletheia-figure.png",
+    "figurecaption": "Aletheia’s interface. Users enter textual content and select/upload a reference dataset in Input View (A). The backend then detects data claims, retrieves corresponding data evidence, and verifies them. The fact-checking results are presented in Result View (B), utilizing color codings to signify their verdicts: accurate, inaccurate, and unverifiable. Users click on the highlighted data claims to access the Evidence View (C). This view contains the designed data evidence presentation and interactions.",
+    "abstract": "Fact-checking data claims requires data evidence retrieval and analysis, which can become tedious and intractable when done manually. This work presents Aletheia, an automated fact-checking prototype designed to facilitate data claims verification and enhance data evidence communication. For verification, we utilize a pre-trained LLM to parse the semantics for evidence retrieval. To effectively communicate the data evidence, we design representations in two forms: data tables and visualizations, tailored to various data fact types. Additionally, we design interactions that showcase a real-world application of these techniques. We evaluate the performance of two core NLP tasks with a curated dataset comprising 400 data claims and compare the two representation forms regarding viewers’ assessment time, confidence, and preference via a user study with 20 participants. The evaluation offers insights into the feasibility and bottlenecks of using LLMs for data fact-checking tasks, potential advantages and disadvantages of using visualizations over data tables, and design recommendations for presenting data evidence.",
+    "supplemental": [
+      {
+        "name": "arXiv",
+        "link": "https://arxiv.org/abs/2409.10713"
+      }
+    ]
+  },
+  "DataPictorial": {
+    "type": "poster",
+    "doi": "https://doi.org/10.1145/3672539.3686353",
+    "id": "2024-datapictorial",
+    "title": "Data Pictorial: Deconstructing Raster Images for Data-Aware Animated Vector Posters",
+    "authors": "Tongyu Zhou AND Gromit Yeuk-Yin Chan AND Shunan Guo AND Jane Hoffswell AND Chang Xiao AND Victor S. Bursztyn AND Eunyee Koh",
+    "booktitle": "Adjunct Proceedings of ACM UIST",
+    "conference": "UIST",
+    "year": 2024,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2024-DataPictorial-UIST.pdf",
+    "paper": "website/resources/papers/2024-DataPictorial-UIST.pdf",
+    "thumbnail": "website/resources/images/DataPictorial-thumbnail.png",
+    "figure": "website/resources/images/DataPictorial-figure.png",
+    "figurecaption": "Our pipeline for Data Pictorial: a static raster poster is decomposed into cropped, labeled components that are converted to SVG elements. Bindings are then established between the metadata of an input data table, the image labels, and SVG properties to construct a data-aware vectorized poster that dynamically cycles through data values via SMIL animation.",
+    "abstract": "To support data integration into pictorials, we propose Data Pictorial, a pipeline that deconstructs a raster image into SVG objects whose attributes are contextualized in data. This process is achieved by cropping objects of interest using zero-shot detection, converting them into quantized bitmaps, and tracing the results as SVG paths. The technique then provides suggestions for binding the SVG objects and properties with data fields, affording the flexibility to automatically modify and animate the SVG based on the mapping. The resultant data-aware vector hypermedia can be potential candidates for real-time data inspection and personalization, all while maintaining the aesthetic of the original pictorial.",
+    "supplemental": []
+  },
+  "MobileInteraction": {
+    "type": "short paper",
+    "doi": "https://doi.org/10.2312/evs.20241057",
+    "id": "2024-mobile",
+    "title": "Interaction Techniques for Exploratory Data Visualization on Mobile Devices",
+    "authors": "Luke S. Snyder AND Ryan A. Rossi AND Eunyee Koh AND Jeffrey Heer AND Jane Hoffswell",
+    "booktitle": "EuroVis Short Papers",
+    "conference": "EuroVis",
+    "year": 2024,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2024-MobileInteraction-EuroVis.pdf",
+    "paper": "website/resources/papers/2024-MobileInteraction-EuroVis.pdf",
+    "thumbnail": "website/resources/images/MobileInteraction-thumbnail.png",
+    "figure": "website/resources/images/MobileInteraction-figure.png",
+    "figurecaption": "Interactions for mobile exploratory data visualization: (A) a stacked bar chart of US population data by age, with the menu opened on the right; (B) the user drags along both axes to INSPECT the data via a tooltip; (C) the user drags along the x-axis to INSPECT and taps to SELECT the states with the highest population (CA, FL, NY, TX); (D) to aid comparison, the user double taps to FOCUS on the selected marks and drags along both axes to further INSPECT them; (E) to return to the initial view from Step 1, the user shakes their device to RESET, and taps the AGGREGATE button to show the MAX(population) for each age group; the user then taps the age < 10 mark; (F) to INSPECT the selected mark in the original context, the user taps the AGGREGATE button again to return to the unaggregated view, which shows that CA has the largest population for age < 10.",
+    "abstract": "The ubiquity and on-the-go availability of mobile devices makes them central to many tasks such as interpersonal communication and media consumption. However, despite the potential of mobile devices for on-demand exploratory data visualization, existing mobile interactions are difficult, often using highly custom interactions, complex gestures, or multi-modal input. We synthesize limitations from the literature and outline four motivating principles for improved mobile interaction: leverage ubiquitous modalities, prioritize discoverability, enable rapid in-context data exploration, and promote graceful recovery. We then contribute thirteen interaction candidates and conduct a formative study with twelve participants who experienced our interactions in a testbed prototype. Based on these interviews, we discuss design considerations and tradeoffs from four main themes: precise and rapid inspection, focused navigation, single-touch and fixed orientation interaction, and judicious use of motion.",
+    "supplemental": [
+      {
+        "name": "arXiv", 
+        "link": "https://doi.org/10.48550/arXiv.2404.11602"
+      },
+      {
+        "name": "Video",
+        "link": "https://osf.io/u9mtd"
+      },
+      {
+        "name": "Supplemental Materials (OSF)", 
+        "link": "https://osf.io/e2ng8/"
+      }
+    ]
+  },
+  "InsightRecommendation": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/BigData59044.2023.10386099",
+    "id": "2023-insightrecommendation",
+    "title": "Visual Insight Recommendation: From Ranking Insight Visualizations to Insight Types",
+    "authors": "Camille Harris AND Ryan A. Rossi AND Sana Malik AND Jane Hoffswell AND Fan Du AND Tak Yeon Lee AND Eunyee Koh AND Handong Zhao",
+    "booktitle": "IEEE International Conference on Big Data (BigData)",
+    "conference": "BigData",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-InsightRecommendation-BigData.pdf",
+    "paper": "website/resources/papers/2023-InsightRecommendation-BigData.pdf",
+    "thumbnail": "website/resources/images/InsightRecommendation-thumbnail.png",
+    "figure": "website/resources/images/InsightRecommendation-figure.png",
+    "figurecaption": "SpotLight is a web-based system for visual insight recommendation that automatically recommends visualizations for the most relevant insights in the data: (a) insights are automatically discovered; (b) insights are grouped into rows, scored, and ranked based on the insight-type; (c) these rows are then globally ranked and sorted; (d) users can interactively query recommendations through attribute filters; and (e) users can bookmark the most important insights.",
+    "abstract": "Visualization recommendation systems make understanding data more accessible to users of all skill levels by automatically generating visualizations for users to explore. However, most existing visualization recommendation systems focus on ranking all possible visualizations based on the attributes or encodings, which makes it difficult to find the most interesting or relevant insights. We therefore introduce a novel class of visualization recommendation systems that automatically rank and recommend both groups of related insights and the most important insights within each group. Our approach combines results across different learning-based methods to discover insights automatically and generalizes to a variety of attribute types (e.g., categorical, numerical, and temporal), including non-trivial combinations of these attribute types. We then implemented a new insight-centric visualization recommendation system, SpotLight, which ranks annotated visualizations in visual insight groups. Finally, we conducted a user study which showed that users are able to quickly understand and find relevant insights in unfamiliar data.",
+    "supplemental": []
+  },
+  "DataCockpit": {
+    "type": "short paper",
+    "doi": "https://doi.org/10.1109/BigData59044.2023.10386133",
+    "id": "2023-datacockpit",
+    "title": "DataCockpit: A Toolkit for Data Lake Navigation and Monitoring Utilizing Quality and Usage Information",
+    "authors": "Arpit Narechania AND Surya Chakraborty AND Shivam Agarwal AND Atanu R Sinha AND Ryan A. Rossi AND Fan Du AND Jane Hoffswell AND Shunan Guo AND Eunyee Koh AND Alex Endert AND Shamkant Navathe",
+    "booktitle": "IEEE International Conference on Big Data (BigData)",
+    "conference": "BigData",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-DataCockpit-BigData.pdf",
+    "paper": "website/resources/papers/2023-DataCockpit-BigData.pdf",
+    "thumbnail": "website/resources/images/DataCockpit-thumbnail.png",
+    "figure": "website/resources/images/DataCockpit-figure.png",
+    "figurecaption": "Visual Monitoring Tool: the Data Lake View lists all datasets in the data lake; the Dataset View provides additional information (e.g., a preview) about a specific dataset (a), corresponding quality and usage scores (b), temporal evolution of these scores (c), and an interactive visualization showing attribute and record-level quality and usage information (d).",
+    "abstract": "Modern organizations amass their datasets into centralized repositories called data lakes, affording analytics as needed. The resultant scale and complexity of these data lakes, however, can make data navigation and monitoring challenging for users. We present DataCockpit, a Python toolkit that leverages datasets, usage logs, and associated meta-data to provision data usage and quality characteristics. DataCockpit computes these characteristics for each attribute (e.g., number of times it was queried for subsequent use in downstream applications) and record (e.g., number of non-missing, valid values) and aggregates them at the level of datasets. We develop a visual monitoring tool, powered by DataCockpit, and demonstrate how it can assist data / system administrators as well as end-users to effectively navigate and monitor a data lake. DataCockpit and the monitoring tool are available as open source software for developers to build custom monitoring applications on top of data lakes.",
+    "supplemental": [
+      {
+        "name": "Video Preview",
+        "link": "https://youtu.be/T-TbsqpNX5M"
+      },
+      {
+        "name": "Talk",
+        "link": "https://youtu.be/o0Hc0O2uqNI"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/datacockpit-org"
+      },
+    ]
+  },
+  "Chatbots": {
+    "type": "short paper",
+    "doi": "https://doi.org/10.1109/BigData59044.2023.10386335",
+    "id": "2023-chatbots",
+    "title": "On Chatbots for Visual Exploratory Data Analysis",
+    "authors": "Brodrick Stigall AND Ryan A. Rossi AND Jane Hoffswell AND Xiang Chen AND Shunan Guo AND Fan Du AND Eunyee Koh AND Kelly Caine",
+    "booktitle": "IEEE International Conference on Big Data (BigData)",
+    "conference": "BigData",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-Chatbots-BigData.pdf",
+    "paper": "website/resources/papers/2023-Chatbots-BigData.pdf",
+    "thumbnail": "website/resources/images/Chatbots-thumbnail.png",
+    "figure": "website/resources/images/Chatbots-figure.png",
+    "figurecaption": "Pre- and post-survey ratings for six usefulness questions and four questions about the utility of particular visual EDA chatbot features (1: Strongly Disagree to 7: Strongly Agree). The circle size shows the number of ratings, the black line shows the mean score for each question, and the arrows denote the amount and direction of change between pre-and post-survey. Overall, participants generally had an increased positive perception of the utility of the proposed chatbot features.",
+    "abstract": "Analyzing data and creating effective visualizations often requires extensive domain expertise. For users with less experience, it can be difficult to know how to get started with exploratory data analysis (EDA) and how to approach the code. Chatbots can reduce the gap between analysis outcomes and user expectations by leveraging multi-turn conversations to provide a more natural interface between the user and computer-agent. To inform the design of future visual EDA chatbots, we conduct a survey and interview study with ten potential users. Our results suggest that users want a visual EDA chatbot that can make exploratory data analysis easier, while also augmenting their knowledge of visualization and analysis techniques. Between the initial survey and post-interview questionnaire, we saw increased optimism overall for the usefulness and anticipated analytic ease of visual EDA chatbots. Based on these results, we identify four key design guidelines: future visual EDA chatbots should (1) understand the user’s data and intent, (2) respond with useful visualizations, (3) leverage the history of the visualizations and data, and (4) produce verifiable and shareable analysis processes.",
+    "supplemental": []
+  },
   "Dupo": {
     "type": "paper",
-    "doi": "",
+    "doi": "https://doi.org/10.1109/TVCG.2023.3326583",
     "id": "2023-dupo",
     "title": "Dupo: A Mixed-Initiative Authoring Tool for Responsive Visualization",
     "authors": "Hyeok Kim AND Ryan Rossi AND Jessica Hullman AND Jane Hoffswell",
@@ -35,7 +202,7 @@ var publications = {
   },
   "Socrates": {
     "type": "paper",
-    "doi": "",
+    "doi": "https://doi.org/10.1109/TVCG.2023.3327363",
     "id": "2023-socrates",
     "title": "Socrates: Data Story Generation via Adaptive Machine-Guided Elicitation of User Feedback",
     "authors": "Guande Wu AND Shunan Guo AND Jane Hoffswell AND Gromit Yeuk-Yin Chan AND Ryan Rossi AND Eunyee Koh",
@@ -50,9 +217,35 @@ var publications = {
     "abstract": "Visual data stories can effectively convey insights from data, yet their creation often necessitates intricate data exploration, insight discovery, narrative organization, and customization to meet the communication objectives of the storyteller. Existing automated data storytelling system, however, tends to overlook the importance of user customization during the data story authoring process, limiting the system’s ability to create tailored narratives that reflect the user’s intentions. We present a novel data story generation workflow that leverages adaptive machine-guided elicitation of user feedback to customize the story. Our approach employs an adaptive plug-in module for existing story generation systems, which incorporates user feedback through interactive questioning based on the conversation history and dataset. This adaptability refines the system’s understanding of the user’s intentions, ensuring the final narrative aligns with their goals. We demonstrate the feasibility of our approach through the implementation of an interactive prototype Socrates. Through a quantitative user study with 18 participants that compares our method to a state-of-the-art data story generation algorithm, we show that Socrates produces more relevant stories with a larger overlap of insights compared to human-generated stories. We also demonstrate the usability of Socrates via interviews with three data analysts and highlight areas of future work.Soc",
     "supplemental": []
   },
+  "PaperToPlace": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1145/3586183.3606832",
+    "id": "2023-papertoplace",
+    "title": "PaperToPlace: Transforming Instruction Documents into Spatialized and Context-Aware Mixed Reality Experiences",
+    "authors": "Chen Chen AND Cuong Nguyen AND Jane Hoffswell AND Jennifer Healey AND Trung Bui AND Nadir Weibel",
+    "booktitle": "ACM Symposium on User Interface Software and Technology (UIST)",
+    "conference": "UIST",
+    "year": 2023,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2023-PaperToPlace-UIST.pdf",
+    "paper": "website/resources/papers/2023-PaperToPlace-UIST.pdf",
+    "thumbnail": "website/resources/images/PaperToPlace-thumbnail.png",
+    "figure": "website/resources/images/PaperToPlace-figure.png",
+    "figurecaption": 'Overview of PaperToPlace: (a) The author creates an MR experience by taking a snapshot of a paper document, with an optional ML-supported pipeline for associating key objects with each instruction step; (b) The consumer can browse the spatialized instruction steps using a hand menu; (c) The step is placed at an optimal location to minimize context switching and prevent occlusion of important interaction areas (e.g., not occluding the touchpad while setting the time on a microwave); (d) The consumer can "pinch-and-drag" the step to refine the system placement. Steps (b - d) show the first-person MR view.',
+    "abstract": "While paper instructions are a mainstream medium for sharing knowledge, consuming such instructions and translating them into activities can be inefficient due to the lack of connectivity with the physical environment. We propose PaperToPlace, a novel workflow comprising an authoring pipeline, which allows the authors to rapidly transform and spatialize existing paper instructions into an MR experience, and a consumption pipeline, which computationally places each instruction step at an optimal location that is easy to read and does not occlude key interaction areas. Our evaluation of the authoring pipeline with 12 participants demonstrates the usability of our workflow and the effectiveness of using a machine learning based approach to help extract the spatial locations associated with each step. A second within-subjects study with another 12 participants demonstrates the merits of our consumption pipeline to reduce context-switching effort by delivering individual segmented instruction steps and offering hands-free affordances.",
+    "supplemental": [
+      {
+        "name": "Video Preview",
+        "link": "https://youtu.be/sjmiDHqtU_Q"
+      },
+      {
+        "name": "Video",
+        "link": "https://youtu.be/FjmWRu2qH0w"
+      },
+    ]
+  },
   "WhatsNext": {
     "type": "short paper",
-    "doi": "",
+    "doi": "https://doi.org/10.1109/VL-HCC57772.2023.00033",
     "id": "2023-whatsNext",
     "title": "WhatsNext: Guidance-enriched Exploratory Data Analysis with Interactive, Low-Code Notebooks",
     "authors": "Chen Chen AND Jane Hoffswell AND Shunan Guo AND Ryan Rossi AND Gromit Yeuk-Yin Chan AND Fan Du AND Eunyee Koh AND Zhicheng Liu",
@@ -288,11 +481,15 @@ var publications = {
     "abstract": "Designing responsive visualizations can be cast as applying transformations to a source view to render it suitable for a different screen size. However, designing responsive visualizations is often tedious as authors must manually apply and reason about candidate transformations. We present Cicero, a declarative grammar for concisely specifying responsive visualization transformations which paves the way for more intelligent responsive visualization authoring tools. Cicero's flexible specifier syntax allows authors to select visualization elements to transform, independent of the source view's structure. Cicero encodes a concise set of actions to encode a diverse set of transformations in both desktop-first and mobile-first design processes. Authors can ultimately reuse design-agnostic transformations across different visualizations. To demonstrate the utility of Cicero, we develop a compiler to an extended version of Vega-Lite, and provide principles for our compiler. We further discuss the incorporation of Cicero into responsive visualization authoring tools, such as a design recommender.",
     "supplemental": [
       {
+        "name": "arXiv",
+        "link": "https://doi.org/10.48550/arXiv.2203.08314"
+      },
+      {
         "name": "Twitter",
         "link": "https://twitter.com/hyeok__kim/status/1506395763928096770"
       },
       {
-        "name": "Presentation",
+        "name": "Talk",
         "link": "https://youtu.be/2sawlX9PsBQ"
       },
       {
@@ -388,7 +585,7 @@ var publications = {
         "link": "https://research.adobe.com/news/designing-responsive-visualizations/"
       },
       {
-        "name": "Presentation",
+        "name": "Talk",
         "link": "https://youtu.be/EcqJxoK0nng"
       },
       {

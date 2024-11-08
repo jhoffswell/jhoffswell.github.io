@@ -112,6 +112,7 @@ function createPubLinksBlock(div, info, name) {
     var toShow = {
       "Video Preview": {"name": "Preview", "icon": "eye"},
       "Video":         {"name": "Video",   "icon": "film"},
+      "Talk":          {"name": "Talk",    "icon": "film"},
       "GitHub":        {"name": "Code",    "icon": "github"},
       "Website":       {"name": "Website", "icon": "link"}
     };
