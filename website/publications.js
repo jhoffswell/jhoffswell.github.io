@@ -13,6 +13,9 @@ function initPublications() {
   var names = Object.keys(publications);
   for (var i = 0; i < names.length; i++) {
     var info = publications[names[i]];
+
+    // Do not show talks in the publication list
+    if(info['type'] == 'talk') continue;
     
     // Add year subheading as needed
     var year = info.year;
@@ -41,6 +44,14 @@ function getPublicationBlock(name) {
   // Create a div to hold the paper info
   var paper = createElement("div", {class: "paper"});
   div.appendChild(paper);
+
+  // Fill in the talk information
+  if(info['type'] == 'talk') {
+    createPubTitleBlock(paper, info, name); // Paper title
+    createPubShortVenueBlock(paper, info);  // Paper venue (short)
+    createTalkLinksBlock(paper, info, name); // Paper links
+    return div;
+  }
 
   // Fill in the paper information
   createPubTitleBlock(paper, info, name); // Paper title
@@ -88,6 +99,35 @@ function createPubLongVenueBlock(div, info) {
   var options = {class: "venue long"};
   var content = " " + info.booktitle + ", " + info.year + ".";
   div.appendChild(createElement("p", options, content));
+}
+
+function createTalkLinksBlock(div, info, name) {
+  var links = div.appendChild(document.createElement("p"));
+  links.className = "links";
+
+  // Display other supplemental information
+  for (var i = 0; i < info.supplemental.length; i++) {
+    var supplement = info.supplemental[i];
+    var toShow = {
+      "Video Preview": {"name": "Preview", "icon": "eye"},
+      "Video":         {"name": "Video",   "icon": "film"},
+      "Talk":          {"name": "Talk",    "icon": "film"},
+      "GitHub":        {"name": "Code",    "icon": "github"},
+      "Website":       {"name": "Website", "icon": "link"}
+    };
+
+    if(toShow.hasOwnProperty(supplement.name)) {
+      var show = toShow[supplement.name];
+      var options = {class: "link noselect", href: supplement.link};
+      links.appendChild(createIconElement(show.icon, "a", options, show.name));
+    }
+  }
+
+  // Display the BibTeX box
+  var options = {
+    class: "link bib noselect",
+    onclick: "showBibTeX(event, '" + name + "')"};
+  links.appendChild(createIconElement("quote-left", "a", options, "BibTeX"));
 }
 
 function createPubLinksBlock(div, info, name) {

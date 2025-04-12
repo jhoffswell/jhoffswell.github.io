@@ -28,17 +28,24 @@ function createDetailsPage(name) {
   var div = createElement("div", {id: name, class: "paper-details"});
   block.appendChild(div);
 
-  createHeaderBlock(div, info);          // Create the header block
-  createFigureBlock(div, info);          // Create the figure and caption
-  createAbstractBlock(div, info);        // Create the abstract block
-  createMaterialsBlock(div, info, name); // Create the materials block
-  createCitationBlock(div, name);        // Create the citation block
+  if(info['type'] == 'talk') {
+    createHeaderBlock(div, info, false);   // Create the header block
+    createMaterialsBlock(div, info, name); // Create the materials block
+    figure = createFigureBlock(div, info); // Create the figure and caption
+    figure.style['margin-top'] = '12px'
+  } else {
+    createHeaderBlock(div, info);          // Create the header block
+    createFigureBlock(div, info);          // Create the figure and caption
+    createAbstractBlock(div, info);        // Create the abstract block
+    createMaterialsBlock(div, info, name); // Create the materials block
+    createCitationBlock(div, name);        // Create the citation block
+  }
 }
 
-function createHeaderBlock(div, info) {
+function createHeaderBlock(div, info, authors=true) {
   // Create the paper title and author list
   div.appendChild(createElement("h2", null, info.title));
-  div.appendChild(createElement("h3", null, getAuthorsHTML(info.authors)));
+  if(authors) div.appendChild(createElement("h3", null, getAuthorsHTML(info.authors)));
   if(info.award) div.appendChild(createIconElement("trophy", "h3", {class: "award noselect"}, info.award));
 }
 
@@ -50,6 +57,7 @@ function createFigureBlock(div, info) {
   // Create the figure and caption
   container.appendChild(createElement("img", {src: info.figure}));
   container.appendChild(createElement("p", null, info.figurecaption));
+  return container
 }
 
 function createAbstractBlock(div, info) {

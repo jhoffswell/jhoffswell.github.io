@@ -1,6 +1,10 @@
 [
+  {"country": "USA", "state": "Nevada", "year": 2025},
+  {"country": "USA", "state": "Hawaii", "year": 2024},
+  {"country": "New Zealand", "state": "", "year": 2023},
+  {"country": "Australia", "state": "", "year": 2023},
   {"country": "Iceland", "state": "", "year": 2023},
-  {"country": "Mexcio", "state": "", "year": 2022},
+  {"country": "Mexico", "state": "", "year": 2022},
   {"country": "USA", "state": "Oklahoma", "year": 2022},
   {"country": "USA", "state": "Colorado", "year": 2022},
   {"country": "USA", "state": "New Mexico", "year": 2022},

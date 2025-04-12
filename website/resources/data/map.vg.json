@@ -39,7 +39,7 @@
       "type": "mercator",
       "scale": 300,
       "rotate": [0, 0, 0],
-      "center": [-50, 30],
+      "center": [-10, 10],
       "translate": [
         {"signal": "translate0"},
         {"signal": "translate1"}

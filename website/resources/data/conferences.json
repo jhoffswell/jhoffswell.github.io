@@ -1,5 +1,57 @@
 [
   {
+    "country": "Japan",
+    "state": "",
+    "city": "Yokohama",
+    "year": 2025,
+    "date": "April 28, 2025",
+    "conference": "CHI",
+    "text": "CHI 2025",
+    "image": "website/resources/images/summaries-thumbnail.png",
+    "presented": true,
+    "latitude": 35.444167,
+    "longitude": 139.638056
+  },
+  {
+    "country": "United States",
+    "state": "Nevada",
+    "city": "Las Vegas",
+    "year": 2025,
+    "date": "March 19, 2025",
+    "conference": "Adobe Summit",
+    "text": "Adobe Summit 2025",
+    "image": "website/resources/images/projectSlideWow-thumbnail.png",
+    "presented": true,
+    "latitude": 36.167222,
+    "longitude": -115.148611
+  },
+  {
+    "country": "United States",
+    "state": "",
+    "city": "Remote",
+    "year": 2024,
+    "date": "October 13, 2024",
+    "conference": "VIS",
+    "text": "VIS 2024",
+    "image": "website/resources/images/explanations-thumbnail.png",
+    "presented": true,
+    "latitude": 40,
+    "longitude": -47
+  },
+  {
+    "country": "Australia",
+    "state": "",
+    "city": "Melbourne",
+    "year": 2023,
+    "date": "October 22, 2023",
+    "conference": "VIS",
+    "text": "VIS 2023",
+    "image": "website/resources/images/dupo-thumbnail.png",
+    "presented": false,
+    "latitude": -37.814167,
+    "longitude": 144.963056
+  },
+  {
     "country": "United States",
     "state": "Oklahoma",
     "city": "Oklahoma City",
@@ -14,16 +66,16 @@
   },
   {
     "country": "United States",
-    "state": "Hawaii",
-    "city": "Honolulu",
+    "state": "",
+    "city": "Remote",
     "year": 2020,
     "date": "April 25, 2020",
     "conference": "CHI",
     "text": "CHI 2020",
     "image": "website/resources/images/responsive-thumbnail.png",
     "presented": true,
-    "latitude": 21.3,
-    "longitude": -157.816667
+    "latitude": 40,
+    "longitude": -50
   },
   {
     "country": "Canada",

@@ -9,6 +9,7 @@ function showAbout() {
 function initAbout() {
   var block = document.getElementById("publicationblock");
 
+  block.appendChild(getPublicationBlock("ProjectSlideWow"));
   block.appendChild(getPublicationBlock("Aligned"));
 
   var extraBlock = getPublicationBlock("Explanations");
@@ -16,7 +17,6 @@ function initAbout() {
   block.appendChild(extraBlock);  
 
   block.appendChild(getPublicationBlock("Aletheia"));
-  block.appendChild(getPublicationBlock("Dupo"));
 
   var block = document.getElementById("resourceblock");
   var names = Object.keys(resources);

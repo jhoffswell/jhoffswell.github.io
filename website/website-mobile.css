@@ -304,21 +304,28 @@
     display: inline-block;
     margin: 0px 0px 0px 10px;
     text-decoration: none;
+    
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 9pt;
+    background-color: #cae2cb;
   }
 
   .publication .iconelement a {
-    color: gray;
+    color: #4f7551;
     cursor: pointer;
     text-decoration: none;
   }
 
   .publication .icon {
-    color: gray;
+    display: none;
+    color: white;
     margin: 0px 10px 0px 0px;
   }
 
   .publication .award, .publication .award a {
-    color: #d08e16;
+    background-color: #d08e16;
+    color: white;
     cursor: default;
     font-weight: bold;
   }

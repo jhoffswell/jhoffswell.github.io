@@ -182,8 +182,8 @@
 
   .publication a:hover { 
     cursor: pointer;
-    color: #B27300;
-    text-decoration: underline;
+    /* color: #B27300; */
+    /* text-decoration: underline; */
   }
 
 /**********************************************************************/
