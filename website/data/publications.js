@@ -1,5 +1,30 @@
 var publications = {
-
+  "ProvenanceLens": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/TVCG.2025.3571708",
+    "id": "2025-provenancelens",
+    "title": "Utilizing Provenance as an Attribute for Visual Data Analysis: A Design Probe with ProvenanceLens",
+    "authors": "Arpit Narechania AND Shunan Guo AND Eunyee Koh AND Alex Endert AND Jane Hoffswell",
+    "booktitle": "IEEE Transactions on Visualization and Computer Graphics",
+    "conference": "TVCG",
+    "year": 2025,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2025-ProvenanceLens-TVCG.pdf",
+    "paper": "website/resources/papers/2025-ProvenanceLens-TVCG.pdf",
+    "thumbnail": "website/resources/images/ProvenanceLens-thumbnail.png",
+    "figure": "website/resources/images/ProvenanceLens-figure.png",
+    "figurecaption": "The ProvenanceLens user interface consisting of seven views: (A) the Data Attributes view shows the attributes and enables transformation (e.g., sort, filter); (B) the Marks and (C) Encodings views specify the visualization; (D) the Visualization view renders the specified visualization and supports filtering of data records; (E) the Data Records view supports review and transformation (sort) of the data records shown in the visualization; (F) the Provenance Attributes view lists the recency and frequency attributes; and (G) the Tasks view shows the task instructions and questions, and tracks the user's progress.",
+    "abstract": "Analytic provenance can be visually encoded to help users track their ongoing analysis trajectories, recall past interactions, and inform new analytic directions. Despite its significance, provenance is often hardwired into analytics systems, affording limited user control and opportunities for self-reflection. We thus propose modeling provenance as an attribute that is available to users during analysis. We demonstrate this concept by modeling two provenance attributes that track the recency and frequency of user interactions with data. We integrate these attributes into a visual data analysis system prototype, ProvenanceLens, wherein users can visualize their interaction recency and frequency by mapping them to encoding channels (e.g., color, size) or applying data transformations (e.g., filter, sort). Using ProvenanceLens as a design probe, we conduct an exploratory study with sixteen users to investigate how these provenance-tracking affordances are utilized for both decision-making and self-reflection. We find that users can accurately and confidently answer questions about their analysis, and we show that mismatches between the user's mental model and the provenance encodings can be surprising, thereby prompting useful self-reflection. We also report on the user strategies surrounding these affordances, and reflect on their intuitiveness and effectiveness in representing provenance.",
+    "supplemental": [
+      {
+        "name": "arXiv",
+        "link": "https://arxiv.org/abs/2505.11784"
+      },
+      {
+        "name": "Video",
+        "link": "https://www.youtube.com/watch?v=GmtMw6krrNU"
+      }
+    ]
+  },
   "Summaries": {
     "type": "poster",
     "doi": "https://doi.org/10.1145/3706599.3720155",
