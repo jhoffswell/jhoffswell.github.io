@@ -26,7 +26,7 @@
 /** Visibility ********************************************************/
 /**********************************************************************/
 
-  .big-only, .small-only {
+  .extra-large, .big-only, .small-only {
     display: none !important;
   }
 
@@ -349,6 +349,7 @@
   }
 
   #featuredblock span {
+    cursor: pointer;
     opacity: 0;
     padding-left: 8px;
     color: gray;
@@ -357,6 +358,7 @@
   }
 
   #featuredblock:hover span {
+    cursor: pointer;
     opacity: 1;
     
   }
