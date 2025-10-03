@@ -8,8 +8,7 @@ function init() {
   initDetails();
 
   // Create the map visualization
-  initConferenceMap();
-  loadMap("website/resources/data/map.vg.json");
+  renderMap();
 
   // Show the page content
   showTab();
@@ -38,7 +37,7 @@ function showTab() {
     case "Publications":
       showPublications();
       break;
-    case "ConferenceMap":
+    case "Travel":
       showConferenceMap();
       break;
     default:

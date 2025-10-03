@@ -1,18 +1,72 @@
 {
-  "$schema": "https://vega.github.io/schema/vega/v3.0.json",
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
   "width": 900,
   "height": 500,
   "autosize": "none",
 
-  "encode": {
-    "update": {
-      "fill": {"value": "white"}
-    }
-  },
-
   "signals": [
-    { "name": "translate0", "update": "width / 2" },
-    { "name": "translate1", "update": "height / 2" },
+    { "name": "tx", "update": "width / 2" },
+    { "name": "ty", "update": "height / 2" },
+    {
+      "name": "scale",
+      "value": 300,
+      "on": [{
+        "events": {"type": "wheel", "consume": true},
+        "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 300, 3000)"
+      }]
+    },
+    {
+      "name": "angles",
+      "value": [0, 0],
+      "on": [{
+        "events": "pointerdown",
+        "update": "[rotateX, centerY]"
+      }]
+    },
+    {
+      "name": "cloned",
+      "value": null,
+      "on": [{
+        "events": "pointerdown",
+        "update": "copy('projection')"
+      }]
+    },
+    {
+      "name": "start",
+      "value": null,
+      "on": [{
+        "events": "pointerdown",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "drag", "value": null,
+      "on": [{
+        "events": "[pointerdown, window:pointerup] > window:pointermove",
+        "update": "invert(cloned, xy())"
+      }]
+    },
+    {
+      "name": "delta", "value": null,
+      "on": [{
+        "events": {"signal": "drag"},
+        "update": "[drag[0] - start[0], start[1] - drag[1]]"
+      }]
+    },
+    {
+      "name": "rotateX", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "angles[0] + delta[0]"
+      }]
+    },
+    {
+      "name": "centerY", "value": 0,
+      "on": [{
+        "events": {"signal": "delta"},
+        "update": "clamp(angles[1] + delta[1], -60, 60)"
+      }]
+    },
     {
       "name": "point",
       "value": {},
@@ -37,13 +91,10 @@
     {
       "name": "projection",
       "type": "mercator",
-      "scale": 300,
-      "rotate": [0, 0, 0],
-      "center": [-10, 10],
-      "translate": [
-        {"signal": "translate0"},
-        {"signal": "translate1"}
-      ]
+      "scale": {"signal": "scale"},
+      "rotate": [{"signal": "rotateX"}, 0, 0],
+      "center": [0, {"signal": "centerY"}],
+      "translate": [{"signal": "tx"}, {"signal": "ty"}]
     }
   ],
 
@@ -126,7 +177,7 @@
       "name": "color",
       "type": "ordinal",
       "reverse": true,
-      "range": {"scheme": "yelloworangered"},
+      "range": ["#84c588", "#4f7551", "black"],
       "domain": ["Presenter (future)", "Presenter", "Attendee"]
     },
     {
@@ -145,8 +196,8 @@
       "title": "Conferences",
       "encode": {
         "symbols": {
-          "update": {
-            "fill": {"value": "#feb351"},
+          "enter": {
+            "fill": {"value": "#4f7551"},
             "stroke": {"value": "#ccc"},
             "strokeWidth": {"value": 0.2}
           }
@@ -159,7 +210,7 @@
       "title": "Attendance Status",
       "encode": {
         "symbols": {
-          "update": {
+          "enter": {
             "stroke": {"value": "#ccc"},
             "strokeWidth": {"value": 0.2}
           }
@@ -222,7 +273,7 @@
             {"test": "datum.conference == 'EuroVis'", "value": "diamond"},
             {"value": "cross"}
           ],
-          "size": {"value": 150},
+          "size": {"value": 200},
           "fill": {"scale": "color", "field": "attendee-status"},
           "fillOpacity": {"value": 0.8},
           "stroke": {"value": "white"},
@@ -246,14 +297,14 @@
           "encode": {
             "enter": {
               "url": {"field": "image"},
-              "x": {"field": "x", "offset": 6},
-              "y": {"field": "y", "offset": 6},
               "width": {"value": 120},
               "height": {"value": 60},
               "aspect": {"value": true},
               "opacity": {"value": 0}
             },
             "update": {
+              "x": {"field": "x", "offset": 6},
+              "y": {"field": "y", "offset": 6},
               "opacity": {"signal": "point === datum ? 1 : 0"}
             }
           }
@@ -264,8 +315,6 @@
           "interactive": false,
           "encode": {
             "enter": {
-              "x": {"field": "x", "offset": 6},
-              "y": {"field": "y", "offset": -8},
               "width": {"value": 120},
               "height": {"value": 14},
               "fill": {"value": "#777777"},
@@ -273,6 +322,8 @@
               "cornerRadius": {"value": 4}
             },
             "update": {
+              "x": {"field": "x", "offset": 6},
+              "y": {"field": "y", "offset": -8},
               "opacity": {"signal": "point === datum ? 0.8 : 0"}
             }
           }
@@ -284,14 +335,14 @@
           "encode": {
             "enter": {
               "text": {"field": "text"},
-              "x": {"field": "x", "offset": 10},
-              "y": {"field": "y", "offset": 3},
               "width": {"value": 120},
               "height": {"value": 12},
               "fill": {"value": "white"},
               "opacity": {"value": 0}
             },
             "update": {
+              "x": {"field": "x", "offset": 10},
+              "y": {"field": "y", "offset": 3},
               "opacity": {"signal": "point === datum ? 0.8 : 0"}
             }
           }
@@ -309,7 +360,9 @@
             "enter": {
               "text": {"field": "text"},
               "fontWeight": {"field": "weight"},
-              "fontSize": {"field": "size"},
+              "fontSize": {"field": "size"}
+            },
+            "update": {
               "x": {"value": 10},
               "y": {"field": "y"}
             }

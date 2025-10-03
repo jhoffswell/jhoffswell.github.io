@@ -7,7 +7,7 @@
     "date": "April 28, 2025",
     "conference": "CHI",
     "text": "CHI 2025",
-    "image": "website/resources/images/summaries-thumbnail.png",
+    "image": "website/resources/images/Summaries-thumbnail.png",
     "presented": true,
     "latitude": 35.444167,
     "longitude": 139.638056
@@ -33,7 +33,7 @@
     "date": "October 13, 2024",
     "conference": "VIS",
     "text": "VIS 2024",
-    "image": "website/resources/images/explanations-thumbnail.png",
+    "image": "website/resources/images/Explanations-thumbnail.png",
     "presented": true,
     "latitude": 40,
     "longitude": -47
