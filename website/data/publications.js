@@ -1,4 +1,43 @@
 var publications = {
+  "DashboardRemizing": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1109/TVCG.2026.3752578",
+    "id": "2026-dashboardRemixing",
+    "title": "Dashboard Remixing: Goal-oriented Organization and Enrichment of Visualizations and Insights",
+    "authors": "Junran Yang AND Leilani Battle AND Jane Hoffswell",
+    "booktitle": "IEEE Transactions on Visualization and Computer Graphics",
+    "conference": "TVCG",
+    "year": 2026,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2026-DashboardRemixing-TVCG.pdf",
+    "paper": "website/resources/papers/2026-DashboardRemixing-TVCG.pdf",
+    "thumbnail": "website/resources/images/thumbnails/DashboardRemixing-thumbnail.png",
+    "figure": "website/resources/images/teasers/DashboardRemixing-figure.png",
+    "figurecaption": " Our recommendation pipeline (B) consists of four steps ((1) - (4)). The input (A) is a dashboard with its chart specification and underlying data tables. The output (D) is a structured webpage consisting of view groups, descriptions of the goals, and data insights reflecting the goals and views in each group. (C) is an illustration of existing and added views grouped by goals.",
+    "abstract": "Dashboard creation requires iteratively authoring multiple views and organizing them into a structured format. However, creators often struggle to step back and assess their own work for organization and refinement due to cognitive limitations. In this work, we propose a pipeline to provide computational support for self-reflection during the design process. Our pipeline automatically infers analytical objectives, discovers implicit pat terns, and structures those patterns to surface coherent analytical pathways. It further enriches existing dashboard designs by generating complementary visualizations and aggregates natural language insights based on relationships across data entities (e.g., contrasting, drill-down, and relatedness) to reveal chart connections. Our rule-based pipeline provides objective, verifiable feedback, offering an external perspective while enabling creators to tell their own data stories. Four case studies and six expert interviews demonstrate how this approach helps creators reflect on organizational alternatives and surface hidden analytical opportunities in a principled way, reducing the cognitive burden while encouraging deeper analytical exploration.",
+    "supplemental": [
+      {
+        "name": "arXiv",
+        "link": "https://arxiv.org/abs/2611.11542"
+      },
+    ]
+  },
+  "SlideSAVR": {
+    "type": "paper",
+    "doi": "https://doi.org/10.1111/cgf.70459",
+    "id": "2026-slideSAVR",
+    "title": "SlideSAVR: Enabling Live Analysis during Data Presentations via Multimodal Sketching and Voice Input",
+    "authors": "Chang Han AND Md. Mehrab Tanjim AND Shunan Guo AND Christine Dierk AND Katherine E. Isaacs AND Jane Hoffswell",
+    "booktitle": "Eurographics Conference on Visualization (EuroVis)",
+    "conference": "EuroVis",
+    "year": 2026,
+    "url": "https://jhoffswell.github.io/website/resources/papers/2026-SlideSAVR-EuroVis.pdf",
+    "paper": "website/resources/papers/2026-SlideSAVR-EuroVis.pdf",
+    "thumbnail": "website/resources/images/thumbnails/SlideSAVR-thumbnail.png",
+    "figure": "website/resources/images/teasers/SlideSAVR-figure.png",
+    "figurecaption": "SlideSAVR supports live data analysis, enabling on-the-fly Q&A between the presenter and audience. Presenters can (a) dynamically update charts and text in response to verbal prompts and sketch input; (b) create interactive handles to previously static charts.",
+    "abstract": "Interpersonal communication in data science can yield sought-after insights, but presentation environments are often not conducive for live analysis, forcing the process to move offline. Through a formative survey with 16 participants, we identified both technical (e.g., complexity of tools) and psychological (e.g., pressure of programming during presentation) factors constraining live data analysis. To enable live analysis, we present SlideSAVR, a data-driven presentation assistant that leverages sketching and voice inputs in live discussion to support collaborative data analysis during presentations. Powered by an agentic framework that flexibly defines augmentation rules, updates slide content dynamically to match the live context, and automates backend computations, SlideSAVR enables fluid audience-presenter interaction and reduces the need for offline reanalysis and follow-up communication. We demonstrate SlideSAVR's ability to support a range of tasks through nine representative use cases. We further evaluate the system's accuracy and computation time across different settings, showing that SlideSAVR can reliably perform diverse tasks when provided with both sketch and voice inputs.",
+    "supplemental": []
+  },
   "ConvoMap": {
     "type": "paper",
     "doi": "https://doi.org/10.1109/VL-HCC65237.2025.00043",
