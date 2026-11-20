@@ -3,7 +3,7 @@ var resources = {
     "date": "November 25th, 2020",
     "description": "A brief overview of my skills, background, and selected publication history (1 page).",
     "link": "website/resources/JaneHoffswell-Resume.pdf",
-    "thumbnail": "website/resources/images/resume-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/resume-thumbnail.png",
     "icon": "file-text",
     "priority": "high"
   },
@@ -11,7 +11,7 @@ var resources = {
     "date": "November 25th, 2020",
     "description": "A full list of my background, skills, employment, publications, and other activities (4 pages).",
     "link": "website/resources/JaneHoffswell-CurriculumVitae.pdf",
-    "thumbnail": "website/resources/images/curriculumVitae-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/curriculumVitae-thumbnail.png",
     "icon": "file-text",
     "priority": "high"
   },
@@ -19,7 +19,7 @@ var resources = {
     "date": "April 6th, 2020",
     "description": "An overview of my current research experience and future research agenda (5 pages).",
     "link": "website/resources/JaneHoffswell-ResearchStatement.pdf",
-    "thumbnail": "website/resources/images/researchStatement-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/researchStatement-thumbnail.png",
     "icon": "file-text",
     "priority": "high"
   },
@@ -27,7 +27,7 @@ var resources = {
     "date": "April 14th, 2020",
     "description": "An overview  of my research agenda, as well as my service and outreach activities (4 pages).",
     "link": "website/resources/JaneHoffswell-AcademicStatement.pdf",
-    "thumbnail": "website/resources/images/academicStatement-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/academicStatement-thumbnail.png",
     "icon": "file-text",
     "priority": "high"
   },
@@ -35,7 +35,7 @@ var resources = {
     "date": "June 24, 2020",
     "description": "My PhD dissertation from the Allen School at the University of Washington (251 pages).",
     "link": "website/resources/JaneHoffswell-Dissertation.pdf",
-    "thumbnail": "website/resources/images/dissertation-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/dissertation-thumbnail.png",
     "icon": "file-text",
     "priority": "high"
   },
@@ -43,7 +43,7 @@ var resources = {
     "date": "April 3rd, 2020",
     "description": "A video overview of my research, presented as part of the Allen School Women's Research Day.",
     "link": "https://youtu.be/EJtakt7I3BQ",
-    "thumbnail": "website/resources/images/researchOverview-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/researchOverview-thumbnail.png",
     "icon": "play-circle",
     "priority": "low"
   },
@@ -51,7 +51,7 @@ var resources = {
     "date": "July 28th, 2023",
     "description": "A brief slide deck on my personal tips, tricks, and preferences for organizing papers in LaTeX.",
     "link": "website/resources/JaneHoffswell-LaTeXTipsTricks.pdf",
-    "thumbnail": "website/resources/images/latexTips-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/latexTips-thumbnail.png",
     "icon": "picture-o",
     "priority": "low"
   },
@@ -59,7 +59,7 @@ var resources = {
     "date": "July 28th, 2023",
     "description": "A simple Overleaf template of my preferred LaTeX structure and helper commands.",
     "link": "https://www.overleaf.com/read/ntgpckzbfhnm",
-    "thumbnail": "website/resources/images/latexTemplate-thumbnail.png",
+    "thumbnail": "website/resources/images/thumbnails/latexTemplate-thumbnail.png",
     "icon": "globe",
     "priority": "low"
   }
